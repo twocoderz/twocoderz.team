@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* My design colors */
+  /* My primary color */
+  --color-primary: #f7b801;
+  --color-primary-90: rgb(247 184 1 / 0.9);
+  --color-primary-80: rgb(247 184 1 / 0.8);
+  --color-primary-70: rgb(247 184 1 / 0.7);
+  --color-primary-60: rgb(247 184 1 / 0.6);
+  --color-primary-50: rgb(247 184 1 / 0.5);
+  --color-primary-40: rgb(247 184 1 / 0.4);
+  --color-primary-30: rgb(247 184 1 / 0.3);
+  --color-primary-20: rgb(247 184 1 / 0.2);
+  --color-primary-10: rgb(247 184 1 / 0.1);
+  --color-primary-5: rgb(247 184 1 / 0.05);
+
+  /* My black color */
+  --color-black: #161512;
+  --color-black-90: rgb(22 21 18 / 0.9);
+  --color-black-80: rgb(22 21 18 / 0.8);
+  --color-black-70: rgb(22 21 18 / 0.7);
+  --color-black-60: rgb(22 21 18 / 0.6);
+  --color-black-50: rgb(22 21 18 / 0.5);
+  --color-black-40: rgb(22 21 18 / 0.4);
+  --color-black-30: rgb(22 21 18 / 0.3);
+  --color-black-20: rgb(22 21 18 / 0.2);
+  --color-black-10: rgb(22 21 18 / 0.1);
+  --color-black-5: rgb(22 21 18 / 0.05);
+
+  /* My white color */
+  --color-white: #fbf8ef;
+  --color-white-90: rgb(252 248 232 / 0.9);
+  --color-white-80: rgb(252 248 232 / 0.8);
+  --color-white-70: rgb(252 248 232 / 0.7);
+  --color-white-60: rgb(252 248 232 / 0.6);
+  --color-white-50: rgb(252 248 232 / 0.5);
+  --color-white-40: rgb(252 248 232 / 0.4);
+  --color-white-30: rgb(252 248 232 / 0.3);
+  --color-white-20: rgb(252 248 232 / 0.2);
+  --color-white-10: rgb(252 248 232 / 0.1);
+  --color-white-5: rgb(252 248 232 / 0.05);
+
+  /* Padding / spacing (px) */
+  /* Figma: p0 → 0, p0,5 → 2, p1 → 4, ..., p25 → 100 */
+  --spacing-p0: 0px;
+  --spacing-p0-5: 2px;
+  --spacing-p1: 4px;
+  --spacing-p1-5: 6px;
+  --spacing-p2: 8px;
+  --spacing-p2-5: 10px;
+  --spacing-p3: 12px;
+  --spacing-p3-5: 14px;
+  --spacing-p4: 16px;
+  --spacing-p4-5: 18px;
+  --spacing-p5: 20px;
+  --spacing-p5-5: 22px;
+  --spacing-p6: 24px;
+  --spacing-p6-5: 26px;
+  --spacing-p7: 28px;
+  --spacing-p7-5: 30px;
+  --spacing-p8: 32px;
+  --spacing-p8-5: 34px;
+  --spacing-p9: 36px;
+  --spacing-p9-5: 38px;
+  --spacing-p10: 40px;
+  --spacing-p10-5: 42px;
+  --spacing-p11: 44px;
+  --spacing-p11-5: 46px;
+  --spacing-p12: 48px;
+  --spacing-p12-5: 50px;
+  --spacing-p13: 52px;
+  --spacing-p13-5: 54px;
+  --spacing-p14: 56px;
+  --spacing-p14-5: 58px;
+  --spacing-p15: 60px;
+  --spacing-p15-5: 62px;
+  --spacing-p16: 64px;
+  --spacing-p16-5: 66px;
+  --spacing-p17: 68px;
+  --spacing-p17-5: 70px;
+  --spacing-p18: 72px;
+  --spacing-p18-5: 74px;
+  --spacing-p19: 76px;
+  --spacing-p19-5: 78px;
+  --spacing-p20: 80px;
+  --spacing-p20-5: 82px;
+  --spacing-p21: 84px;
+  --spacing-p21-5: 86px;
+  --spacing-p22: 88px;
+  --spacing-p22-5: 90px;
+  --spacing-p23: 92px;
+  --spacing-p23-5: 94px;
+  --spacing-p24: 96px;
+  --spacing-p24-5: 98px;
+  --spacing-p25: 100px;
+
+  /* Radius (px) */
+  /* Figma: r0,5 → 2, r1 → 4, ..., r10 → 40 */
+  --radius-r0-5: 2px;
+  --radius-r1: 4px;
+  --radius-r2: 8px;
+  --radius-r3: 12px;
+  --radius-r4: 16px;
+  --radius-r5: 20px;
+  --radius-r6: 24px;
+  --radius-r7: 28px;
+  --radius-r8: 32px;
+  --radius-r9: 36px;
+  --radius-r10: 40px;
+
+  /* Border width (px) */
+  /* Figma: ss1 → 1, ss2 → 2, ss3 → 3, ss4 → 4 */
+  --border-width-ss1: 1px;
+  --border-width-ss2: 2px;
+  --border-width-ss3: 3px;
+  --border-width-ss4: 4px;
+}
+
+@layer base {
+  :root {
+    font-family:
+      "Nunito",
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  /* ─── Display ─── */
+  .text-dp24 {
+    font-size: 24px;
+    line-height: 110%;
+    font-weight: 700;
+  }
+
+  /* ─── Light ─── */
+  .text-l10 {
+    font-size: 10px;
+    font-weight: 300;
+  }
+  .text-l11 {
+    font-size: 11px;
+    font-weight: 300;
+  }
+  .text-l12 {
+    font-size: 12px;
+    font-weight: 300;
+  }
+  .text-l14 {
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .text-l16 {
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .text-l18 {
+    font-size: 18px;
+    font-weight: 300;
+  }
+  .text-l20 {
+    font-size: 20px;
+    font-weight: 300;
+  }
+  .text-l24 {
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+  /* ─── Regular ─── */
+  .text-r10 {
+    font-size: 10px;
+    font-weight: 400;
+  }
+  .text-r11 {
+    font-size: 11px;
+    font-weight: 400;
+  }
+  .text-r12 {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .text-r14 {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .text-r16 {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .text-r18 {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .text-r20 {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .text-r24 {
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  /* ─── Medium ─── */
+  .text-m10 {
+    font-size: 10px;
+    font-weight: 500;
+  }
+  .text-m11 {
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .text-m12 {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .text-m14 {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .text-m16 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .text-m18 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .text-m20 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .text-m24 {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  /* ─── Semibold ─── */
+  .text-sb10 {
+    font-size: 10px;
+    font-weight: 600;
+  }
+  .text-sb11 {
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .text-sb12 {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .text-sb14 {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .text-sb16 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .text-sb18 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .text-sb20 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .text-sb24 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  /* ─── Bold ─── */
+  .text-b10 {
+    font-size: 10px;
+    font-weight: 700;
+  }
+  .text-b11 {
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .text-b12 {
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .text-b14 {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .text-b16 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .text-b18 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .text-b20 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .text-b24 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .text-b28 {
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .text-b32 {
+    font-size: 32px;
+    font-weight: 700;
+  }
+}
