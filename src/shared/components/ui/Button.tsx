@@ -11,9 +11,9 @@ type ButtonVariant = "primary" | "secondary";
 type ButtonSize = "sm" | "md" | "lg";
 
 const sizeMap: Record<ButtonSize, string> = {
-  sm: "px-6 py-4 text-sm",
-  md: "px-8 py-4 text-base",
-  lg: "px-12 py-6 text-md",
+  sm: "px-4 py-3 text-xs",
+  md: "px-6 py-4 text-sm",
+  lg: "px-12 py-6 text-base",
 };
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -51,7 +51,8 @@ export function Button(props: ButtonProps) {
     [0, 1],
     ["rgb(255, 255,255)", "rgb(0,0,0)"],
   );
-  const buttonScale = useTransform(progress, [0, 1], [1, 1.045]);
+
+  // const buttonScale = useTransform(progress, [0, 1], [1, 1.045]);
 
   function handleHoverStart() {
     rawProgress.set(1);
@@ -69,8 +70,8 @@ export function Button(props: ButtonProps) {
         whileTap={{ scale: 0.97 }}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
         className={cn(
-          "relative overflow-hidden rounded-full font-normal tracking-wider",
-          "border border-black-70 text-black-80 bg-transparent",
+          "relative flex items-center gap-p2 overflow-hidden rounded-full font-normal tracking-wider",
+          "border-2 border-black-70 text-black-80 bg-transparent",
           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black-80",
           "cursor-pointer select-none",
           sizeMap[size],
@@ -86,7 +87,6 @@ export function Button(props: ButtonProps) {
   return (
     <motion.button
       ref={ref}
-      style={{ scale: buttonScale }}
       onHoverStart={handleHoverStart}
       onHoverEnd={handleHoverEnd}
       whileTap={{ scale: 0.97 }}
