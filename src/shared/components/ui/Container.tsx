@@ -1,10 +1,10 @@
 import type { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 
-export type ContainerProps = {
+export interface ContainerProps {
   children: ReactNode;
   className?: string;
-};
+}
 
 export default function Container(props: ContainerProps) {
   const { children, className } = props;

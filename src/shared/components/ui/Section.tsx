@@ -1,10 +1,10 @@
 import type { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 
-export type SectionProps = {
+export interface SectionProps {
   children: ReactNode;
   className?: string;
-};
+}
 
 export default function Section(props: SectionProps) {
   const { children, className } = props;
