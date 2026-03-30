@@ -4,22 +4,28 @@ import { HamburgerMdIcon } from "../../icons/HamburgerMdIcon";
 import { Button } from "../ui/Button";
 import Container from "../ui/Container";
 import Logo from "../ui/Logo";
+import NavItem from "../ui/NavItem";
 
 export interface HeaderProps {}
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navItems = [
+    { href: "#", label: "Works" },
+    { href: "#", label: "Services" },
+    { href: "#", label: "About" },
+  ];
   return (
     <header className="sticky top-0 z-50 bg-transparent backdrop-blur-md px-p6 py-p4">
       <Container className="flex items-center justify-between">
         {/* Logo */}
         <Logo />
         {/* nav */}
-        <nav className="hidden md:flex gap-p8">
+        <nav className="hidden md:flex md:items-center gap-p8">
           {/* desktop nav */}
-          <a href="#">Works</a>
-          <a href="#">Services</a>
-          <a href="#">About</a>
+          {navItems.map((item) => (
+            <NavItem href={item.href}>{item.label}</NavItem>
+          ))}
         </nav>
         {/* Right:hambuger + CTA buttons */}
         <div className="flex items-center gap-p4">
