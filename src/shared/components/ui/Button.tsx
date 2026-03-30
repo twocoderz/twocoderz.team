@@ -1,39 +1,116 @@
-import type { ReactNode } from "react";
-import { motion } from "framer-motion";
+import { useRef, type ButtonHTMLAttributes, type ReactNode } from "react";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
-export type ButtonProps = {
-  children: ReactNode;
-  className?: string;
-  variant?: "primary" | "outline";
-  type?: "button" | "submit";
+function cn(...inputs: Parameters<typeof clsx>) {
+  return twMerge(clsx(...inputs));
+}
+
+type ButtonVariant = "primary" | "secondary";
+type ButtonSize = "sm" | "md" | "lg";
+
+const sizeMap: Record<ButtonSize, string> = {
+  sm: "px-6 py-4 text-sm",
+  md: "px-8 py-4 text-base",
+  lg: "px-12 py-6 text-md",
 };
 
-export default function Button(props: ButtonProps) {
-  const { children, className, variant = "primary", type = "button" } = props;
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: ReactNode;
+  variant?: ButtonVariant;
+  size?: ButtonSize;
+  className?: string;
+}
 
-  const baseClasses =
-    "px-p2 py-p1 text-m16 rounded-3xl tracking-wider transition-all duration-400";
-  const variantClasses = clsx({
-    // primary button
-    "text-white bg-black-80 hover:bg-white hover:text-black-80":
-      variant === "primary",
-    // outline button
-    "text-black-80 bg-transparent border-2 border-black-80 hover:bg-black-80 hover:text-white":
-      variant === "outline",
+export function Button(props: ButtonProps) {
+  const {
+    children,
+    variant = "primary",
+    size = "md",
+    className,
+    ...rest
+  } = props;
+
+  const variantClasses =
+    variant === "secondary"
+      ? "border border-black-80 text-black-80 bg-transparent"
+      : "bg-black-80 text-white border border-white/25";
+
+  const ref = useRef<HTMLButtonElement>(null);
+  const rawProgress = useMotionValue(0);
+  const progress = useSpring(rawProgress, {
+    stiffness: 90,
+    damping: 13,
+    mass: 0.6,
   });
 
-  const buttonClasses = twMerge(baseClasses, variantClasses, className);
+  const fillScaleX = useTransform(progress, [0, 1], [0, 1]);
+  const textColor = useTransform(
+    progress,
+    [0, 1],
+    ["rgb(255, 255,255)", "rgb(0,0,0)"],
+  );
+  const buttonScale = useTransform(progress, [0, 1], [1, 1.045]);
+
+  function handleHoverStart() {
+    rawProgress.set(1);
+  }
+
+  function handleHoverEnd() {
+    rawProgress.set(0);
+  }
+
+  if (variant === "secondary") {
+    return (
+      <motion.button
+        ref={ref}
+        whileHover={{ scale: 1.04 }}
+        whileTap={{ scale: 0.97 }}
+        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+        className={cn(
+          "relative overflow-hidden rounded-full font-normal tracking-wider",
+          "border border-black-70 text-black-80 bg-transparent",
+          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black-80",
+          "cursor-pointer select-none",
+          sizeMap[size],
+          className,
+        )}
+        {...(rest as any)}
+      >
+        {children}
+      </motion.button>
+    );
+  }
 
   return (
     <motion.button
-      type={type}
-      className={buttonClasses}
-      whileTap={{ scale: 0.95 }}
-      transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
+      ref={ref}
+      style={{ scale: buttonScale }}
+      onHoverStart={handleHoverStart}
+      onHoverEnd={handleHoverEnd}
+      whileTap={{ scale: 0.97 }}
+      className={cn(
+        "relative overflow-hidden rounded-full font-normal tracking-wider",
+        variantClasses,
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60",
+        "cursor-pointer select-none",
+        sizeMap[size],
+        className,
+      )}
+      {...(rest as any)}
     >
-      {children}
+      <motion.span
+        aria-hidden
+        style={{ scaleX: fillScaleX }}
+        className="pointer-events-none absolute inset-0 origin-left bg-white"
+      />
+      <motion.span
+        style={{ color: textColor }}
+        className="relative z-10 flex items-center justify-center gap-p0-5 whitespace-nowrap"
+      >
+        {children}
+      </motion.span>
     </motion.button>
   );
 }
