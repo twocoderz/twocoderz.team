@@ -3,6 +3,7 @@ import { ArrowRightIcon } from "../../icons/ArrowRightIcon";
 import { HamburgerMdIcon } from "../../icons/HamburgerMdIcon";
 import { Button } from "../ui/Button";
 import Container from "../ui/Container";
+import Logo from "../ui/Logo";
 
 export interface HeaderProps {}
 
@@ -12,9 +13,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-transparent backdrop-blur-md px-p6 py-p4">
       <Container className="flex items-center justify-between">
         {/* Logo */}
-        <div>
-          <h3 className="text-md text-black-80 font-medium">twocoderz</h3>
-        </div>
+        <Logo />
         {/* nav */}
         <nav className="hidden md:flex gap-p8">
           {/* desktop nav */}
