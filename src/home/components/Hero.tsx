@@ -22,8 +22,8 @@ export default function Hero() {
       <Container>
         <div className="py-p14">
           {/* hero center texts */}
-          <div className="text-center max-w-xl mx-auto mb-p4">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-black-70 font-bold leading-none mb-p6">
+          <div className="text-center max-w-3xl mx-auto mb-p4">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl text-black-70 font-bold leading-none mb-p8 mt-p6">
               We build websites that bring you customers
               <span className="inline-block w-4 h-2 bg-primary ml-2"></span>
             </h1>
@@ -39,7 +39,7 @@ export default function Hero() {
                 key={src}
                 src={src}
                 alt={`Slide ${index + 1}`}
-                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${index === current ? "opacity-100" : "opacity-0"}`}
+                className={`absolute mt-p8 inset-0 w-full h-full object-cover transition-opacity duration-700 ${index === current ? "opacity-100" : "opacity-0"}`}
               />
             ))}
           </div>

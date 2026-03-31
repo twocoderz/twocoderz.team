@@ -120,6 +120,26 @@
   }
 }
 
+html,
+body {
+  /* Masque la scrollbar dans Firefox et les navigateurs modernes */
+  scrollbar-width: none;
+
+  /* Masque la scrollbar dans Internet Explorer et anciens Edge */
+  -ms-overflow-style: none;
+
+  /* Optionnel : améliore le scroll sur iOS / Safari mobile */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Masque la scrollbar dans Chrome, Safari, Edge (basé sur WebKit) */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
 @layer components {
   /* ─── Display ─── */
   .text-dp24 {
