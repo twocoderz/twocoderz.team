@@ -11,9 +11,10 @@ export default function Clients() {
           </h2>
           <div className="flex items-center justify-between">
             <MyLink label="All works" href="#" />
-            <p className="text-black-80 text-md md:text-lg lg:text-xl text-right">
-              We&apos;ve helped companies build strong online presence and drive
-              real results.
+            <p className="text-black-80 text-md lg:text-lg max-w-md">
+              We help companies establish a strong digital presence through
+              modern, high-performing websites. Every project is designed to
+              reflect your brand and connect with your audience.
             </p>
           </div>
         </div>
