@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRightIcon } from "../../icons/ArrowRightIcon";
 import { HamburgerMdIcon } from "../../icons/HamburgerMdIcon";
@@ -6,7 +6,6 @@ import { Button } from "../ui/Button";
 import Container from "../ui/Container";
 import Logo from "../ui/Logo";
 import NavItem from "../ui/NavItem";
-import { ShrinkIcon } from "../../icons/ShrinkIcon";
 import CloseIcon from "../../icons/CloseIcon";
 
 export interface HeaderProps {}
@@ -14,6 +13,18 @@ export interface HeaderProps {}
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const closeMenu = () => setIsMenuOpen(false);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
+
   const navItems = [
     { href: "#", label: "Works" },
     { href: "#", label: "Services" },
@@ -43,7 +54,7 @@ export default function Header() {
               <ArrowRightIcon className="w-4 h-4" />
             </Button>
           </div>
-          {/* hambuger */}
+          {/* menu buttons */}
           <button
             onClick={() => setIsMenuOpen((v) => !v)}
             className="md:hidden cursor-pointer relative w-8 h-8"
@@ -59,9 +70,9 @@ export default function Header() {
                   animate={{ opacity: 1, scale: 1, rotate: 0 }}
                   exit={{ opacity: 0, scale: 0.8, rotate: 10 }}
                   transition={{ duration: 0.18 }}
-                  className="absolute inset-0"
+                  className="absolute inset-0 flex items-center justify-center"
                 >
-                  <CloseIcon className="w-8 h-8 text-black-80" />
+                  <CloseIcon className="w-6 h-6 text-black-90" />
                 </motion.span>
               ) : (
                 <motion.span
@@ -70,9 +81,9 @@ export default function Header() {
                   animate={{ opacity: 1, scale: 1, rotate: 0 }}
                   exit={{ opacity: 0, scale: 0.8, rotate: -10 }}
                   transition={{ duration: 0.18 }}
-                  className="absolute inset-0"
+                  className="absolute inset-0 flex items-center justify-center"
                 >
-                  <HamburgerMdIcon className="w-8 h-8 text-black-80" />
+                  <HamburgerMdIcon className="w-8 h-8 text-black-90" />
                 </motion.span>
               )}
             </AnimatePresence>
@@ -92,7 +103,7 @@ export default function Header() {
             transition={{ duration: 0.25, ease: "easeInOut" }}
           >
             <motion.div
-              className="flex flex-col gap-p6 py-p12"
+              className="flex flex-col gap-p6 py-p20 px-p6"
               initial={{ y: -8 }}
               animate={{ y: 0 }}
               exit={{ y: -8 }}
