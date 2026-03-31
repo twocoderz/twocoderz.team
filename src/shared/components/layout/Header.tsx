@@ -13,6 +13,7 @@ export interface HeaderProps {}
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const closeMenu = () => setIsMenuOpen(false);
   const navItems = [
     { href: "#", label: "Works" },
     { href: "#", label: "Services" },
@@ -48,6 +49,7 @@ export default function Header() {
             className="md:hidden cursor-pointer relative w-8 h-8"
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-controls="mobile-menu"
           >
             <AnimatePresence initial={false} mode="wait">
               {isMenuOpen ? (
@@ -82,6 +84,7 @@ export default function Header() {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
+            id="mobile-menu"
             className="md:hidden bg-transparent overflow-hidden"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
@@ -95,11 +98,21 @@ export default function Header() {
               exit={{ y: -8 }}
               transition={{ duration: 0.2 }}
             >
-              <a href="#">Works</a>
-              <a href="#">Services</a>
-              <a href="#">About</a>
-              <a href="#">Subscribe</a>
-              <a href="#">Contact</a>
+              <a href="#" onClick={closeMenu}>
+                Works
+              </a>
+              <a href="#" onClick={closeMenu}>
+                Services
+              </a>
+              <a href="#" onClick={closeMenu}>
+                About
+              </a>
+              <a href="#" onClick={closeMenu}>
+                Subscribe
+              </a>
+              <a href="#" onClick={closeMenu}>
+                Contact
+              </a>
             </motion.div>
           </motion.div>
         )}
