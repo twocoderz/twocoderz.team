@@ -1,11 +1,9 @@
-import Hero from "./home/components/Hero";
-import Header from "./shared/components/layout/Header";
+import HomePage from "./home/HomePage";
 
 function App() {
   return (
     <>
-      <Header />
-      <Hero />
+      <HomePage />
     </>
   );
 }
