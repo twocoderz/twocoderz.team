@@ -11,7 +11,7 @@ type ButtonVariant = "primary" | "secondary";
 type ButtonSize = "sm" | "md" | "lg";
 
 const sizeMap: Record<ButtonSize, string> = {
-  sm: "px-4 py-3 text-xs",
+  sm: "px-4 py-2.5 text-xs",
   md: "px-6 py-4 text-sm",
   lg: "px-12 py-6 text-base",
 };
