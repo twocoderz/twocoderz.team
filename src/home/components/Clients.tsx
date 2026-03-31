@@ -2,6 +2,24 @@ import Container from "../../shared/components/ui/Container";
 import MyLink from "../../shared/components/ui/MyLink";
 
 export default function Clients() {
+  const clients = [
+    "Netflix",
+    "Spotify",
+    "Stripe",
+    "Adobe",
+    "Mozilla",
+    "Salesforce",
+    "Opera",
+    "Octa",
+    "Citrix",
+    "Redis",
+    "Oppo",
+    "Universal",
+    "Turo",
+    "Xero",
+    "Xsolla",
+  ];
+
   return (
     <section className="bg-transparent min-h-screen">
       <Container>
@@ -17,7 +35,18 @@ export default function Clients() {
               reflect your brand and connect with your audience.
             </p>
           </div>
-          <div></div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-p4 mt-p8">
+            {clients.map((client) => (
+              <div
+                key={client}
+                className="flex items-center justify-center py-p6"
+              >
+                <span className="text-black-90 text-4xl font-bold">
+                  {client}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </Container>
     </section>

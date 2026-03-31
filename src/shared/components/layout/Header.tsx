@@ -80,7 +80,9 @@ export default function Header() {
         <nav className="hidden md:flex md:items-center gap-p8">
           {/* desktop nav */}
           {navItems.map((item) => (
-            <NavItem href={item.href}>{item.label}</NavItem>
+            <NavItem key={item.label} href={item.href}>
+              {item.label}
+            </NavItem>
           ))}
         </nav>
         {/* Right:hambuger + CTA buttons */}
