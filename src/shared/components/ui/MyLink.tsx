@@ -18,11 +18,11 @@ export default function MyLink(props: MyLinkProps) {
     >
       <a
         href={href}
-        className="text-md font-normal text-black-80 hover:text-primary"
+        className="text-md font-normal text-black-60 hover:text-black-90"
       >
         {label}
       </a>
-      <ArrowRightIcon className="w-4 h-4 hover:w-8 transition-all duration-500 text-black-80 hover:text-primary" />
+      <ArrowRightIcon className="w-4 h-4 hover:w-8 transition-all duration-500 text-black-60 hover:text-black-90" />
     </div>
   );
 }

@@ -69,7 +69,7 @@ export default function Header() {
   ];
   return (
     <header
-      className={`sticky top-0 z-50 bg-transparent backdrop-blur-md px-p6 py-p4 transition-transform duration-300 ${
+      className={`sticky top-0 z-50 bg-white backdrop-blur-md px-p6 py-p4 transition-transform duration-300 ${
         isHeaderVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
