@@ -1,10 +1,13 @@
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRightIcon } from "../../icons/ArrowRightIcon";
 import { HamburgerMdIcon } from "../../icons/HamburgerMdIcon";
 import { Button } from "../ui/Button";
 import Container from "../ui/Container";
 import Logo from "../ui/Logo";
 import NavItem from "../ui/NavItem";
+import { ShrinkIcon } from "../../icons/ShrinkIcon";
+import CloseIcon from "../../icons/CloseIcon";
 
 export interface HeaderProps {}
 
@@ -41,28 +44,66 @@ export default function Header() {
           </div>
           {/* hambuger */}
           <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden cursor-pointer"
+            onClick={() => setIsMenuOpen((v) => !v)}
+            className="md:hidden cursor-pointer relative w-8 h-8"
+            aria-expanded={isMenuOpen}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
-            <HamburgerMdIcon />
+            <AnimatePresence initial={false} mode="wait">
+              {isMenuOpen ? (
+                <motion.span
+                  key="close"
+                  initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
+                  animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                  exit={{ opacity: 0, scale: 0.8, rotate: 10 }}
+                  transition={{ duration: 0.18 }}
+                  className="absolute inset-0"
+                >
+                  <CloseIcon className="w-8 h-8 text-black-80" />
+                </motion.span>
+              ) : (
+                <motion.span
+                  key="open"
+                  initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
+                  animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                  exit={{ opacity: 0, scale: 0.8, rotate: -10 }}
+                  transition={{ duration: 0.18 }}
+                  className="absolute inset-0"
+                >
+                  <HamburgerMdIcon className="w-8 h-8 text-black-80" />
+                </motion.span>
+              )}
+            </AnimatePresence>
           </button>
         </div>
       </Container>
 
       {/* Mobile menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-transparent">
-          <Container>
-            <div className="flex flex-col gap-p4 py-p8">
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            className="md:hidden bg-transparent overflow-hidden"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+          >
+            <motion.div
+              className="flex flex-col gap-p6 py-p12"
+              initial={{ y: -8 }}
+              animate={{ y: 0 }}
+              exit={{ y: -8 }}
+              transition={{ duration: 0.2 }}
+            >
               <a href="#">Works</a>
               <a href="#">Services</a>
               <a href="#">About</a>
               <a href="#">Subscribe</a>
               <a href="#">Contact</a>
-            </div>
-          </Container>
-        </div>
-      )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
