@@ -15,9 +15,9 @@ export function ExpandIcon(props: IconProps) {
       <path
         d="M10 19H5V14M14 5H19V10"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

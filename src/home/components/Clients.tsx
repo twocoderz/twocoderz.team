@@ -6,10 +6,10 @@ export default function Clients() {
     <section className="bg-transparent min-h-screen">
       <Container>
         <div className="flex flex-col gap-p6 py-p12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black-80 mb-p8">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black-80 mb-p8">
             Trusted by businesses
           </h2>
-          <div className="flex items-center justify-between">
+          <div className="flex items-start justify-between">
             <MyLink label="All works" href="#" />
             <p className="text-black-80 text-md lg:text-lg max-w-md">
               We help companies establish a strong digital presence through
@@ -17,6 +17,7 @@ export default function Clients() {
               reflect your brand and connect with your audience.
             </p>
           </div>
+          <div></div>
         </div>
       </Container>
     </section>

@@ -15,9 +15,9 @@ export function AddPlusIcon(props: IconProps) {
       <path
         d="M6 12H12M12 12H18M12 12V18M12 12V6"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

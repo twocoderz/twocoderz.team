@@ -15,9 +15,9 @@ export function CaretUpMdIcon(props: IconProps) {
       <path
         d="M8 14L12 10L16 14"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

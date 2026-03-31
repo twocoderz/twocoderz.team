@@ -15,9 +15,9 @@ export function ArrowLeftIcon(props: IconProps) {
       <path
         d="M3 12L8 17M3 12L8 7M3 12H21"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
