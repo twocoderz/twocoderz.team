@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRightIcon } from "../../icons/ArrowRightIcon";
 import { HamburgerMdIcon } from "../../icons/HamburgerMdIcon";
@@ -12,6 +12,8 @@ export interface HeaderProps {}
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const lastScrollYRef = useRef(0);
   const closeMenu = () => setIsMenuOpen(false);
 
   useEffect(() => {
@@ -25,13 +27,52 @@ export default function Header() {
     };
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY <= 8) {
+        setIsHeaderVisible(true);
+        lastScrollYRef.current = currentScrollY;
+        return;
+      }
+
+      const isScrollingDown = currentScrollY > lastScrollYRef.current;
+
+      if (isScrollingDown && currentScrollY > 80 && !isMenuOpen) {
+        setIsHeaderVisible(false);
+      } else {
+        setIsHeaderVisible(true);
+      }
+
+      lastScrollYRef.current = currentScrollY;
+    };
+
+    lastScrollYRef.current = window.scrollY;
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      setIsHeaderVisible(true);
+    }
+  }, [isMenuOpen]);
+
   const navItems = [
     { href: "#", label: "Works" },
     { href: "#", label: "Services" },
     { href: "#", label: "About" },
   ];
   return (
-    <header className="sticky top-0 z-50 bg-transparent backdrop-blur-md px-p6 py-p4">
+    <header
+      className={`sticky top-0 z-50 bg-transparent backdrop-blur-md px-p6 py-p4 transition-transform duration-300 ${
+        isHeaderVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <Container className="flex items-center justify-between">
         {/* Logo */}
         <Logo />
