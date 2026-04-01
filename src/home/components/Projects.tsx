@@ -99,8 +99,8 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
       </div>
 
       {/* Contenu texte */}
-      <div className="space-y-3">
-        <h3 className="text-xl font-bold text-black-70 group-hover:text-black-90 transition-colors duration-500">
+      <div className="space-y-2">
+        <h3 className="text-3xl font-bold text-black-70 group-hover:text-black-90 transition-colors duration-500">
           {project.name}
         </h3>
 

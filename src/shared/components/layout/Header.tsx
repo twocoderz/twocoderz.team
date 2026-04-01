@@ -66,6 +66,7 @@ export default function Header() {
     { href: "#", label: "Works" },
     { href: "#", label: "Services" },
     { href: "#", label: "About" },
+    { href: "#", label: "Blog" },
   ];
   return (
     <header
