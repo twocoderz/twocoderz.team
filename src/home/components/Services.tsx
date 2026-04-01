@@ -1,5 +1,4 @@
 import Container from "../../shared/components/ui/Container";
-import MyLink from "../../shared/components/ui/MyLink";
 import { ArrowRightIcon } from "../../shared/icons/ArrowRightIcon";
 
 const brandServices = [
@@ -30,10 +29,10 @@ const productServices = [
 
 function ServiceRow({ name, href }: { name: string; href: string }) {
   return (
-    <a href={href} className="group ">
-      <span className="text-lg font-bold text-black-80">{name}</span>
+    <a href={href} className="group flex items-center px-p5 py-p4 bg-primary">
+      <span className="text-lg font-bold text-white">{name}</span>
       <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-        <ArrowRightIcon className="w-5 h-5 text-black-80" />
+        <ArrowRightIcon className="w-5 h-5 text-white" />
       </span>
     </a>
   );
@@ -41,7 +40,7 @@ function ServiceRow({ name, href }: { name: string; href: string }) {
 
 export default function Services() {
   return (
-    <section className="bg-transparent min-h-scree">
+    <section className="bg-transparent min-h-screen">
       <Container>
         <div className="flex flex-col py-p6 ">
           <h2 className="text-2xl max-w-lg md:text-3xl lg:text-5xl font-bold text-black-80">
@@ -56,24 +55,28 @@ export default function Services() {
             </p>
           </div>
           {/* Deux colonnes */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-p4 mt-p5">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-start mt-p12">
             {/* Colonne brand */}
             <div>
-              <p className="text-sm uppercase tracking-widest mb-p1 opacity-50">
+              <p className="text-sm uppercase tracking-widest mb-p6 opacity-50">
                 Brand
               </p>
-              {brandServices.map((service) => (
-                <ServiceRow key={service.name} {...service} />
-              ))}
+              <div className="flex flex-col justify-center items-start gap-p4">
+                {brandServices.map((service) => (
+                  <ServiceRow key={service.name} {...service} />
+                ))}
+              </div>
             </div>
             {/* Colonne product */}
             <div>
-              <p className="text-sm uppercase tracking-widest mb-p1 opacity-50">
+              <p className="text-sm uppercase tracking-widest mb-p6 opacity-50">
                 Product
               </p>
-              {productServices.map((service) => (
-                <ServiceRow key={service.name} {...service} />
-              ))}
+              <div className="flex flex-col justify-center items-start gap-p4 ">
+                {productServices.map((service) => (
+                  <ServiceRow key={service.name} {...service} />
+                ))}
+              </div>
             </div>
           </div>
         </div>
