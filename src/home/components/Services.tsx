@@ -111,34 +111,27 @@ function ServiceRow({ name, href, shape, color }: ServiceRowProps) {
   return (
     <a
       href={href}
-      className="group relative flex items-center px-p4 py-p4 bg-black-80 rounded-full"
+      className="group relative flex items-center justify-between px-p4 py-p4 bg-black-80 rounded-full"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <motion.div
-        animate={{ x: isHovered ? 220 : 0, opacity: isHovered ? 0 : 1 }}
-        transition={{
-          type: "spring",
-          stiffness: 120,
-          damping: 25,
-        }}
-      >
-        <Shape type={shape} color={color} />
-      </motion.div>
+      <div className="flex items-center gap-p3 flex-1">
+        <motion.div
+          animate={{ x: isHovered ? 220 : 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 120,
+            damping: 25,
+          }}
+        >
+          <Shape type={shape} color={color} />
+        </motion.div>
+        <span className="text-lg font-bold text-white">{name}</span>
+      </div>
 
-      <motion.div
-        animate={{ x: isHovered ? 0 : -220, opacity: isHovered ? 1 : 0 }}
-        transition={{
-          type: "spring",
-          stiffness: 120,
-          damping: 25,
-        }}
-        className="absolute"
-      >
-        <Shape type={shape} color={color} />
-      </motion.div>
-
-      <span className="text-lg font-bold text-white">{name}</span>
+      <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+        <ArrowRightIcon className="w-5 h-5 text-white" />
+      </span>
     </a>
   );
 }
