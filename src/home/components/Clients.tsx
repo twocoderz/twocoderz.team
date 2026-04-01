@@ -19,67 +19,64 @@ import Twocoderz from "/images/logo.png?url";
 export default function Clients() {
   const logos = [
     {
-      name: "two",
-      src: Twocoderz,
-    },
-    {
-      name: "stripe",
-      src: Stripe,
+      name: "netflix",
+      src: Netflix,
     },
     {
       name: "adobe",
       src: Adobe,
     },
     {
-      name: "mtn",
-      src: Mtn,
+      name: "apple",
+      src: Apple,
     },
     {
-      name: "mozilla",
-      src: Mozilla,
+      name: "stripe",
+      src: Stripe,
     },
     {
       name: "meta",
       src: Meta,
     },
-
     {
       name: "opera",
       src: Opera,
-    },
-    {
-      name: "oppo",
-      src: Oppo,
     },
     {
       name: "spotify",
       src: Spotify,
     },
     {
-      name: "snap",
-      src: Snap,
-    },
-
-    {
-      name: "netflix",
-      src: Netflix,
-    },
-
-    {
-      name: "chelse",
-      src: Chelsea,
+      name: "mozilla",
+      src: Mozilla,
     },
     {
-      name: "apple",
-      src: Apple,
+      name: "oppo",
+      src: Oppo,
     },
     {
       name: "anthropic",
       src: Anthropic,
     },
     {
+      name: "snap",
+      src: Snap,
+    },
+    {
+      name: "mtn",
+      src: Mtn,
+    },
+    {
       name: "xerox",
       src: Xerox,
+    },
+    {
+      name: "chelse",
+      src: Chelsea,
+    },
+    {
+      name: "two",
+      src: Twocoderz,
     },
   ];
 
