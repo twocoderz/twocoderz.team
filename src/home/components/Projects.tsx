@@ -52,7 +52,7 @@ const projects = [
   },
 ];
 
-// composant card individuel
+// Composant carte individuelle
 function ProjectCard({ project }: { project: (typeof projects)[0] }) {
   const [current, setCurrent] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
@@ -78,30 +78,41 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
       href={project.href}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="group block mb-32 py-12"
+      className="group block py-12"
     >
-      {/* Bloc image */}
+      {/* Bloc image - hauteur fixe */}
       <div
-        className={`relative w-full aspect-video rounded-md overflow-hidden mb-p1 ${project.tall ? "h-130" : "h-80"}`}
+        className={`relative w-full rounded-lg overflow-hidden mb-6 transition-all duration-300 ${
+          project.tall ? "h-130" : "h-80"
+        }`}
       >
         {project.slides.map((src, index) => (
           <img
             key={src}
             src={src}
             alt={`${project.name} slide ${index + 1}`}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${index === current ? "opacity-100" : "opacity-0"} `}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+              index === current ? "opacity-100" : "opacity-0"
+            }`}
           />
         ))}
       </div>
-      {/* Texte */}
-      <h3 className="text-xl font-bold text-black-70 mt-p4 group-hover:text-black-90 transition-all duration-500">
-        {project.name}
-      </h3>
-      <p
-        className={`text-black-80 text-md font-normal mt-p1 transition-all duration-500 overflow-hidden ${isHovered ? "max-h-20 opacity-100" : "max-h-0 opacity-0"}`}
-      >
-        {project.description}
-      </p>
+
+      {/* Contenu texte */}
+      <div className="space-y-3">
+        <h3 className="text-xl font-bold text-black-70 group-hover:text-black-90 transition-colors duration-500">
+          {project.name}
+        </h3>
+
+        {/* Description avec animation slide-up depuis le bas */}
+        <p
+          className={`text-black-80 text-md font-normal transition-all duration-500 ease-out ${
+            isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+          }`}
+        >
+          {project.description}
+        </p>
+      </div>
     </a>
   );
 }
