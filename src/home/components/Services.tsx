@@ -1,37 +1,117 @@
 import Container from "../../shared/components/ui/Container";
 import { ArrowRightIcon } from "../../shared/icons/ArrowRightIcon";
 
+type ShapeType = "square" | "circle" | "heart" | "triangle";
+
 const brandServices = [
   {
     name: "Brand Strategy",
     href: "#",
+    shape: "heart" as ShapeType,
+    color: "#FF1493",
   },
   {
     name: "Startup Branding",
     href: "#",
+    shape: "heart" as ShapeType,
+    color: "#FF1493",
   },
   {
     name: "Branding",
     href: "#",
+    shape: "circle" as ShapeType,
+    color: "#3B82F6",
   },
   {
     name: "Web Design",
     href: "#",
+    shape: "square" as ShapeType,
+    color: "#10B981",
   },
 ];
 
 const productServices = [
-  { name: "App Design", href: "#" },
-  { name: "UX Design", href: "#" },
-  { name: "Design Systems", href: "#" },
-  { name: "Web App Development", href: "#" },
+  {
+    name: "App Design",
+    href: "#",
+    shape: "triangle" as ShapeType,
+    color: "#EC4899",
+  },
+  {
+    name: "UX Design",
+    href: "#",
+    shape: "triangle" as ShapeType,
+    color: "#10B981",
+  },
+  {
+    name: "Design Systems",
+    href: "#",
+    shape: "square" as ShapeType,
+    color: "#FBBF24",
+  },
+  {
+    name: "Web App Development",
+    href: "#",
+    shape: "square" as ShapeType,
+    color: "#EC4899",
+  },
 ];
 
-function ServiceRow({ name, href }: { name: string; href: string }) {
+function Shape({ type, color }: { type: ShapeType; color: string }) {
+  switch (type) {
+    case "square":
+      return (
+        <div
+          className="w-4 h-4 rounded-sm mr-p3 shrink-0"
+          style={{ backgroundColor: color }}
+        />
+      );
+    case "circle":
+      return (
+        <div
+          className="w-4 h-4 rounded-full mr-p3 shrink-0"
+          style={{ backgroundColor: color }}
+        />
+      );
+    case "heart":
+      return (
+        <svg
+          className="w-4 h-4 mr-p3 shrink-0"
+          viewBox="0 0 24 24"
+          fill={color}
+        >
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+        </svg>
+      );
+    case "triangle":
+      return (
+        <svg
+          className="w-4 h-4 mr-p3 shrink-0"
+          viewBox="0 0 24 24"
+          fill={color}
+        >
+          <polygon points="12,2 22,22 2,22" />
+        </svg>
+      );
+  }
+}
+
+interface ServiceRowProps {
+  name: string;
+  href: string;
+  shape: ShapeType;
+  color: string;
+}
+
+function ServiceRow({ name, href, shape, color }: ServiceRowProps) {
   return (
-    <a href={href} className="group flex items-center px-p5 py-p4 bg-primary">
+    <a
+      href={href}
+      className="group flex items-center px-p4 py-p4 bg-black-80 rounded-full"
+    >
+      <Shape type={shape} color={color} />
       <span className="text-lg font-bold text-white">{name}</span>
-      <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+      <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 ml-auto">
         <ArrowRightIcon className="w-5 h-5 text-white" />
       </span>
     </a>
