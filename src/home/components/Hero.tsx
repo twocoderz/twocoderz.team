@@ -22,8 +22,8 @@ export default function Hero() {
       <Container>
         <div className="py-p14">
           {/* hero center texts */}
-          <div className="text-center max-w-3xl mx-auto mb-p4">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl text-black-70 font-bold leading-none mb-p8 mt-p6">
+          <div className="text-center max-w-6xl md:max-w-lg lg:max-w-3xl mx-auto mb-p4">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl text-black-70 font-bold leading-none mb-p8 mt-p6">
               We build websites that grow your business
               <span className="inline-block w-4 h-4 bg-primary ml-1"></span>
             </h1>

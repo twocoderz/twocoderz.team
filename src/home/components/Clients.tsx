@@ -83,27 +83,27 @@ export default function Clients() {
   return (
     <section className="bg-transparent min-h-screen">
       <Container>
-        <div className="flex flex-col gap-p6 py-p12">
+        <div className="flex flex-col gap-p6 py-p6 md:py-p8 lg:py-p12">
           <h2 className="text-2xl max-w-lg md:text-3xl lg:text-4xl font-bold text-black-80">
             Trusted by businesses
           </h2>
-          <div className="flex items-start justify-between gap-p8">
+          <div className="flex flex-col md:flex-row items-start justify-between gap-p8">
             <MyLink label="All works" href="#" />
             <p className="text-black-80 text-md lg:text-lg max-w-md">
               We help companies establish a strong digital presence through
               modern, high-performing websites.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-p8 mt-p16">
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-p2 md:gap-p4 lg:gap-p8 mt-p16">
             {logos.map((logo) => (
               <div
                 key={logo.name}
-                className="group flex items-center justify-center py-p8"
+                className="group flex items-center justify-center py-p2 md:py-p4 lg:py-p8"
               >
                 <img
                   src={logo.src}
                   alt={logo.name}
-                  className="h-8 group-hover:scale-105 transition-all duration-500 w-auto"
+                  className="h-4 md:h-6 lg:h-8 group-hover:scale-105 transition-all duration-500 w-auto"
                 />
               </div>
             ))}
