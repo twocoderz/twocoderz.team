@@ -9,17 +9,18 @@ import Meta from "/images/meta.svg?url";
 import Mozilla from "/images/mozilla.svg?url";
 import Opera from "/images/opera.svg?url";
 import Mtn from "/images/mtn.svg?url";
-import Oracle from "/images/oracle.svg?url";
 import Spotify from "/images/spotify.svg?url";
 import Stripe from "/images/stripe.svg?url";
 import Snap from "/images/snapchat.svg?url";
 import Chelsea from "/images/chelsea.svg?url";
+import Xerox from "/images/xerox.svg?url";
+import Twocoderz from "/images/logo.png?url";
 
 export default function Clients() {
   const logos = [
     {
-      name: "netflix",
-      src: Netflix,
+      name: "two",
+      src: Twocoderz,
     },
     {
       name: "stripe",
@@ -58,9 +59,10 @@ export default function Clients() {
       name: "snap",
       src: Snap,
     },
+
     {
-      name: "oracle",
-      src: Oracle,
+      name: "netflix",
+      src: Netflix,
     },
 
     {
@@ -75,13 +77,17 @@ export default function Clients() {
       name: "anthropic",
       src: Anthropic,
     },
+    {
+      name: "xerox",
+      src: Xerox,
+    },
   ];
 
   return (
     <section className="bg-transparent min-h-screen">
       <Container>
         <div className="flex flex-col gap-p6 py-p12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black-80 mb-p8">
+          <h2 className="text-2xl max-w-lg md:text-3xl lg:text-4xl font-bold text-black-80 mb-p8">
             Trusted by businesses
           </h2>
           <div className="flex items-start justify-between">
@@ -91,15 +97,17 @@ export default function Clients() {
               modern, high-performing websites.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-p4 mt-p8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-p4 mt-p12">
             {logos.map((logo) => (
               <div
                 key={logo.name}
-                className="flex items-center justify-center py-p6"
+                className="group flex items-center justify-center py-p9"
               >
-                <img src={logo.src} alt={logo.name} className="h-6 w-auto">
-                  {logo.src}
-                </img>
+                <img
+                  src={logo.src}
+                  alt={logo.name}
+                  className="h-8 group-hover:scale-105 transition-all duration-500 w-auto"
+                />
               </div>
             ))}
           </div>
