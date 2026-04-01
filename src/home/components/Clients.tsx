@@ -15,6 +15,7 @@ import Snap from "/images/snapchat.svg?url";
 import Chelsea from "/images/chelsea.svg?url";
 import Xerox from "/images/xerox.svg?url";
 import Twocoderz from "/images/logo.png?url";
+import Projects from "./Projects";
 
 export default function Clients() {
   const logos = [
@@ -83,7 +84,7 @@ export default function Clients() {
   return (
     <section className="bg-transparent min-h-screen">
       <Container>
-        <div className="flex flex-col gap-p6 py-p6 md:py-p8 lg:py-p12">
+        <div className="flex flex-col gap-p6 py-p6 md:py-p8 lg:py-p12 mb-p8">
           <h2 className="text-2xl max-w-lg md:text-3xl lg:text-4xl font-bold text-black-80">
             Trusted by businesses
           </h2>
@@ -109,6 +110,7 @@ export default function Clients() {
             ))}
           </div>
         </div>
+        <Projects />
       </Container>
     </section>
   );
