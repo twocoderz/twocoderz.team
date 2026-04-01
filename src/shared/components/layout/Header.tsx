@@ -69,7 +69,7 @@ export default function Header() {
   ];
   return (
     <header
-      className={`sticky top-0 z-50 bg-white backdrop-blur-md px-p6 py-p4 transition-transform duration-300 ${
+      className={`sticky top-0 z-50 bg-white backdrop-blur-md py-p4 transition-transform duration-300 ${
         isHeaderVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -77,7 +77,7 @@ export default function Header() {
         {/* Logo */}
         <Logo />
         {/* nav */}
-        <nav className="hidden md:flex md:items-center gap-p8">
+        <nav className="hidden md:flex md:items-center gap-p12">
           {/* desktop nav */}
           {navItems.map((item) => (
             <NavItem key={item.label} href={item.href}>
