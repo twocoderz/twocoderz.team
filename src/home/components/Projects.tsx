@@ -12,6 +12,7 @@ const projects = [
       "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800",
       "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800",
     ],
+    tall: true,
   },
   {
     name: "Rizzle",
@@ -23,6 +24,7 @@ const projects = [
       "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800",
       "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?w=800",
     ],
+    tall: false,
   },
   {
     name: "Firefox",
@@ -34,6 +36,7 @@ const projects = [
       "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800",
       "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800",
     ],
+    tall: false,
   },
   {
     name: "Clearbit",
@@ -45,6 +48,7 @@ const projects = [
       "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800",
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
     ],
+    tall: true,
   },
 ];
 
@@ -74,10 +78,12 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
       href={project.href}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="group"
+      className="group block mb-32 py-12"
     >
       {/* Bloc image */}
-      <div className="relative w-full aspect-video rounded-sm overflow-hidden mb-p1">
+      <div
+        className={`relative w-full aspect-video rounded-md overflow-hidden mb-p1 ${project.tall ? "h-130" : "h-80"}`}
+      >
         {project.slides.map((src, index) => (
           <img
             key={src}
@@ -88,10 +94,14 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
         ))}
       </div>
       {/* Texte */}
-      <h3 className="text-md font-bold text-black-70 group-hover:text-black-90 transition-all duration-500">
+      <h3 className="text-xl font-bold text-black-70 mt-p4 group-hover:text-black-90 transition-all duration-500">
         {project.name}
       </h3>
-      <p className="text-black-80 text-md">{project.description}</p>
+      <p
+        className={`text-black-80 text-md font-normal mt-p1 transition-all duration-500 overflow-hidden ${isHovered ? "max-h-20 opacity-100" : "max-h-0 opacity-0"}`}
+      >
+        {project.description}
+      </p>
     </a>
   );
 }
@@ -101,7 +111,7 @@ export default function Projects() {
     <section>
       <Container>
         {/* Grille de projets */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-p2">
+        <div className="columns-1 md:columns-2 gap-24">
           {projects.map((project) => (
             <ProjectCard key={project.name} project={project} />
           ))}
