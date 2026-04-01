@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { motion } from "framer-motion";
 import Container from "../../shared/components/ui/Container";
 import { ArrowRightIcon } from "../../shared/icons/ArrowRightIcon";
 
@@ -104,16 +106,39 @@ interface ServiceRowProps {
 }
 
 function ServiceRow({ name, href, shape, color }: ServiceRowProps) {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <a
       href={href}
-      className="group flex items-center px-p4 py-p4 bg-black-80 rounded-full"
+      className="group relative flex items-center px-p4 py-p4 bg-black-80 rounded-full"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      <Shape type={shape} color={color} />
+      <motion.div
+        animate={{ x: isHovered ? 220 : 0, opacity: isHovered ? 0 : 1 }}
+        transition={{
+          type: "spring",
+          stiffness: 120,
+          damping: 25,
+        }}
+      >
+        <Shape type={shape} color={color} />
+      </motion.div>
+
+      <motion.div
+        animate={{ x: isHovered ? 0 : -220, opacity: isHovered ? 1 : 0 }}
+        transition={{
+          type: "spring",
+          stiffness: 120,
+          damping: 25,
+        }}
+        className="absolute"
+      >
+        <Shape type={shape} color={color} />
+      </motion.div>
+
       <span className="text-lg font-bold text-white">{name}</span>
-      <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 ml-auto">
-        <ArrowRightIcon className="w-5 h-5 text-white" />
-      </span>
     </a>
   );
 }
