@@ -117,7 +117,10 @@ function ServiceRow({ name, href, shape, color }: ServiceRowProps) {
     >
       <div className="flex items-center gap-p3 flex-1">
         <motion.div
-          animate={{ x: isHovered ? 220 : 0 }}
+          animate={{
+            opacity: isHovered ? 0 : 1,
+            pointerEvents: isHovered ? "none" : "auto",
+          }}
           transition={{
             type: "spring",
             stiffness: 120,
@@ -129,8 +132,23 @@ function ServiceRow({ name, href, shape, color }: ServiceRowProps) {
         <span className="text-lg font-bold text-white">{name}</span>
       </div>
 
-      <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-        <ArrowRightIcon className="w-5 h-5 text-white" />
+      <motion.div
+        animate={{
+          opacity: isHovered ? 1 : 0,
+          pointerEvents: isHovered ? "auto" : "none",
+        }}
+        transition={{
+          type: "spring",
+          stiffness: 120,
+          damping: 25,
+        }}
+        className="absolute right-p4 top-1/2 -translate-y-1/2"
+      >
+        <Shape type={shape} color={color} />
+      </motion.div>
+
+      <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 ml-p3">
+        <div></div>
       </span>
     </a>
   );
