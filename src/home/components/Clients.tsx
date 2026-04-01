@@ -90,7 +90,7 @@ export default function Clients() {
           </h2>
           <div className="flex flex-col md:flex-row items-start justify-between gap-p8">
             <MyLink label="All works" href="#" />
-            <p className="text-black-80 text-md lg:text-lg max-w-md">
+            <p className="text-black-80 text-sm lg:text-md max-w-md">
               We help companies establish a strong digital presence through
               modern, high-performing websites.
             </p>
