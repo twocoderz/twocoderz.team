@@ -1,23 +1,80 @@
 import Container from "../../shared/components/ui/Container";
 import MyLink from "../../shared/components/ui/MyLink";
+import Netflix from "/images/netflix.svg?url";
+import Adobe from "/images/adobe.svg?url";
+import Apple from "/images/apple.svg?url";
+import Oppo from "/images/oppo.svg?url";
+import Anthropic from "/images/anthropic.svg?url";
+import Meta from "/images/meta.svg?url";
+import Mozilla from "/images/mozilla.svg?url";
+import Opera from "/images/opera.svg?url";
+import Mtn from "/images/mtn.svg?url";
+import Oracle from "/images/oracle.svg?url";
+import Spotify from "/images/spotify.svg?url";
+import Stripe from "/images/stripe.svg?url";
+import Snap from "/images/snapchat.svg?url";
+import Chelsea from "/images/chelsea.svg?url";
 
 export default function Clients() {
-  const clients = [
-    "Netflix",
-    "Spotify",
-    "Stripe",
-    "Adobe",
-    "Mozilla",
-    "Salesforce",
-    "Opera",
-    "Octa",
-    "Citrix",
-    "Redis",
-    "Oppo",
-    "Universal",
-    "Turo",
-    "Xero",
-    "Xsolla",
+  const logos = [
+    {
+      name: "netflix",
+      src: Netflix,
+    },
+    {
+      name: "stripe",
+      src: Stripe,
+    },
+    {
+      name: "adobe",
+      src: Adobe,
+    },
+    {
+      name: "mtn",
+      src: Mtn,
+    },
+    {
+      name: "mozilla",
+      src: Mozilla,
+    },
+    {
+      name: "meta",
+      src: Meta,
+    },
+
+    {
+      name: "opera",
+      src: Opera,
+    },
+    {
+      name: "oppo",
+      src: Oppo,
+    },
+    {
+      name: "spotify",
+      src: Spotify,
+    },
+    {
+      name: "snap",
+      src: Snap,
+    },
+    {
+      name: "oracle",
+      src: Oracle,
+    },
+
+    {
+      name: "chelse",
+      src: Chelsea,
+    },
+    {
+      name: "apple",
+      src: Apple,
+    },
+    {
+      name: "anthropic",
+      src: Anthropic,
+    },
   ];
 
   return (
@@ -31,19 +88,18 @@ export default function Clients() {
             <MyLink label="All works" href="#" />
             <p className="text-black-80 text-md lg:text-lg max-w-md">
               We help companies establish a strong digital presence through
-              modern, high-performing websites. Every project is designed to
-              reflect your brand and connect with your audience.
+              modern, high-performing websites.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-p4 mt-p8">
-            {clients.map((client) => (
+            {logos.map((logo) => (
               <div
-                key={client}
+                key={logo.name}
                 className="flex items-center justify-center py-p6"
               >
-                <span className="text-black-90 text-4xl font-bold">
-                  {client}
-                </span>
+                <img src={logo.src} alt={logo.name} className="h-6 w-auto">
+                  {logo.src}
+                </img>
               </div>
             ))}
           </div>
