@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Container from "../../shared/components/ui/Container";
-import { ArrowRightIcon } from "../../shared/icons/ArrowRightIcon";
+
 
 type ShapeType = "square" | "circle" | "heart" | "triangle";
 
