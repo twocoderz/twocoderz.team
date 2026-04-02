@@ -52,7 +52,6 @@ const SERVICES = [
 const ACCENT_DARK = "#1a0b33";
 const ACCENT_NAV_MUTED = "#3d2a5c";
 
-
 export default function Services() {
   const [activeIndex, setActiveIndex] = useState(0);
   const total = SERVICES.length;
@@ -68,16 +67,18 @@ export default function Services() {
   const indexLabel = (n: number) => String(n + 1).padStart(2, "0");
 
   return (
-    <section className="bg-[#f5f5f7] py-p12 md:py-p16">
+    <section className="bg-transparent py-p12 md:py-p16">
       <Container>
         <div className="flex flex-col gap-p8 md:gap-p10">
-          <div className="max-w-2xl">
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black tracking-tight">
-              Our services
-            </h2>
-            <p className="mt-p4 text-black-70 text-sm md:text-r16 leading-relaxed">
-              End-to-end delivery across mobile, web, APIs, and design—one team,
-              clear communication, and builds you can evolve for years.
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black tracking-tight">
+            Our services
+          </h2>
+          <div className="flex flex-col md:flex-row items-start justify-between gap-p8">
+            <div></div>
+            <p className="text-black-80 text-sm lg:text-md max-w-md">
+              Our services cover every stage of your digital project, from
+              initial ideas to final delivery. We focus on clarity, performance,
+              and long-term scalability.
             </p>
           </div>
 
@@ -109,9 +110,7 @@ export default function Services() {
                       : "w-[4.5rem] sm:w-24 md:flex-[0.35] md:min-w-[5.5rem] md:w-auto",
                   ].join(" ")}
                   style={
-                    isActive
-                      ? { backgroundColor: ACCENT_DARK }
-                      : undefined
+                    isActive ? { backgroundColor: ACCENT_DARK } : undefined
                   }
                 >
                   {isActive ? (

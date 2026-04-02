@@ -85,7 +85,7 @@ export default function Clients() {
     <section className="bg-transparent min-h-screen">
       <Container>
         <div className="flex flex-col gap-p6 py-p6 md:py-p8 lg:py-p12 mb-p8">
-          <h2 className="text-2xl max-w-lg md:text-3xl lg:text-4xl font-bold text-black-80">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black tracking-tight">
             Trusted by businesses
           </h2>
           <div className="flex flex-col md:flex-row items-start justify-between gap-p8">
