@@ -23,7 +23,7 @@ export default function HomePage() {
     <>
       <a
         href="#main-content"
-        className="fixed left-4 top-0 z-[100] -translate-y-full rounded-b-md bg-black px-p4 py-p2 text-sm font-medium text-white shadow-md transition-transform focus:translate-y-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+        className="fixed left-4 top-0 z-100 -translate-y-full rounded-b-md bg-black px-p4 py-p2 text-sm font-medium text-white shadow-md transition-transform focus:translate-y-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
       >
         Skip to main content
       </a>
