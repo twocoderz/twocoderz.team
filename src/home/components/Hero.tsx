@@ -18,7 +18,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="bg-transparent min-h-screen">
+    <section className="bg-transparent py-p12 md:py-p16">
       <Container>
         <div className="py-p14">
           {/* hero center texts */}

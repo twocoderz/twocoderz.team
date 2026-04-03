@@ -102,12 +102,12 @@ export default function Services() {
                   aria-current={isActive ? "true" : undefined}
                   onClick={() => setActiveIndex(index)}
                   className={[
-                    "relative shrink-0 snap-center rounded-r6 text-left overflow-hidden border-0 cursor-pointer",
+                    "relative shrink-0 snap-center rounded-r1 text-left overflow-hidden border-0 cursor-pointer",
                     "focus:outline-none focus-visible:ring-2 focus-visible:ring-black/25 focus-visible:ring-offset-2",
                     "min-h-[min(72vh,520px)] md:min-h-0",
                     isActive
-                      ? "w-[min(88vw,420px)] md:flex-[3] md:min-w-0 md:w-auto"
-                      : "w-[4.5rem] sm:w-24 md:flex-[0.35] md:min-w-[5.5rem] md:w-auto",
+                      ? "w-[min(88vw,420px)] md:flex-[5] md:min-w-0 md:w-auto"
+                      : "w-[4.5rem] sm:w-24 md:flex-[1] md:min-w-[5.5rem] md:w-auto",
                   ].join(" ")}
                   style={
                     isActive ? { backgroundColor: ACCENT_DARK } : undefined
@@ -123,8 +123,8 @@ export default function Services() {
                           /{String(total).padStart(2, "0")}
                         </span>
                       </p>
-                      <div className="mt-p6 flex flex-1 flex-col justify-center gap-p4">
-                        <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight">
+                      <div className="flex flex-1 flex-col justify-center gap-p4 max-w-sm">
+                        <h3 className="text-xl md:text-2xl lg:text-4xl font-bold text-white leading-tight">
                           {service.title}
                         </h3>
                         <p className="text-sm md:text-r16 text-white/55 leading-relaxed max-w-prose">
@@ -158,7 +158,7 @@ export default function Services() {
             <button
               type="button"
               onClick={goPrev}
-              className="inline-flex h-12 w-12 items-center justify-center rounded-full text-white shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20 focus-visible:ring-offset-2"
+              className="inline-flex h-8 w-8 items-center justify-center rounded-r1 text-white shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20 focus-visible:ring-offset-2"
               style={{ backgroundColor: ACCENT_DARK }}
               aria-label="Previous service"
             >
@@ -167,7 +167,7 @@ export default function Services() {
             <button
               type="button"
               onClick={goNext}
-              className="inline-flex h-12 w-12 items-center justify-center rounded-full text-white shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20 focus-visible:ring-offset-2"
+              className="inline-flex h-8 w-8 items-center justify-center rounded-r1 text-white shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20 focus-visible:ring-offset-2"
               style={{ backgroundColor: ACCENT_NAV_MUTED }}
               aria-label="Next service"
             >

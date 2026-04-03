@@ -82,9 +82,9 @@ export default function Clients() {
   ];
 
   return (
-    <section className="bg-transparent min-h-screen">
+    <section className="bg-transparent py-p12 md:py-p16">
       <Container>
-        <div className="flex flex-col gap-p6 py-p6 md:py-p8 lg:py-p12 mb-p8">
+        <div className="flex flex-col gap-p6 mb-p8">
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black tracking-tight">
             Trusted by businesses
           </h2>
