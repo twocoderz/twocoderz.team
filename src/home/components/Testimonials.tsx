@@ -1,72 +1,162 @@
+import { useState } from "react";
 import Container from "../../shared/components/ui/Container";
 import MyLink from "../../shared/components/ui/MyLink";
 import MyUser from "../../shared/components/ui/MyUser";
+import { ArrowLeftIcon } from "../../shared/icons/ArrowLeftIcon";
+import { ArrowRightIcon } from "../../shared/icons/ArrowRightIcon";
 
-const users = [
-  { name: "Brian Beaver", src: "", profession: "VP of Design at Turo" },
+const testimonials = [
+  {
+    name: "Brian Beaver",
+    profession: "VP of Design at Turo",
+    company: "apple",
+    quote:
+      "The team's exceptional design thinking and execution transformed our vision into reality. Couldn't be happier with the results.",
+  },
   {
     name: "Malini Leveque",
-    src: "",
     profession: "Vice President, Product Design and Research at Citrix",
+    company: "adobe",
+    quote:
+      "Outstanding collaboration and attention to detail. They truly understand what makes great design work across all platforms.",
   },
   {
     name: "Dan Brown",
-    src: "",
     profession: "Senior Marketing Manager at Mozilla",
+    company: "mozilla",
+    quote:
+      "Their approach to problem-solving is refreshing. We've seen tangible improvements in user engagement and satisfaction.",
   },
   {
-    name: "Chris chen",
-    src: "",
+    name: "Chris Chen",
     profession: "Head of ColorOS Design Department at Oppo",
+    company: "oppo",
+    quote:
+      "Impressed with their technical expertise and creative solutions. A pleasure to work with from start to finish.",
   },
   {
     name: "Chris Bank",
-    src: "",
-    profession:
-      "VP of Design at TuroSr. Manager of Customer Online Experience at Okta ",
+    profession: "VP of Design at Turo",
+    company: "meta",
+    quote:
+      "They delivered beyond our expectations. The team's passion for excellence is evident in every detail of their work.",
   },
-  { name: "Andrew Mason", src: "", profession: "CEO at Descript" },
+  {
+    name: "Andrew Mason",
+    profession: "CEO at Descript",
+    company: "spotify",
+    quote:
+      "Working with them elevated our entire product. Their insights and execution quality are second to none.",
+  },
   {
     name: "Mark Opland",
-    src: "",
     profession: "Product Design Director at Xero",
+    company: "xerox",
+    quote:
+      "The best investment we made this year. Their strategic thinking paired with design excellence is a winning combination.",
   },
   {
     name: "Khoi Vinh",
-    src: "",
     profession: "Senior Director of Product Design at Adobe",
+    company: "adobe",
+    quote:
+      "Exceptional talent and professionalism. They brought our most ambitious ideas to life with remarkable skill.",
   },
   {
     name: "Edu Carneiro",
-    src: "",
     profession: "Head of Web Marketing, Brand & SEO at Redis",
+    company: "stripe",
+    quote:
+      "From concept to launch, everything was handled with care and precision. Highly recommend their services.",
   },
   {
     name: "Kevin Sproles",
-    src: "",
     profession: "CEO at Volusion",
+    company: "netflix",
+    quote:
+      "Thankful for the team for helping us take the Volusion brand to the next level. Couldn't have done it without them.",
+  },
+  {
+    name: "Sarah Johnson",
+    profession: "Design Director at Snapchat",
+    company: "snapchat",
+    quote:
+      "Their innovative approach and deep understanding of design principles made our project a huge success.",
   },
 ];
 
 export default function Testimonials() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) =>
+      prev === 0 ? testimonials.length - 1 : prev - 1,
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prev) =>
+      prev === testimonials.length - 1 ? 0 : prev + 1,
+    );
+  };
+
+  const current = testimonials[currentIndex];
+
   return (
     <section>
       <Container>
-        <div className="flex flex-col items-start gap-p8 ">
-          <h2>What our clients say</h2>
-          <MyLink href="#" label="Reviews" />
-        </div>
-        <div>
-          <div></div>
-          <p></p>
-          <div>
-            {users.map((user) => (
-              <MyUser
-                src={user.src}
-                name={user.name}
-                profession={user.profession}
+        <div className="flex items-start justify-between">
+          <div className="flex flex-col items-start gap-p8 max-w-sm">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black tracking-tight">
+              What our clients say
+            </h2>
+            <MyLink href="#" label="Reviews" />
+          </div>
+
+          <div className="flex flex-col items-start max-w-lg">
+            <div className="flex items-center justify-between">
+              {/* Company Logo */}
+              <img
+                src={`/images/${current.company}.svg`}
+                alt={current.company}
+                className="h-p12 mb-p12 object-contain"
               />
-            ))}
+              <div className="flex flex-col items-center justify-center min-w-fit">
+                <p className="text-black-50 text-sm mb-p8">
+                  {String(currentIndex + 1).padStart(2, "0")} /{" "}
+                  {String(testimonials.length).padStart(2, "0")}
+                </p>
+                <div className="flex gap-p4">
+                  <button
+                    onClick={handlePrev}
+                    className="p-p4 hover:bg-gray-100 rounded-lg transition-colors"
+                    aria-label="Previous testimonial"
+                  >
+                    <ArrowLeftIcon />
+                  </button>
+                  <button
+                    onClick={handleNext}
+                    className="p-p4 hover:bg-gray-100 rounded-lg transition-colors"
+                    aria-label="Next testimonial"
+                  >
+                    <ArrowRightIcon />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col">
+              {/* Quote */}
+              <p className="text-lg font-normal text-black-80 mb-p12 leading-relaxed max-w-2xl">
+                "{current.quote}"
+              </p>
+
+              {/* User Info */}
+              <MyUser
+                src=""
+                name={current.name}
+                profession={current.profession}
+              />
+            </div>
           </div>
         </div>
       </Container>
