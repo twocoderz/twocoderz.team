@@ -122,7 +122,7 @@ export default function Testimonials() {
   const current = testimonials[currentIndex];
 
   return (
-    <Section>
+    <Section id="testimonials">
       <Container>
         <div className="flex flex-col ">
           <div className="flex items-start justify-between mb-p16">
@@ -130,7 +130,7 @@ export default function Testimonials() {
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black tracking-tight">
                 What our clients say
               </h2>
-              <MyLink href="#" label="Reviews" />
+              <MyLink href="#testimonials" label="Reviews" />
             </div>
 
             <div className="flex flex-col items-start max-w-2xl px-p4 py-p4">

@@ -249,7 +249,7 @@ export default function Services() {
   );
 
   return (
-    <Section clipOverflow={false}>
+    <Section id="services" clipOverflow={false}>
       <Container>
         <div className="flex flex-col gap-p6">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black tracking-tight">

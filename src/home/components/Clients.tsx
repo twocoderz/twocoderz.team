@@ -83,14 +83,14 @@ export default function Clients() {
   ];
 
   return (
-    <Section>
+    <Section id="works">
       <Container>
         <div className="flex flex-col gap-p6 mb-p8">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black tracking-tight">
             Trusted by businesses
           </h2>
           <div className="flex flex-col md:flex-row items-start justify-between gap-p8">
-            <MyLink label="All works" href="#" />
+            <MyLink label="All works" href="#works" />
             <p className="text-black-80 text-sm lg:text-md max-w-md">
               We help companies establish a strong digital presence through
               modern, high-performing websites.

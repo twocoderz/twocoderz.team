@@ -4,10 +4,13 @@ import Section from "../../shared/components/ui/Section";
 
 export default function Footer() {
   return (
-    <Section>
+    <Section id="site-footer" noScrollMargin>
       <Container>
         <div className="flex flex-col gap-p12">
-          <div className="flex items-center justify-between bg-black-5 p-p8 rounded-r2">
+          <div
+            id="newsletter"
+            className="flex scroll-mt-24 items-center justify-between rounded-r2 bg-black-5 p-p8 md:scroll-mt-28"
+          >
             <div className="flex flex-col">
               <h4 className="text-lg font-bold text-black-80">
                 Sign up for our newsletter
@@ -59,12 +62,15 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-col gap-p6">
+            <div
+              id="about"
+              className="flex scroll-mt-24 flex-col gap-p6 md:scroll-mt-28"
+            >
               <p className="text-xs text-black-40 font-semibold">Company</p>
               <ul className="flex flex-col gap-p3">
                 <li>
                   <a
-                    href="#"
+                    href="#about"
                     className="text-xs text-black-80 hover:text-black transition-all duration-500"
                   >
                     About
@@ -72,7 +78,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="#services"
                     className="text-xs text-black-80 hover:text-black transition-all duration-500"
                   >
                     Services
@@ -80,7 +86,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="#works"
                     className="text-xs text-black-80 hover:text-black transition-all duration-500"
                   >
                     Works
@@ -96,12 +102,15 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-col gap-p6">
+            <div
+              id="blog"
+              className="flex scroll-mt-24 flex-col gap-p6 md:scroll-mt-28"
+            >
               <p className="text-xs text-black-40 font-semibold">Learn</p>
               <ul className="flex flex-col gap-p3">
                 <li>
                   <a
-                    href="#"
+                    href="#testimonials"
                     className="text-xs text-black-80 hover:text-black transition-all duration-500"
                   >
                     Reviews
@@ -117,7 +126,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="#blog"
                     className="text-xs text-black-80 hover:text-black transition-all duration-500"
                   >
                     Articles
@@ -125,7 +134,10 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-col gap-p6">
+            <div
+              id="contact"
+              className="flex scroll-mt-24 flex-col gap-p6 md:scroll-mt-28"
+            >
               <p className="text-xs text-black-40 font-semibold">
                 Get in touch
               </p>
@@ -140,7 +152,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="#contact"
                     className="text-xs text-black-80 hover:text-black transition-all duration-500"
                   >
                     Contact up

@@ -19,7 +19,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <Section>
+    <Section id="hero">
       <Container>
         {/* hero center texts */}
         <div className="text-center max-w-6xl md:max-w-lg lg:max-w-3xl mx-auto mb-p12">

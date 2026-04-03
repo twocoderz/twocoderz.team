@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRightIcon } from "../../icons/ArrowRightIcon";
 import { HamburgerMdIcon } from "../../icons/HamburgerMdIcon";
-import { Button } from "../ui/Button";
 import Container from "../ui/Container";
 import Logo from "../ui/Logo";
 import NavItem from "../ui/NavItem";
@@ -63,10 +62,10 @@ export default function Header() {
   }, [isMenuOpen]);
 
   const navItems = [
-    { href: "#", label: "Works" },
-    { href: "#", label: "Services" },
-    { href: "#", label: "About" },
-    { href: "#", label: "Blog" },
+    { href: "#works", label: "Works" },
+    { href: "#services", label: "Services" },
+    { href: "#about", label: "About" },
+    { href: "#blog", label: "Blog" },
   ];
   return (
     <header
@@ -90,13 +89,19 @@ export default function Header() {
         <div className="flex items-center gap-p4">
           {/* CTA buttons */}
           <div className="hidden md:flex md:items-center md:gap-p4">
-            <Button variant="secondary" size="sm">
+            <a
+              href="#newsletter"
+              className="inline-flex select-none items-center gap-p2 overflow-hidden rounded-full border-2 border-black-70 bg-transparent px-4 py-2.5 text-xs font-normal tracking-wider text-black-80 transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black-80"
+            >
               Subscribe
-            </Button>
-            <Button variant="primary" size="sm">
+            </a>
+            <a
+              href="#contact"
+              className="relative inline-flex select-none items-center justify-center gap-0.5 overflow-hidden rounded-full border-2 border-white/25 bg-black-80 px-4 py-2.5 text-xs font-normal tracking-wider text-white transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+            >
               <span>Contact</span>
               <ArrowRightIcon className="w-4 h-4" />
-            </Button>
+            </a>
           </div>
           {/* menu buttons */}
           <button
@@ -153,19 +158,22 @@ export default function Header() {
               exit={{ y: -8 }}
               transition={{ duration: 0.2 }}
             >
-              <a href="#" onClick={closeMenu}>
+              <a href="#works" onClick={closeMenu}>
                 Works
               </a>
-              <a href="#" onClick={closeMenu}>
+              <a href="#services" onClick={closeMenu}>
                 Services
               </a>
-              <a href="#" onClick={closeMenu}>
+              <a href="#about" onClick={closeMenu}>
                 About
               </a>
-              <a href="#" onClick={closeMenu}>
+              <a href="#blog" onClick={closeMenu}>
+                Blog
+              </a>
+              <a href="#newsletter" onClick={closeMenu}>
                 Subscribe
               </a>
-              <a href="#" onClick={closeMenu}>
+              <a href="#contact" onClick={closeMenu}>
                 Contact
               </a>
             </motion.div>
