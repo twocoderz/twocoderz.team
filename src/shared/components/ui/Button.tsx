@@ -13,7 +13,7 @@ type ButtonSize = "sm" | "md" | "lg";
 const sizeMap: Record<ButtonSize, string> = {
   sm: "px-4 py-2.5 text-xs",
   md: "px-6 py-4 text-sm",
-  lg: "px-16 py-8 text-base",
+  lg: "px-16 py-6 text-base",
 };
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

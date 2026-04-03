@@ -57,14 +57,6 @@ export default function Footer() {
                     Facebook
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
-                  >
-                    Whatsapp
-                  </a>
-                </li>
               </ul>
             </div>
             <div className="flex flex-col gap-p6">
