@@ -73,7 +73,7 @@ export default function Services() {
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black tracking-tight">
             Our services
           </h2>
-          <div className="flex flex-col md:flex-row items-start justify-between gap-p8">
+          <div className="flex flex-col md:flex-row items-start justify-between gap-p8 mb-p8">
             <div></div>
             <p className="text-black-80 text-sm lg:text-md max-w-md">
               Our services cover every stage of your digital project, from
@@ -83,7 +83,7 @@ export default function Services() {
           </div>
 
           <div
-            className="flex flex-row gap-2 md:gap-3 w-full min-h-[min(72vh,520px)] md:min-h-[440px] md:h-[440px] overflow-x-auto overflow-y-hidden snap-x snap-mandatory md:snap-none pb-1 md:pb-0 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="flex flex-row gap-2 md:gap-3 w-full min-h-[min(72vh,520px)] md:min-h-[440px] md:h-[540px] overflow-x-auto overflow-y-hidden snap-x snap-mandatory md:snap-none pb-1 md:pb-0 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
             role="list"
             aria-label="Services"
           >
@@ -123,7 +123,7 @@ export default function Services() {
                           /{String(total).padStart(2, "0")}
                         </span>
                       </p>
-                      <div className="flex flex-1 flex-col justify-center gap-p4 max-w-sm">
+                      <div className="flex flex-1 flex-col mt-p10 gap-p4 max-w-sm">
                         <h3 className="text-xl md:text-2xl lg:text-4xl font-bold text-white leading-tight">
                           {service.title}
                         </h3>
