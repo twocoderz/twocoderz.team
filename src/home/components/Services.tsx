@@ -24,13 +24,6 @@ const SERVICES = [
     image:
       "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1200&q=80",
   },
-  {
-    title: "API Development",
-    description:
-      "RESTful and event-driven APIs with solid contracts, versioning, and observability. Secure authentication, rate limits, and documentation your team can rely on.",
-    image:
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
-  },
 
   {
     title: "Desktop Apps",
@@ -194,8 +187,8 @@ export default function Services() {
                 "focus:outline-none focus-visible:ring-2 focus-visible:ring-black/25 focus-visible:ring-offset-2",
                 "min-h-[min(72vh,520px)] md:min-h-0 md:h-full",
                 isActive
-                  ? "bg-black w-[min(88vw,420px)] md:flex-[5] md:min-w-0 md:w-auto"
-                  : "w-[4.5rem] sm:w-24 md:flex-[1] md:min-w-[5.5rem] md:w-auto",
+                  ? "bg-black w-[min(88vw,420px)] md:flex-5 md:min-w-0 md:w-auto"
+                  : "w-p18 sm:w-24 md:flex-1 md:min-w-p22 md:w-auto",
               ].join(" ")}
             >
               {isActive ? (
@@ -259,7 +252,7 @@ export default function Services() {
       <div className="py-p12 md:py-p16 pb-p8 md:pb-p10">
         <Container>
           <div className="flex flex-col gap-p6">
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black tracking-tight">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black tracking-tight">
               Our services
             </h2>
             <div className="flex flex-col md:flex-row items-start justify-between gap-p8">

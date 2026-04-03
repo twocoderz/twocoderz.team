@@ -4,6 +4,7 @@ import MyLink from "../../shared/components/ui/MyLink";
 import MyUser from "../../shared/components/ui/MyUser";
 import { ArrowLeftIcon } from "../../shared/icons/ArrowLeftIcon";
 import { ArrowRightIcon } from "../../shared/icons/ArrowRightIcon";
+import { Button } from "../../shared/components/ui/Button";
 
 const testimonials = [
   {
@@ -116,58 +117,66 @@ export default function Testimonials() {
   return (
     <section className="bg-transparent py-p12 md:py-p16">
       <Container>
-        <div className="flex items-start justify-between">
-          <div className="flex flex-col items-start gap-p8 max-w-sm">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black tracking-tight">
-              What our clients say
-            </h2>
-            <MyLink href="#" label="Reviews" />
-          </div>
+        <div className="flex flex-col ">
+          <div className="flex items-start justify-between mb-p16">
+            <div className="flex flex-col items-start gap-p8 max-w-xs">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black tracking-tight">
+                What our clients say
+              </h2>
+              <MyLink href="#" label="Reviews" />
+            </div>
 
-          <div className="flex flex-col items-start max-w-lg px-p4 py-p4">
-            <div className="flex items-start justify-between w-full mb-p12">
-              {/* Company Logo */}
-              <img
-                src={`/images/${current.company}.svg`}
-                alt={current.company}
-                className="h-p12 object-contain"
-              />
-              <div className="flex items-center gap-p4 ">
-                <button
-                  onClick={handlePrev}
-                  className="cursor-pointer transition-all duration-500"
-                  aria-label="Previous testimonial"
-                >
-                  <ArrowLeftIcon className="w-5 h-5 text-black-60" />
-                </button>
+            <div className="flex flex-col items-start max-w-2xl px-p4 py-p4">
+              <div className="flex items-start justify-between w-full mb-p12">
+                {/* Company Logo */}
+                <img
+                  src={`/images/${current.company}.svg`}
+                  alt={current.company}
+                  className="h-p12 object-contain"
+                />
+                <div className="flex items-center gap-p4 ">
+                  <button
+                    onClick={handlePrev}
+                    className="cursor-pointer transition-all duration-500"
+                    aria-label="Previous testimonial"
+                  >
+                    <ArrowLeftIcon className="w-5 h-5 text-black-60" />
+                  </button>
 
-                <p className="text-black-60 text-base">
-                  {String(currentIndex + 1).padStart(2, "0")} /{" "}
-                  {String(testimonials.length).padStart(2, "0")}
+                  <p className="text-black-60 text-base">
+                    {String(currentIndex + 1).padStart(2, "0")} /{" "}
+                    {String(testimonials.length).padStart(2, "0")}
+                  </p>
+
+                  <button
+                    onClick={handleNext}
+                    className="cursor-pointer transition-all duration-500"
+                    aria-label="Next testimonial"
+                  >
+                    <ArrowRightIcon className="w-5 h-5 text-black-60" />
+                  </button>
+                </div>
+              </div>
+              <div className="flex flex-col">
+                {/* Quote */}
+                <p className="text-lg font-normal text-black-80 mb-p12 leading-relaxed max-w-lg">
+                  "{current.quote}"
                 </p>
 
-                <button
-                  onClick={handleNext}
-                  className="cursor-pointer transition-all duration-500"
-                  aria-label="Next testimonial"
-                >
-                  <ArrowRightIcon className="w-5 h-5 text-black-60" />
-                </button>
+                {/* User Info */}
+                <MyUser
+                  src={current.src}
+                  name={current.name}
+                  profession={current.profession}
+                />
               </div>
             </div>
-            <div className="flex flex-col">
-              {/* Quote */}
-              <p className="text-lg font-normal text-black-80 mb-p12 leading-relaxed max-w-2xl">
-                "{current.quote}"
-              </p>
-
-              {/* User Info */}
-              <MyUser
-                src={current.src}
-                name={current.name}
-                profession={current.profession}
-              />
-            </div>
+          </div>
+          <div className="text-center mt-p24">
+            <Button variant="primary" size="lg">
+              <span> Let&apos;s talk</span>
+              <ArrowRightIcon className="w-4 h-4 ml-p4" />
+            </Button>
           </div>
         </div>
       </Container>

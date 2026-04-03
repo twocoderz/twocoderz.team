@@ -13,7 +13,7 @@ type ButtonSize = "sm" | "md" | "lg";
 const sizeMap: Record<ButtonSize, string> = {
   sm: "px-4 py-2.5 text-xs",
   md: "px-6 py-4 text-sm",
-  lg: "px-12 py-6 text-base",
+  lg: "px-16 py-8 text-base",
 };
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -35,7 +35,7 @@ export function Button(props: ButtonProps) {
   const variantClasses =
     variant === "secondary"
       ? "border border-black-80 text-black-80 bg-transparent"
-      : "bg-black-80 text-white border border-white/25";
+      : "bg-black-80 text-white border-2 border-white/25";
 
   const ref = useRef<HTMLButtonElement>(null);
   const rawProgress = useMotionValue(0);
