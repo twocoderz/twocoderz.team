@@ -49,9 +49,6 @@ const SERVICES = [
   },
 ] as const;
 
-const ACCENT_DARK = "#1a0b33";
-const ACCENT_NAV_MUTED = "#3d2a5c";
-
 export default function Services() {
   const [activeIndex, setActiveIndex] = useState(0);
   const total = SERVICES.length;
@@ -83,7 +80,7 @@ export default function Services() {
           </div>
 
           <div
-            className="flex flex-row gap-2 md:gap-3 w-full min-h-[min(72vh,520px)] md:min-h-[440px] md:h-[540px] overflow-x-auto overflow-y-hidden snap-x snap-mandatory md:snap-none pb-1 md:pb-0 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="flex flex-row gap-2 md:gap-3 w-full min-h-[min(72vh,520px)] md:min-h-[440px] md:h-[640px] overflow-x-auto overflow-y-hidden snap-x snap-mandatory md:snap-none pb-1 md:pb-0 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
             role="list"
             aria-label="Services"
           >
@@ -106,20 +103,17 @@ export default function Services() {
                     "focus:outline-none focus-visible:ring-2 focus-visible:ring-black/25 focus-visible:ring-offset-2",
                     "min-h-[min(72vh,520px)] md:min-h-0",
                     isActive
-                      ? "w-[min(88vw,420px)] md:flex-[5] md:min-w-0 md:w-auto"
+                      ? "bg-black w-[min(88vw,420px)] md:flex-[5] md:min-w-0 md:w-auto"
                       : "w-[4.5rem] sm:w-24 md:flex-[1] md:min-w-[5.5rem] md:w-auto",
                   ].join(" ")}
-                  style={
-                    isActive ? { backgroundColor: ACCENT_DARK } : undefined
-                  }
                 >
                   {isActive ? (
                     <div className="flex h-full flex-col justify-between p-p6 md:p-p8 lg:p-p10 min-h-[inherit]">
-                      <p className="text-white/90 font-semibold tabular-nums">
+                      <p className="text-white font-semibold tabular-nums">
                         <span className="text-2xl md:text-3xl">
                           {indexLabel(index)}
                         </span>
-                        <span className="text-white/40 text-sm md:text-r16 font-medium">
+                        <span className="text-sm md:text-r16 font-medium text-white/40">
                           /{String(total).padStart(2, "0")}
                         </span>
                       </p>
@@ -158,8 +152,7 @@ export default function Services() {
             <button
               type="button"
               onClick={goPrev}
-              className="inline-flex h-8 w-8 items-center justify-center rounded-r1 text-white shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20 focus-visible:ring-offset-2"
-              style={{ backgroundColor: ACCENT_DARK }}
+              className="inline-flex h-8 w-8 items-center justify-center rounded-r1 bg-black text-white shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20 focus-visible:ring-offset-2"
               aria-label="Previous service"
             >
               <ChevronLeftIcon />
@@ -167,8 +160,7 @@ export default function Services() {
             <button
               type="button"
               onClick={goNext}
-              className="inline-flex h-8 w-8 items-center justify-center rounded-r1 text-white shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20 focus-visible:ring-offset-2"
-              style={{ backgroundColor: ACCENT_NAV_MUTED }}
+              className="inline-flex h-8 w-8 items-center justify-center rounded-r1 bg-black-70 text-white shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20 focus-visible:ring-offset-2"
               aria-label="Next service"
             >
               <ChevronRightIcon />
