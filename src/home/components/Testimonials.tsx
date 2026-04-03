@@ -125,7 +125,7 @@ export default function Testimonials() {
           </div>
 
           <div className="flex flex-col items-start max-w-lg px-p4 py-p4">
-            <div className="flex items-start justify-between w-full mb-p8">
+            <div className="flex items-start justify-between w-full mb-p12">
               {/* Company Logo */}
               <img
                 src={`/images/${current.company}.svg`}
