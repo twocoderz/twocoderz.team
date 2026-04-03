@@ -114,34 +114,33 @@ export default function Testimonials() {
           </div>
 
           <div className="flex flex-col items-start max-w-lg">
-            <div className="flex items-center justify-between">
+            <div className="flex items-start justify-end">
               {/* Company Logo */}
               <img
                 src={`/images/${current.company}.svg`}
                 alt={current.company}
                 className="h-p12 mb-p12 object-contain"
               />
-              <div className="flex flex-col items-center justify-center min-w-fit">
+              <div className="flex items-center ">
+                <button
+                  onClick={handlePrev}
+                  className="cursor-pointer transition-all duration-500"
+                  aria-label="Previous testimonial"
+                >
+                  <ArrowLeftIcon className="w-5 h-5 text-black-60" />
+                </button>
                 <p className="text-black-50 text-sm mb-p8">
                   {String(currentIndex + 1).padStart(2, "0")} /{" "}
                   {String(testimonials.length).padStart(2, "0")}
                 </p>
-                <div className="flex gap-p4">
-                  <button
-                    onClick={handlePrev}
-                    className="p-p4 hover:bg-gray-100 rounded-lg transition-colors"
-                    aria-label="Previous testimonial"
-                  >
-                    <ArrowLeftIcon />
-                  </button>
-                  <button
-                    onClick={handleNext}
-                    className="p-p4 hover:bg-gray-100 rounded-lg transition-colors"
-                    aria-label="Next testimonial"
-                  >
-                    <ArrowRightIcon />
-                  </button>
-                </div>
+
+                <button
+                  onClick={handleNext}
+                  className="cursor-pointer transition-all duration-500"
+                  aria-label="Next testimonial"
+                >
+                  <ArrowRightIcon className="w-5 h-5 text-black-60" />
+                </button>
               </div>
             </div>
             <div className="flex flex-col">
