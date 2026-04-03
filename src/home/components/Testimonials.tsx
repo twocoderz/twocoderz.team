@@ -114,12 +114,12 @@ export default function Testimonials() {
           </div>
 
           <div className="flex flex-col items-start max-w-lg">
-            <div className="flex items-start justify-end">
+            <div className="flex items-start justify-between w-full mb-p8">
               {/* Company Logo */}
               <img
                 src={`/images/${current.company}.svg`}
                 alt={current.company}
-                className="h-p12 mb-p12 object-contain"
+                className="h-p12 object-contain"
               />
               <div className="flex items-center ">
                 <button
@@ -129,7 +129,8 @@ export default function Testimonials() {
                 >
                   <ArrowLeftIcon className="w-5 h-5 text-black-60" />
                 </button>
-                <p className="text-black-50 text-sm mb-p8">
+
+                <p className="text-black-50 text-sm">
                   {String(currentIndex + 1).padStart(2, "0")} /{" "}
                   {String(testimonials.length).padStart(2, "0")}
                 </p>
