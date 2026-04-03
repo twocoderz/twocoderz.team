@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import Container from "../../shared/components/ui/Container";
 import MyLink from "../../shared/components/ui/MyLink";
 import MyUser from "../../shared/components/ui/MyUser";
@@ -98,6 +99,11 @@ const testimonials = [
   },
 ];
 
+const transitionEase = [0.22, 1, 0.36, 1] as const;
+
+const testimonialMotionKey = (index: number, name: string) =>
+  `${index}-${name}`;
+
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -164,12 +170,22 @@ export default function Testimonials() {
                   "{current.quote}"
                 </p>
 
-                {/* User Info */}
-                <MyUser
-                  src={current.src}
-                  name={current.name}
-                  profession={current.profession}
-                />
+                <motion.div
+                  key={`profile-${testimonialMotionKey(currentIndex, current.name)}`}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.36,
+                    ease: transitionEase,
+                    delay: 0.07,
+                  }}
+                >
+                  <MyUser
+                    src={current.src}
+                    name={current.name}
+                    profession={current.profession}
+                  />
+                </motion.div>
               </div>
             </div>
           </div>
