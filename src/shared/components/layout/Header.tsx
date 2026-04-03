@@ -62,10 +62,10 @@ export default function Header() {
   }, [isMenuOpen]);
 
   const navItems = [
-    { href: "#works", label: "Works" },
-    { href: "#services", label: "Services" },
-    { href: "#about", label: "About" },
-    { href: "#blog", label: "Blog" },
+    { href: "/work", label: "Work" },
+    { href: "/services", label: "Services" },
+    { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
   ];
   return (
     <header

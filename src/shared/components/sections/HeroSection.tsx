@@ -1,0 +1,51 @@
+import Container from "../ui/Container";
+import Section from "../ui/Section";
+
+export interface HeroSectionProps {
+  title: string;
+  subtitle?: string;
+  ctaText?: string;
+  ctaHref?: string;
+  backgroundImage?: string;
+  alignment?: "left" | "center" | "right";
+}
+
+export function HeroSection({
+  title,
+  subtitle,
+  ctaText,
+  ctaHref,
+  backgroundImage,
+  alignment = "center",
+}: HeroSectionProps) {
+  const alignmentClass = {
+    left: "text-left",
+    center: "text-center",
+    right: "text-right",
+  }[alignment];
+
+  return (
+    <Section id="hero" className={backgroundImage ? "bg-cover bg-center" : ""}>
+      <Container>
+        <div className={`mx-auto max-w-2xl ${alignmentClass}`}>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-black-70 mb-p6">
+            {title}
+          </h1>
+          {subtitle && (
+            <p className="text-sm md:text-base text-black-80 mb-p8">
+              {subtitle}
+            </p>
+          )}
+          {ctaText && ctaHref && (
+            <a
+              href={ctaHref}
+              className="inline-block px-p8 py-p4 bg-black-80 text-white rounded-full hover:scale-105 transition-transform"
+            >
+              {ctaText}
+            </a>
+          )}
+        </div>
+      </Container>
+    </Section>
+  );
+}
