@@ -14,11 +14,15 @@ export default function NavItem(props: NavItemProps) {
     <a
       href={href}
       className={twMerge(
-        "text-black-80 text-sm hover:text-black transition-all duration-300",
+        "group relative inline-block pb-px text-black-80 text-sm transition-colors duration-300 ease-out hover:text-black",
         className,
       )}
     >
       {children}
+      <span
+        className="pointer-events-none absolute bottom-0 left-0 right-0 h-0.5 origin-left scale-x-0 bg-black transition-transform duration-300 ease-out group-hover:scale-x-100"
+        aria-hidden
+      />
     </a>
   );
 }

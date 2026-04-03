@@ -287,8 +287,8 @@ export default function Services() {
             : undefined
         }
       >
-        <div className="md:sticky md:top-p12 md:box-border md:flex md:h-svh md:flex-col md:py-p12">
-          <Container className="flex w-full min-h-0 flex-col pb-p12 md:h-full md:flex-1 md:justify-center md:pb-0">
+        <div className="md:sticky md:top-p8 md:box-border md:flex md:h-svh md:flex-col md:py-p12">
+          <Container className="flex w-full min-h-0 flex-col pb-p6 md:h-full md:flex-1 md:justify-center md:pb-0">
             {carousel}
           </Container>
         </div>
