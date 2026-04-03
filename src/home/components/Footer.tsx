@@ -1,9 +1,10 @@
 import { Button } from "../../shared/components/ui/Button";
 import Container from "../../shared/components/ui/Container";
+import Section from "../../shared/components/ui/Section";
 
 export default function Footer() {
   return (
-    <footer className="bg-transparent py-p12 md:py-p16">
+    <Section>
       <Container>
         <div className="flex flex-col gap-p12">
           <div className="flex items-center justify-between bg-black-5 p-p8 rounded-r2">
@@ -158,6 +159,6 @@ export default function Footer() {
           </div>
         </div>
       </Container>
-    </footer>
+    </Section>
   );
 }

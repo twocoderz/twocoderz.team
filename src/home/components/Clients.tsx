@@ -16,6 +16,7 @@ import Chelsea from "/images/chelsea.svg?url";
 import Xerox from "/images/xerox.svg?url";
 import Twocoderz from "/images/logo.png?url";
 import Projects from "./Projects";
+import Section from "../../shared/components/ui/Section";
 
 export default function Clients() {
   const logos = [
@@ -82,7 +83,7 @@ export default function Clients() {
   ];
 
   return (
-    <section className="bg-transparent py-p12 md:py-p16">
+    <Section>
       <Container>
         <div className="flex flex-col gap-p6 mb-p8">
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black tracking-tight">
@@ -112,6 +113,6 @@ export default function Clients() {
         </div>
         <Projects />
       </Container>
-    </section>
+    </Section>
   );
 }

@@ -5,6 +5,7 @@ import MyUser from "../../shared/components/ui/MyUser";
 import { ArrowLeftIcon } from "../../shared/icons/ArrowLeftIcon";
 import { ArrowRightIcon } from "../../shared/icons/ArrowRightIcon";
 import { Button } from "../../shared/components/ui/Button";
+import Section from "../../shared/components/ui/Section";
 
 const testimonials = [
   {
@@ -115,7 +116,7 @@ export default function Testimonials() {
   const current = testimonials[currentIndex];
 
   return (
-    <section className="bg-transparent py-p12 md:py-p16">
+    <Section>
       <Container>
         <div className="flex flex-col ">
           <div className="flex items-start justify-between mb-p16">
@@ -180,6 +181,6 @@ export default function Testimonials() {
           </div>
         </div>
       </Container>
-    </section>
+    </Section>
   );
 }

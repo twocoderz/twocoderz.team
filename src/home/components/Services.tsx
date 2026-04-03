@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Container from "../../shared/components/ui/Container";
+import Section from "../../shared/components/ui/Section";
 
 const SERVICES = [
   {
@@ -248,27 +249,25 @@ export default function Services() {
   );
 
   return (
-    <section className="bg-transparent">
-      <div className="py-p12 md:py-p16 pb-p8 md:pb-p10">
-        <Container>
-          <div className="flex flex-col gap-p6">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black tracking-tight">
-              Our services
-            </h2>
-            <div className="flex flex-col md:flex-row items-start justify-between gap-p8">
-              <div
-                className="hidden min-h-0 min-w-0 md:block md:flex-1"
-                aria-hidden
-              />
-              <p className="text-black-80 text-sm lg:text-md max-w-md shrink-0">
-                Our services cover every stage of your digital project, from
-                initial ideas to final delivery. We focus on clarity,
-                performance, and long-term scalability.
-              </p>
-            </div>
+    <Section>
+      <Container>
+        <div className="flex flex-col gap-p6">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black tracking-tight">
+            Our services
+          </h2>
+          <div className="flex flex-col md:flex-row items-start justify-between gap-p8">
+            <div
+              className="hidden min-h-0 min-w-0 md:block md:flex-1"
+              aria-hidden
+            />
+            <p className="text-black-80 text-sm lg:text-md max-w-md shrink-0">
+              Our services cover every stage of your digital project, from
+              initial ideas to final delivery. We focus on clarity, performance,
+              and long-term scalability.
+            </p>
           </div>
-        </Container>
-      </div>
+        </div>
+      </Container>
 
       {/* Desktop: scroll runway + sticky plein écran uniquement pour le carrousel */}
       <div
@@ -286,6 +285,6 @@ export default function Services() {
           </Container>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

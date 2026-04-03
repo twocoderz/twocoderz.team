@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Container from "../../shared/components/ui/Container";
+import Section from "../../shared/components/ui/Section";
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
@@ -18,7 +19,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="bg-transparent py-p12 md:py-p16">
+    <Section>
       <Container>
         <div className="py-p14">
           {/* hero center texts */}
@@ -45,6 +46,6 @@ export default function Hero() {
           </div>
         </div>
       </Container>
-    </section>
+    </Section>
   );
 }
