@@ -78,7 +78,7 @@ export default function Header() {
         {/* Logo */}
         <Logo />
         {/* nav */}
-        <nav className="hidden md:flex md:items-center gap-p12">
+        <nav className="hidden md:flex md:items-center gap-p8">
           {/* desktop nav */}
           {navItems.map((item) => (
             <NavItem key={item.label} href={item.href}>
