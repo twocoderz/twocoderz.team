@@ -59,7 +59,31 @@ export default function Services() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [desktopScroll, setDesktopScroll] = useState(false);
   const trackRef = useRef<HTMLDivElement>(null);
+  /** Pendant un scrollTo(smooth) après clic, on n’applique pas syncIndexFromScroll (évite les sauts). */
+  const scrollSyncLockedRef = useRef(false);
+  const scrollUnlockTimerRef = useRef<ReturnType<typeof setTimeout> | null>(
+    null,
+  );
   const total = SERVICES.length;
+
+  const clearScrollSyncLock = useCallback(() => {
+    scrollSyncLockedRef.current = false;
+    if (scrollUnlockTimerRef.current !== null) {
+      clearTimeout(scrollUnlockTimerRef.current);
+      scrollUnlockTimerRef.current = null;
+    }
+  }, []);
+
+  const armScrollSyncLock = useCallback(() => {
+    scrollSyncLockedRef.current = true;
+    if (scrollUnlockTimerRef.current !== null) {
+      clearTimeout(scrollUnlockTimerRef.current);
+    }
+    scrollUnlockTimerRef.current = setTimeout(() => {
+      scrollSyncLockedRef.current = false;
+      scrollUnlockTimerRef.current = null;
+    }, 1300);
+  }, []);
 
   useEffect(() => {
     const mq = window.matchMedia(`(min-width: ${SCROLL_MD_MIN}px)`);
@@ -72,6 +96,7 @@ export default function Services() {
   const syncIndexFromScroll = useCallback(() => {
     const el = trackRef.current;
     if (!el || !desktopScroll) return;
+    if (scrollSyncLockedRef.current) return;
 
     const start = el.getBoundingClientRect().top + window.scrollY;
     const trackHeight = el.offsetHeight;
@@ -115,8 +140,18 @@ export default function Services() {
       cancelAnimationFrame(frame);
       window.removeEventListener("scroll", onScrollOrResize);
       window.removeEventListener("resize", onScrollOrResize);
+      clearScrollSyncLock();
     };
-  }, [desktopScroll, syncIndexFromScroll]);
+  }, [desktopScroll, syncIndexFromScroll, clearScrollSyncLock]);
+
+  useEffect(() => {
+    if (!desktopScroll) return;
+    const onScrollEnd = () => clearScrollSyncLock();
+    window.addEventListener("scrollend", onScrollEnd);
+    return () => {
+      window.removeEventListener("scrollend", onScrollEnd);
+    };
+  }, [desktopScroll, clearScrollSyncLock]);
 
   const scrollTrackToIndex = (idx: number) => {
     if (!desktopScroll) return;
@@ -126,6 +161,7 @@ export default function Services() {
     const scrollRange = el.offsetHeight - window.innerHeight;
     if (scrollRange <= 0) return;
     const t = total <= 1 ? 0 : idx / (total - 1);
+    armScrollSyncLock();
     window.scrollTo({ top: start + t * scrollRange, behavior: "smooth" });
   };
 
