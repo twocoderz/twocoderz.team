@@ -129,22 +129,6 @@ export default function Services() {
     window.scrollTo({ top: start + t * scrollRange, behavior: "smooth" });
   };
 
-  const goPrev = () => {
-    setActiveIndex((i) => {
-      const n = (i - 1 + total) % total;
-      requestAnimationFrame(() => scrollTrackToIndex(n));
-      return n;
-    });
-  };
-
-  const goNext = () => {
-    setActiveIndex((i) => {
-      const n = (i + 1) % total;
-      requestAnimationFrame(() => scrollTrackToIndex(n));
-      return n;
-    });
-  };
-
   const indexLabel = (n: number) => String(n + 1).padStart(2, "0");
 
   const carousel = (
