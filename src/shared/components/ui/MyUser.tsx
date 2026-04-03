@@ -9,9 +9,11 @@ export default function MyUser(props: MyUserProps) {
   return (
     <div className="flex items-center gap-p6">
       <img src={src} alt={`${name} image`} className="w-12 h-12 rounded-full" />
-      <div className="flex flex-col items-start gap-p2">
+      <div className="flex flex-col items-start">
         <h4 className="text-black-80 font-bold text-lg">{name}</h4>
-        <p className="text-black-50 font-normal text-sm">{profession}</p>
+        <p className="text-black-50 font-normal max-w-xs text-sm">
+          {profession}
+        </p>
       </div>
     </div>
   );

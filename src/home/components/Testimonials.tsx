@@ -10,6 +10,7 @@ const testimonials = [
     name: "Brian Beaver",
     profession: "VP of Design at Turo",
     company: "apple",
+    src: "https://api.dicebear.com/7.x/avataaars/svg?seed=BrianBeaver",
     quote:
       "The team's exceptional design thinking and execution transformed our vision into reality. Couldn't be happier with the results.",
   },
@@ -17,6 +18,7 @@ const testimonials = [
     name: "Malini Leveque",
     profession: "Vice President, Product Design and Research at Citrix",
     company: "adobe",
+    src: "https://api.dicebear.com/7.x/avataaars/svg?seed=MaliniLeveque",
     quote:
       "Outstanding collaboration and attention to detail. They truly understand what makes great design work across all platforms.",
   },
@@ -24,6 +26,7 @@ const testimonials = [
     name: "Dan Brown",
     profession: "Senior Marketing Manager at Mozilla",
     company: "mozilla",
+    src: "https://api.dicebear.com/7.x/avataaars/svg?seed=DanBrown",
     quote:
       "Their approach to problem-solving is refreshing. We've seen tangible improvements in user engagement and satisfaction.",
   },
@@ -31,6 +34,7 @@ const testimonials = [
     name: "Chris Chen",
     profession: "Head of ColorOS Design Department at Oppo",
     company: "oppo",
+    src: "https://api.dicebear.com/7.x/avataaars/svg?seed=ChrisChen",
     quote:
       "Impressed with their technical expertise and creative solutions. A pleasure to work with from start to finish.",
   },
@@ -38,6 +42,7 @@ const testimonials = [
     name: "Chris Bank",
     profession: "VP of Design at Turo",
     company: "meta",
+    src: "https://api.dicebear.com/7.x/avataaars/svg?seed=ChrisBank",
     quote:
       "They delivered beyond our expectations. The team's passion for excellence is evident in every detail of their work.",
   },
@@ -45,6 +50,7 @@ const testimonials = [
     name: "Andrew Mason",
     profession: "CEO at Descript",
     company: "spotify",
+    src: "https://api.dicebear.com/7.x/avataaars/svg?seed=AndrewMason",
     quote:
       "Working with them elevated our entire product. Their insights and execution quality are second to none.",
   },
@@ -52,6 +58,7 @@ const testimonials = [
     name: "Mark Opland",
     profession: "Product Design Director at Xero",
     company: "xerox",
+    src: "https://api.dicebear.com/7.x/avataaars/svg?seed=MarkOpland",
     quote:
       "The best investment we made this year. Their strategic thinking paired with design excellence is a winning combination.",
   },
@@ -59,6 +66,7 @@ const testimonials = [
     name: "Khoi Vinh",
     profession: "Senior Director of Product Design at Adobe",
     company: "adobe",
+    src: "https://api.dicebear.com/7.x/avataaars/svg?seed=KhoiVinh",
     quote:
       "Exceptional talent and professionalism. They brought our most ambitious ideas to life with remarkable skill.",
   },
@@ -66,6 +74,7 @@ const testimonials = [
     name: "Edu Carneiro",
     profession: "Head of Web Marketing, Brand & SEO at Redis",
     company: "stripe",
+    src: "https://api.dicebear.com/7.x/avataaars/svg?seed=EduCarneiro",
     quote:
       "From concept to launch, everything was handled with care and precision. Highly recommend their services.",
   },
@@ -73,6 +82,7 @@ const testimonials = [
     name: "Kevin Sproles",
     profession: "CEO at Volusion",
     company: "netflix",
+    src: "https://api.dicebear.com/7.x/avataaars/svg?seed=KevinSproles",
     quote:
       "Thankful for the team for helping us take the Volusion brand to the next level. Couldn't have done it without them.",
   },
@@ -80,6 +90,7 @@ const testimonials = [
     name: "Sarah Johnson",
     profession: "Design Director at Snapchat",
     company: "snapchat",
+    src: "https://api.dicebear.com/7.x/avataaars/svg?seed=SarahJohnson",
     quote:
       "Their innovative approach and deep understanding of design principles made our project a huge success.",
   },
@@ -103,7 +114,7 @@ export default function Testimonials() {
   const current = testimonials[currentIndex];
 
   return (
-    <section>
+    <section className="bg-transparent py-p12 md:py-p16">
       <Container>
         <div className="flex items-start justify-between">
           <div className="flex flex-col items-start gap-p8 max-w-sm">
@@ -113,7 +124,7 @@ export default function Testimonials() {
             <MyLink href="#" label="Reviews" />
           </div>
 
-          <div className="flex flex-col items-start max-w-lg">
+          <div className="flex flex-col items-start max-w-lg px-p4 py-p4">
             <div className="flex items-start justify-between w-full mb-p8">
               {/* Company Logo */}
               <img
@@ -121,7 +132,7 @@ export default function Testimonials() {
                 alt={current.company}
                 className="h-p12 object-contain"
               />
-              <div className="flex items-center ">
+              <div className="flex items-center gap-p4 ">
                 <button
                   onClick={handlePrev}
                   className="cursor-pointer transition-all duration-500"
@@ -130,7 +141,7 @@ export default function Testimonials() {
                   <ArrowLeftIcon className="w-5 h-5 text-black-60" />
                 </button>
 
-                <p className="text-black-50 text-sm">
+                <p className="text-black-60 text-base">
                   {String(currentIndex + 1).padStart(2, "0")} /{" "}
                   {String(testimonials.length).padStart(2, "0")}
                 </p>
@@ -152,7 +163,7 @@ export default function Testimonials() {
 
               {/* User Info */}
               <MyUser
-                src=""
+                src={current.src}
                 name={current.name}
                 profession={current.profession}
               />
