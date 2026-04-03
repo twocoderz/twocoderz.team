@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-transparent py-p12 md:py-p16">
       <Container>
         <div className="flex flex-col gap-p12">
-          <div className="flex items-center justify-between bg-black-5 p-p8 rounded-r4">
+          <div className="flex items-center justify-between bg-black-5 p-p8 rounded-r2">
             <div className="flex flex-col">
               <h4 className="text-lg font-bold text-black-80">
                 Sign up for our newsletter
@@ -24,51 +24,111 @@ export default function Footer() {
             <div className="flex flex-col gap-p6">
               <p className="text-xs text-black-40 font-semibold">Social</p>
               <ul className="flex flex-col gap-p3">
-                <li className="text-xs text-black-80 hover:text-black transition-all duration-500">
-                  Linked in
+                <li>
+                  <a
+                    href="#"
+                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                  >
+                    Linked in
+                  </a>
                 </li>
-                <li className="text-xs text-black-80 hover:text-black transition-all duration-500">
-                  Instagram
+                <li>
+                  <a
+                    href="#"
+                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                  >
+                    Instagram
+                  </a>
                 </li>
-                <li className="text-xs text-black-80 hover:text-black transition-all duration-500">
-                  Twitter
+                <li>
+                  <a
+                    href="#"
+                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                  >
+                    Twitter
+                  </a>
                 </li>
-                <li className="text-xs text-black-80 hover:text-black transition-all duration-500">
-                  Facebook
+                <li>
+                  <a
+                    href="#"
+                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                  >
+                    Facebook
+                  </a>
                 </li>
-                <li className="text-xs text-black-80 hover:text-black transition-all duration-500">
-                  Whatsapp
+                <li>
+                  <a
+                    href="#"
+                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                  >
+                    Whatsapp
+                  </a>
                 </li>
               </ul>
             </div>
             <div className="flex flex-col gap-p6">
               <p className="text-xs text-black-40 font-semibold">Company</p>
               <ul className="flex flex-col gap-p3">
-                <li className="text-xs text-black-80 hover:text-black transition-all duration-500">
-                  About
+                <li>
+                  <a
+                    href="#"
+                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                  >
+                    About
+                  </a>
                 </li>
-                <li className="text-xs text-black-80 hover:text-black transition-all duration-500">
-                  Services
+                <li>
+                  <a
+                    href="#"
+                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                  >
+                    Services
+                  </a>
                 </li>
-                <li className="text-xs text-black-80 hover:text-black transition-all duration-500">
-                  Works
+                <li>
+                  <a
+                    href="#"
+                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                  >
+                    Works
+                  </a>
                 </li>
-                <li className="text-xs text-black-80 hover:text-black transition-all duration-500">
-                  Process
+                <li>
+                  <a
+                    href="#"
+                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                  >
+                    Process
+                  </a>
                 </li>
               </ul>
             </div>
             <div className="flex flex-col gap-p6">
               <p className="text-xs text-black-40 font-semibold">Learn</p>
               <ul className="flex flex-col gap-p3">
-                <li className="text-xs text-black-80 hover:text-black transition-all duration-500">
-                  Reviews
+                <li>
+                  <a
+                    href="#"
+                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                  >
+                    Reviews
+                  </a>
                 </li>
-                <li className="text-xs text-black-80 hover:text-black transition-all duration-500">
-                  FAQs
+                <li>
+                  <a
+                    href="#"
+                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                  >
+                    FAQs
+                  </a>
                 </li>
-                <li className="text-xs text-black-80 hover:text-black transition-all duration-500">
-                  Articles
+                <li>
+                  <a
+                    href="#"
+                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                  >
+                    Articles
+                  </a>
                 </li>
               </ul>
             </div>
@@ -77,11 +137,21 @@ export default function Footer() {
                 Get in touch
               </p>
               <ul className="flex flex-col gap-p3">
-                <li className="text-xs text-black-80 hover:text-black transition-all duration-500">
-                  +228 91 79 61 15
+                <li>
+                  <a
+                    href="tel:+22891796115"
+                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                  >
+                    +228 91 79 61 15
+                  </a>
                 </li>
-                <li className="text-xs text-black-80 hover:text-black transition-all duration-500">
-                  Contact up
+                <li>
+                  <a
+                    href="#"
+                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                  >
+                    Contact up
+                  </a>
                 </li>
               </ul>
             </div>
