@@ -132,9 +132,9 @@ export default function Services() {
   const indexLabel = (n: number) => String(n + 1).padStart(2, "0");
 
   const carousel = (
-    <div className="flex min-h-0 w-full flex-col md:flex-1">
+    <div className="flex w-full flex-col md:mx-auto md:h-[min(48rem,76svh)] md:w-full md:shrink-0">
       <div
-        className="flex flex-row gap-2 md:gap-3 w-full min-h-[min(72vh,520px)] md:min-h-0 md:flex-1 md:h-full overflow-x-auto overflow-y-hidden snap-x snap-mandatory md:snap-none pb-1 md:pb-0 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className="flex min-h-[min(72vh,520px)] w-full flex-row gap-2 overflow-x-auto overflow-y-hidden pb-1 [-ms-overflow-style:none] [scrollbar-width:none] snap-x snap-mandatory md:h-full md:min-h-0 md:gap-3 md:snap-none [&::-webkit-scrollbar]:hidden"
         role="list"
         aria-label="Services"
       >
@@ -172,7 +172,7 @@ export default function Services() {
                       /{String(total).padStart(2, "0")}
                     </span>
                   </p>
-                  <div className="flex flex-1 flex-col mt-p10 gap-p4 max-w-sm overflow-hidden">
+                  <div className="flex flex-1 flex-col mt-p12 gap-p4 max-w-sm overflow-y-auto overflow-x-hidden md:mt-p8">
                     <motion.div
                       key={service.title}
                       initial={{
@@ -252,7 +252,7 @@ export default function Services() {
         }
       >
         <div className="md:sticky md:top-p12 md:box-border md:flex md:h-svh md:flex-col md:py-p12">
-          <Container className="flex w-full min-h-0 flex-col pb-p12 md:h-full md:flex-1 md:pb-0">
+          <Container className="flex w-full min-h-0 flex-col pb-p12 md:h-full md:flex-1 md:justify-center md:pb-0">
             {carousel}
           </Container>
         </div>
