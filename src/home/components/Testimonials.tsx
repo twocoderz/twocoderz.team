@@ -118,7 +118,7 @@ export default function Testimonials() {
       <Container>
         <div className="flex items-start justify-between">
           <div className="flex flex-col items-start gap-p8 max-w-sm">
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-black tracking-tight">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black tracking-tight">
               What our clients say
             </h2>
             <MyLink href="#" label="Reviews" />
