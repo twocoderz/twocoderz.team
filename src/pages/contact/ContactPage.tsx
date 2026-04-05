@@ -19,11 +19,7 @@ export default function ContactPage() {
         <Container>
           <div className="max-w-lg mx-auto flex flex-col items-center">
             {/* email link */}
-            <EmailLink
-              href="#"
-              label="rahim100codeur@gmail.com"
-              className="mb-p6"
-            />
+            <EmailLink label="rahim100codeur@gmail.com" className="mb-p6" />
             {/* separator */}
             <div className="my-6 flex w-full items-center gap-4">
               <div className="h-px flex-1 bg-black/20" />
@@ -32,7 +28,7 @@ export default function ContactPage() {
             </div>
             {/* the form */}
             <div className="flex flex-col w-full mt-p8">
-              <h2 className="text-2xl font-bold text-black-80 text-center mb-p8">
+              <h2 className="text-2xl font-bold tracking-wide text-black-80 text-center mb-p8">
                 Fill out the form
               </h2>
               <ContactForm />
