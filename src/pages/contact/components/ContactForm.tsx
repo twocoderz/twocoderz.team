@@ -6,6 +6,7 @@ export default function ContactForm() {
     <form action="" className="flex flex-col gap-p8">
       <Input
         type="text"
+        required
         placeholder="Full name"
         className="placeholder:text-black-40 placeholder:text-sm"
       />

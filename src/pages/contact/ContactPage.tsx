@@ -46,7 +46,7 @@ export default function ContactPage() {
                 , including our cookie use
               </p>
               <div className="text-center mt-p8">
-                <Button variant="primary" size="lg">
+                <Button variant="primary" size="sp">
                   <span> Let&apos;s talk</span>
                 </Button>
               </div>

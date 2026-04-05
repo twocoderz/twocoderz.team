@@ -11,7 +11,10 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     return (
       <div className="flex flex-col gap-p2">
         {label && (
-          <label className="text-sm font-medium text-black-80">{label}</label>
+          <label className="text-sm font-medium text-black-80">
+            {label}
+            {props.required && <span className="text-red-500 ml-1">●</span>}
+          </label>
         )}
         <input
           ref={ref}
