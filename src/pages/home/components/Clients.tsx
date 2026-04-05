@@ -1,87 +1,10 @@
 import Container from "../../../shared/components/ui/Container";
 import MyLink from "../../../shared/components/ui/MyLink";
-import Netflix from "/images/netflix.svg?url";
-import Adobe from "/images/adobe.svg?url";
-import Apple from "/images/apple.svg?url";
-import Oppo from "/images/oppo.svg?url";
-import Anthropic from "/images/anthropic.svg?url";
-import Meta from "/images/meta.svg?url";
-import Mozilla from "/images/mozilla.svg?url";
-import Opera from "/images/opera.svg?url";
-import Mtn from "/images/mtn.svg?url";
-import Spotify from "/images/spotify.svg?url";
-import Stripe from "/images/stripe.svg?url";
-import Snap from "/images/snapchat.svg?url";
-import Chelsea from "/images/chelsea.svg?url";
-import Xerox from "/images/xerox.svg?url";
-import Twocoderz from "/images/logo.png?url";
+import { clientsData } from "../../../shared/data/clients";
 import Projects from "./Projects";
 import Section from "../../../shared/components/ui/Section";
 
 export default function Clients() {
-  const logos = [
-    {
-      name: "netflix",
-      src: Netflix,
-    },
-    {
-      name: "adobe",
-      src: Adobe,
-    },
-    {
-      name: "apple",
-      src: Apple,
-    },
-    {
-      name: "stripe",
-      src: Stripe,
-    },
-    {
-      name: "meta",
-      src: Meta,
-    },
-    {
-      name: "opera",
-      src: Opera,
-    },
-    {
-      name: "spotify",
-      src: Spotify,
-    },
-    {
-      name: "mozilla",
-      src: Mozilla,
-    },
-    {
-      name: "oppo",
-      src: Oppo,
-    },
-    {
-      name: "anthropic",
-      src: Anthropic,
-    },
-    {
-      name: "snap",
-      src: Snap,
-    },
-    {
-      name: "mtn",
-      src: Mtn,
-    },
-    {
-      name: "xerox",
-      src: Xerox,
-    },
-    {
-      name: "chelse",
-      src: Chelsea,
-    },
-    {
-      name: "two",
-      src: Twocoderz,
-    },
-  ];
-
   return (
     <Section id="works">
       <Container>
@@ -97,7 +20,7 @@ export default function Clients() {
             </p>
           </div>
           <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-p2 md:gap-p4 lg:gap-p8 mt-p16">
-            {logos.map((logo) => (
+            {clientsData.map((logo) => (
               <div
                 key={logo.name}
                 className="group flex items-center justify-center py-p2 md:py-p4 lg:py-p8"
