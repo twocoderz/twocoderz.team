@@ -7,12 +7,14 @@ export default function ContactForm() {
       <Input
         type="text"
         required
+        autoComplete="name"
         placeholder="Full name"
         className="placeholder:text-black-40 placeholder:text-sm w-full"
       />
       <Input
         type="email"
         required
+        autoComplete="email"
         placeholder="email@company.com"
         className="placeholder:text-black-40 placeholder:text-sm w-full"
       />
@@ -23,6 +25,7 @@ export default function ContactForm() {
       />
       <Input
         type="text"
+        autoComplete="off"
         placeholder="How did you find Twocoderz?"
         className="placeholder:text-black-40 placeholder:text-sm w-full"
       />
