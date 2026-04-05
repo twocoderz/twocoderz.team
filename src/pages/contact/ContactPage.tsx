@@ -35,6 +35,15 @@ export default function ContactPage() {
                 Fill out the form
               </h2>
               <ContactForm />
+              <p className="text-black-80 text-xs text-center mt-p8">
+                By filling in the form, you agree to our{" "}
+                <span>
+                  <a href="#" className="cursor-pointer">
+                    Privacy Policy
+                  </a>
+                </span>
+                , including our cookie use
+              </p>
             </div>
           </div>
         </Container>

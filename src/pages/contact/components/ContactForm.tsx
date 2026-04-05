@@ -7,14 +7,22 @@ export default function ContactForm() {
       <Input
         type="text"
         placeholder="Full name"
-        className="placeholder:text-black-40"
+        className="placeholder:text-black-40 placeholder:text-sm"
       />
       <Input
         type="email"
         placeholder="email@company.com"
-        className="placeholder:text-black-40"
+        className="placeholder:text-black-40 placeholder:text-sm"
       />
-      <Textarea />
+      <Textarea
+        placeholder="Project description"
+        className="h-48 placeholder:text-black-40 placeholder:text-sm"
+      />
+      <Input
+        type="text"
+        placeholder="How did you find Twocoderz?"
+        className="placeholder:text-black-40 placeholder:text-sm"
+      />
     </form>
   );
 }
