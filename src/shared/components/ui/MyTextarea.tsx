@@ -19,7 +19,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
           <textarea
             ref={ref}
             aria-label={ariaLabel}
-            className={`px-p6 py-p4 bg-black-5 rounded-r2 focus:outline-none focus:ring-1 focus:ring-black-80 resize-none ${
+            className={`px-p6 py-p4 bg-black-5 rounded-r2 focus:rounded-l-r2 focus:rounded-r-none focus:outline-none focus:ring-0 focus:border-r-1 focus:border-black-80 resize-none ${
               error ? "border-red-500 focus:ring-red-500" : ""
             } ${className || ""}`}
             {...props}
