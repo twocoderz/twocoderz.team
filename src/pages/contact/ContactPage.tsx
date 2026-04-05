@@ -1,7 +1,9 @@
 import Layout from "../../shared/components/layout/Layout";
 import { HeroSection } from "../../shared/components/sections/HeroSection";
+import { Button } from "../../shared/components/ui/Button";
 import Container from "../../shared/components/ui/Container";
 import Section from "../../shared/components/ui/Section";
+import { ArrowRightIcon } from "../../shared/icons/ArrowRightIcon";
 import ContactForm from "./components/ContactForm";
 import EmailLink from "./components/EmailLink";
 
@@ -44,6 +46,11 @@ export default function ContactPage() {
                 </span>
                 , including our cookie use
               </p>
+              <div className="text-center mt-p8">
+                <Button variant="primary" size="lg">
+                  <span> Let&apos;s talk</span>
+                </Button>
+              </div>
             </div>
           </div>
         </Container>
