@@ -2,6 +2,7 @@ import Layout from "../../shared/components/layout/Layout";
 import { HeroSection } from "../../shared/components/sections/HeroSection";
 import Container from "../../shared/components/ui/Container";
 import Section from "../../shared/components/ui/Section";
+import ContactForm from "./components/ContactForm";
 import EmailLink from "./components/EmailLink";
 
 export default function ContactPage() {
@@ -30,9 +31,10 @@ export default function ContactPage() {
             </div>
             {/* the form */}
             <div className="flex flex-col mt-p8">
-              <h2 className="text-2xl font-bold text-black-80 text-center">
+              <h2 className="text-2xl font-bold text-black-80 text-center mb-p8">
                 Fill out the form
               </h2>
+              <ContactForm />
             </div>
           </div>
         </Container>
