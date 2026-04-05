@@ -7,7 +7,7 @@ export default function ContactPage() {
   return (
     <Layout>
       <HeroSection
-        title="Get in Touch"
+        title="Contact us"
         subtitle="Let's talk about your project and see how we can help."
         alignment="center"
       />
@@ -19,12 +19,7 @@ export default function ContactPage() {
             {/* TODO: Add contact info */}
             {/* TODO: Add social links */}
             {/* TODO: Add map or location info */}
-            <div className="text-center">
-              <h2 className="text-2xl font-bold text-black-80 mb-p4">
-                Contact Form Coming Soon
-              </h2>
-              <p className="text-black-60">Build the contact form here!</p>
-            </div>
+            <div className="text-center"></div>
           </div>
         </Container>
       </Section>
