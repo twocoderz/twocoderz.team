@@ -16,7 +16,7 @@ export default function ContactPage() {
 
       <Section>
         <Container>
-          <div className="max-w-2xl mx-auto flex flex-col items-center">
+          <div className="max-w-lg mx-auto flex flex-col items-center">
             {/* email link */}
             <EmailLink
               href="#"
@@ -30,7 +30,7 @@ export default function ContactPage() {
               <div className="h-px flex-1 bg-black/20" />
             </div>
             {/* the form */}
-            <div className="flex flex-col mt-p8">
+            <div className="flex flex-col w-full mt-p8">
               <h2 className="text-2xl font-bold text-black-80 text-center mb-p8">
                 Fill out the form
               </h2>
