@@ -6,6 +6,8 @@ import Container from "../ui/Container";
 import Logo from "../ui/Logo";
 import NavItem from "../ui/NavItem";
 import CloseIcon from "../../icons/CloseIcon";
+import { ROUTES } from "../../../routes";
+import { Button } from "../ui/Button";
 
 export interface HeaderProps {}
 
@@ -62,10 +64,10 @@ export default function Header() {
   }, [isMenuOpen]);
 
   const navItems = [
-    { href: "/work", label: "Work" },
-    { href: "/services", label: "Services" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
+    { href: ROUTES.WORK, label: "Work" },
+    { href: ROUTES.SERVICES, label: "Services" },
+    { href: ROUTES.ABOUT, label: "About" },
+    { href: ROUTES.PROCESS, label: "Process" },
   ];
   return (
     <header
@@ -89,19 +91,13 @@ export default function Header() {
         <div className="flex items-center gap-p4">
           {/* CTA buttons */}
           <div className="hidden md:flex md:items-center md:gap-p4">
-            <a
-              href="#newsletter"
-              className="inline-flex select-none items-center gap-p2 overflow-hidden rounded-full border-2 border-black-70 bg-transparent px-4 py-2.5 text-xs font-normal tracking-wider text-black-80 transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black-80"
-            >
+            <Button variant="secondary" size="sm">
               Subscribe
-            </a>
-            <a
-              href="#contact"
-              className="relative inline-flex select-none items-center justify-center gap-0.5 overflow-hidden rounded-full border-2 border-white/25 bg-black-80 px-4 py-2.5 text-xs font-normal tracking-wider text-white transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
-            >
+            </Button>
+            <Button variant="primary" size="sm">
               <span>Contact</span>
               <ArrowRightIcon className="w-4 h-4" />
-            </a>
+            </Button>
           </div>
           {/* menu buttons */}
           <button
