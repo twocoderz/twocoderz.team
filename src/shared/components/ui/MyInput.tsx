@@ -14,12 +14,12 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       <div className="flex flex-col gap-p2">
         <div className="relative">
           {props.required && (
-            <span className="absolute top-0 left-0 h-2 w-2 rounded-full bg-red-500" />
+            <span className="absolute top-0 group-focus:-top-1 left-0 group-focus:-left-1 transition-all duration-500 h-2 w-2 rounded-full bg-red-500" />
           )}
           <input
             ref={ref}
             aria-label={ariaLabel}
-            className={`px-p6 py-p4 bg-black-5 rounded-r-r2 rounded-tl-r2 rounded-bl-r2 focus:outline-none focus:ring-1 focus:ring-black-80 ${
+            className={`group px-p6 py-p4 bg-black-5 rounded-r2 focus:outline-none focus:ring-1 focus:ring-black-80 ${
               error ? "border-red-500 focus:ring-red-500" : ""
             } ${className || ""}`}
             {...props}
