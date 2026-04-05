@@ -3,7 +3,6 @@ import { HeroSection } from "../../shared/components/sections/HeroSection";
 import { Button } from "../../shared/components/ui/Button";
 import Container from "../../shared/components/ui/Container";
 import Section from "../../shared/components/ui/Section";
-import { ArrowRightIcon } from "../../shared/icons/ArrowRightIcon";
 import ContactForm from "./components/ContactForm";
 import EmailLink from "./components/EmailLink";
 
