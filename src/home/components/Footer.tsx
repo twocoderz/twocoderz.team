@@ -12,7 +12,7 @@ export default function Footer() {
             className="flex scroll-mt-24 items-center justify-between rounded-r2 bg-black-5 p-p6 md:scroll-mt-28"
           >
             <div className="flex flex-col">
-              <h4 className="text-lg font-bold text-black-80">
+              <h4 className="text-lg font-semibold text-black-80">
                 Sign up for our newsletter
               </h4>
               <p className="text-sm text-black-60 font-normal">

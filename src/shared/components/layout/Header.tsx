@@ -91,13 +91,17 @@ export default function Header() {
         <div className="flex items-center gap-p4">
           {/* CTA buttons */}
           <div className="hidden md:flex md:items-center md:gap-p4">
-            <Button variant="secondary" size="sm">
-              Subscribe
-            </Button>
-            <Button variant="primary" size="sm">
-              <span>Contact</span>
-              <ArrowRightIcon className="w-4 h-4" />
-            </Button>
+            <a href={ROUTES.SUBSCRIBE}>
+              <Button variant="secondary" size="sm">
+                Subscribe
+              </Button>
+            </a>
+            <a href={ROUTES.CONTACT}>
+              <Button variant="primary" size="sm">
+                <span>Contact</span>
+                <ArrowRightIcon className="w-4 h-4" />
+              </Button>
+            </a>
           </div>
           {/* menu buttons */}
           <button
@@ -154,22 +158,22 @@ export default function Header() {
               exit={{ y: -8 }}
               transition={{ duration: 0.2 }}
             >
-              <a href="#works" onClick={closeMenu}>
-                Works
+              <a href={ROUTES.WORK} onClick={closeMenu}>
+                Work
               </a>
-              <a href="#services" onClick={closeMenu}>
+              <a href={ROUTES.SERVICES} onClick={closeMenu}>
                 Services
               </a>
-              <a href="#about" onClick={closeMenu}>
+              <a href={ROUTES.ABOUT} onClick={closeMenu}>
                 About
               </a>
-              <a href="#blog" onClick={closeMenu}>
-                Blog
+              <a href={ROUTES.PROCESS} onClick={closeMenu}>
+                Process
               </a>
-              <a href="#newsletter" onClick={closeMenu}>
+              <a href={ROUTES.SUBSCRIBE} onClick={closeMenu}>
                 Subscribe
               </a>
-              <a href="#contact" onClick={closeMenu}>
+              <a href={ROUTES.CONTACT} onClick={closeMenu}>
                 Contact
               </a>
             </motion.div>
