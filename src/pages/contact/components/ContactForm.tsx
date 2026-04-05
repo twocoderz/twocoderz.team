@@ -1,4 +1,5 @@
 import Input from "../../../shared/components/ui/MyInput";
+import Textarea from "../../../shared/components/ui/MyTextarea";
 
 export default function ContactForm() {
   return (
@@ -13,6 +14,7 @@ export default function ContactForm() {
         placeholder="email@company.com"
         className="placeholder:text-black-40"
       />
+      <Textarea />
     </form>
   );
 }
