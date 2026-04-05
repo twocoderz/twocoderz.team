@@ -1,7 +1,7 @@
-import Layout from "../shared/components/layout/Layout";
-import { HeroSection } from "../shared/components/sections/HeroSection";
-import { ServiceGridSection } from "../shared/components/sections/ServiceGridSection";
-import { servicesData } from "../shared/data/services";
+import Layout from "../../shared/components/layout/Layout";
+import { HeroSection } from "../../shared/components/sections/HeroSection";
+import { ServiceGridSection } from "../../shared/components/sections/ServiceGridSection";
+import { servicesData } from "../../shared/data/services";
 
 export default function ServicesPage() {
   return (

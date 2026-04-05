@@ -1,7 +1,7 @@
-import Layout from "../shared/components/layout/Layout";
-import { HeroSection } from "../shared/components/sections/HeroSection";
-import { PortfolioGridSection } from "../shared/components/sections/PortfolioGridSection";
-import { portfolioData } from "../shared/data/portfolio";
+import Layout from "../../shared/components/layout/Layout";
+import { HeroSection } from "../../shared/components/sections/HeroSection";
+import { PortfolioGridSection } from "../../shared/components/sections/PortfolioGridSection";
+import { portfolioData } from "../../shared/data/portfolio";
 
 export default function WorkPage() {
   return (

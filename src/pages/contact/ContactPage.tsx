@@ -1,7 +1,7 @@
-import Layout from "../shared/components/layout/Layout";
-import { HeroSection } from "../shared/components/sections/HeroSection";
-import Container from "../shared/components/ui/Container";
-import Section from "../shared/components/ui/Section";
+import Layout from "../../shared/components/layout/Layout";
+import { HeroSection } from "../../shared/components/sections/HeroSection";
+import Container from "../../shared/components/ui/Container";
+import Section from "../../shared/components/ui/Section";
 
 export default function ContactPage() {
   return (
