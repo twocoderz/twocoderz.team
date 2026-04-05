@@ -8,21 +8,23 @@ export default function ContactForm() {
         type="text"
         required
         placeholder="Full name"
-        className="placeholder:text-black-40 placeholder:text-sm"
+        className="placeholder:text-black-40 placeholder:text-sm w-full"
       />
       <Input
         type="email"
+        required
         placeholder="email@company.com"
-        className="placeholder:text-black-40 placeholder:text-sm"
+        className="placeholder:text-black-40 placeholder:text-sm w-full"
       />
       <Textarea
         placeholder="Project description"
-        className="h-48 placeholder:text-black-40 placeholder:text-sm"
+        required
+        className="h-48 placeholder:text-black-40 placeholder:text-sm w-full"
       />
       <Input
         type="text"
         placeholder="How did you find Twocoderz?"
-        className="placeholder:text-black-40 placeholder:text-sm"
+        className="placeholder:text-black-40 placeholder:text-sm w-full"
       />
     </form>
   );
