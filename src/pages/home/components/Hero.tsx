@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Container from "../../shared/components/ui/Container";
-import Section from "../../shared/components/ui/Section";
+import Container from "../../../shared/components/ui/Container";
+import Section from "../../../shared/components/ui/Section";
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);

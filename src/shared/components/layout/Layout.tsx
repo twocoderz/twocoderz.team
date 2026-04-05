@@ -1,5 +1,5 @@
 import Header from "./Header";
-import Footer from "../../../home/components/Footer";
+import Footer from "../../../pages/home/components/Footer";
 import type { ReactNode } from "react";
 
 export interface LayoutProps {

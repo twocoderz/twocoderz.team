@@ -1,5 +1,5 @@
-import Container from "../../shared/components/ui/Container";
-import MyLink from "../../shared/components/ui/MyLink";
+import Container from "../../../shared/components/ui/Container";
+import MyLink from "../../../shared/components/ui/MyLink";
 import Netflix from "/images/netflix.svg?url";
 import Adobe from "/images/adobe.svg?url";
 import Apple from "/images/apple.svg?url";
@@ -16,7 +16,7 @@ import Chelsea from "/images/chelsea.svg?url";
 import Xerox from "/images/xerox.svg?url";
 import Twocoderz from "/images/logo.png?url";
 import Projects from "./Projects";
-import Section from "../../shared/components/ui/Section";
+import Section from "../../../shared/components/ui/Section";
 
 export default function Clients() {
   const logos = [

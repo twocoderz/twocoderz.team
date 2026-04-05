@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import Container from "../../shared/components/ui/Container";
-import Section from "../../shared/components/ui/Section";
+import Container from "../../../shared/components/ui/Container";
+import Section from "../../../shared/components/ui/Section";
 
 const SERVICES = [
   {

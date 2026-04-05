@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import Layout from "../shared/components/layout/Layout";
+import Layout from "../../shared/components/layout/Layout";
 import Clients from "./components/Clients";
 import Hero from "./components/Hero";
 

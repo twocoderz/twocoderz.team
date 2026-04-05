@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import Container from "../../shared/components/ui/Container";
+import Container from "../../../shared/components/ui/Container";
 
 const projects = [
   {

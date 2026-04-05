@@ -1,6 +1,6 @@
-import { Button } from "../../shared/components/ui/Button";
-import Container from "../../shared/components/ui/Container";
-import Section from "../../shared/components/ui/Section";
+import { Button } from "../../../shared/components/ui/Button";
+import Container from "../../../shared/components/ui/Container";
+import Section from "../../../shared/components/ui/Section";
 
 export default function Footer() {
   return (

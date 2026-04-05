@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Container from "../../shared/components/ui/Container";
-import MyLink from "../../shared/components/ui/MyLink";
-import MyUser from "../../shared/components/ui/MyUser";
-import { ArrowLeftIcon } from "../../shared/icons/ArrowLeftIcon";
-import { ArrowRightIcon } from "../../shared/icons/ArrowRightIcon";
-import { Button } from "../../shared/components/ui/Button";
-import Section from "../../shared/components/ui/Section";
+import Container from "../../../shared/components/ui/Container";
+import MyLink from "../../../shared/components/ui/MyLink";
+import MyUser from "../../../shared/components/ui/MyUser";
+import { ArrowLeftIcon } from "../../../shared/icons/ArrowLeftIcon";
+import { ArrowRightIcon } from "../../../shared/icons/ArrowRightIcon";
+import { Button } from "../../../shared/components/ui/Button";
+import Section from "../../../shared/components/ui/Section";
 
 const testimonials = [
   {
