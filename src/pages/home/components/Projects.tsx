@@ -1,59 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import Container from "../../../shared/components/ui/Container";
-
-const projects = [
-  {
-    name: "Upstream",
-    description:
-      "Turning a complex carbon platform into a clear, intuitive product",
-    href: "#",
-    slides: [
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
-      "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800",
-      "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800",
-    ],
-    tall: true,
-  },
-  {
-    name: "Rizzle",
-    description:
-      "Comprehensive redesign propelled the platform to 34M monthly active users",
-    href: "#",
-    slides: [
-      "https://images.unsplash.com/photo-1616469829581-73993eb86b02?w=800",
-      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800",
-      "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?w=800",
-    ],
-    tall: false,
-  },
-  {
-    name: "Firefox",
-    description:
-      "Identity system that enhanced brand recognition and user engagement",
-    href: "#",
-    slides: [
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800",
-      "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800",
-      "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800",
-    ],
-    tall: false,
-  },
-  {
-    name: "Clearbit",
-    description:
-      "Website redesign contributing to their $150M acquisition by Hubspot",
-    href: "#",
-    slides: [
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800",
-      "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800",
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
-    ],
-    tall: true,
-  },
-];
+import { portfolioData } from "../../../shared/data/portfolio";
 
 // Composant carte individuelle
-function ProjectCard({ project }: { project: (typeof projects)[0] }) {
+function ProjectCard({ project }: { project: (typeof portfolioData)[0] }) {
   const [current, setCurrent] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -123,7 +73,7 @@ export default function Projects() {
       <Container>
         {/* Grille de projets */}
         <div className="columns-1 md:columns-2 gap-24">
-          {projects.map((project) => (
+          {portfolioData.map((project) => (
             <ProjectCard key={project.name} project={project} />
           ))}
         </div>

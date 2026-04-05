@@ -2,38 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Container from "../../../shared/components/ui/Container";
 import Section from "../../../shared/components/ui/Section";
-
-const SERVICES = [
-  {
-    title: "Mobile Development",
-    description:
-      "Native and cross-platform apps with polished UX, offline-ready flows, and store-ready builds. We ship performant mobile products that scale with your roadmap.",
-    image:
-      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    title: "Web Development",
-    description:
-      "Fast, accessible sites and web apps using modern stacks. From marketing pages to complex dashboards, we focus on SEO, Core Web Vitals, and maintainable code.",
-    image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    title: "UX/UI Design",
-    description:
-      "Research-backed interfaces, design systems, and prototypes that align business goals with user needs. Clear hierarchy, consistent patterns, and delightful details.",
-    image:
-      "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1200&q=80",
-  },
-
-  {
-    title: "Desktop Apps",
-    description:
-      "Cross-platform desktop experiences with native feel—installers, auto-updates, and deep OS integration when you need power users and offline-first workflows.",
-    image:
-      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=1200&q=80",
-  },
-] as const;
+import { servicesData } from "../../../shared/data/services";
 
 const SCROLL_MD_MIN = 768;
 const layoutSpring = {
@@ -58,7 +27,7 @@ export default function Services() {
   const scrollUnlockTimerRef = useRef<ReturnType<typeof setTimeout> | null>(
     null,
   );
-  const total = SERVICES.length;
+  const total = servicesData.length;
 
   const clearScrollSyncLock = useCallback(() => {
     scrollSyncLockedRef.current = false;
@@ -168,7 +137,7 @@ export default function Services() {
         role="list"
         aria-label="Services"
       >
-        {SERVICES.map((service, index) => {
+        {servicesData.map((service, index) => {
           const isActive = index === activeIndex;
           return (
             <motion.button
@@ -275,7 +244,7 @@ export default function Services() {
         className="w-full"
         style={
           desktopScroll
-            ? { minHeight: `${SERVICES.length * 100}svh` }
+            ? { minHeight: `${servicesData.length * 100}svh` }
             : undefined
         }
       >
