@@ -17,12 +17,22 @@ export default function ContactPage() {
         <Container>
           <div className="max-w-2xl mx-auto flex flex-col items-center">
             {/* email link */}
-            <EmailLink href="#" label="rahim100codeur@gmail.com" />
+            <EmailLink
+              href="#"
+              label="rahim100codeur@gmail.com"
+              className="mb-p6"
+            />
             {/* separator */}
             <div className="my-6 flex w-full items-center gap-4">
               <div className="h-px flex-1 bg-black/20" />
               <span className="text-sm text-black/60">Or</span>
               <div className="h-px flex-1 bg-black/20" />
+            </div>
+            {/* the form */}
+            <div className="flex flex-col mt-p8">
+              <h2 className="text-2xl font-bold text-black-80 text-center">
+                Fill out the form
+              </h2>
             </div>
           </div>
         </Container>
