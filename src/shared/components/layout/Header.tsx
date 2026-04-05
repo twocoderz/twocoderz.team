@@ -77,9 +77,7 @@ export default function Header() {
     >
       <Container className="flex items-center justify-between">
         {/* Logo */}
-        <a href={ROUTES.HOME}>
-          <Logo />
-        </a>
+        <Logo />
         {/* nav */}
         <nav className="hidden md:flex md:items-center gap-p8">
           {/* desktop nav */}

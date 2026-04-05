@@ -1,7 +1,6 @@
 import { lazy, Suspense } from "react";
-import Header from "../shared/components/layout/Header";
+import Layout from "../shared/components/layout/Layout";
 import Clients from "./components/Clients";
-import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 
 const Services = lazy(() => import("./components/Services"));
@@ -27,16 +26,14 @@ export default function HomePage() {
       >
         Skip to main content
       </a>
-      <Header />
-      <main id="main-content">
+      <Layout>
         <Hero />
         <Clients />
         <Suspense fallback={<BelowFoldFallback />}>
           <Services />
           <Testimonials />
         </Suspense>
-      </main>
-      <Footer />
+      </Layout>
     </>
   );
 }
