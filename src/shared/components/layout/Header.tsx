@@ -122,7 +122,15 @@ export default function Header() {
         <nav className="hidden md:flex md:items-center gap-p8">
           {/* desktop nav */}
           {navItems.map((item) => (
-            <NavItem key={item.label} href={item.href}>
+            <NavItem
+              key={item.label}
+              href={item.href}
+              className={
+                isDarkHeader
+                  ? "text-white/90 hover:text-white [&>span]:bg-white/90"
+                  : "undefined"
+              }
+            >
               {item.label}
             </NavItem>
           ))}
