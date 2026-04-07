@@ -31,24 +31,21 @@ export function HeroSection({
     <Section
       id="hero"
       className={twMerge(
+        "text-black-80",
         backgroundImage ? "bg-cover bg-center" : "",
         className,
       )}
     >
       <Container>
         <div className={`mx-auto max-w-2xl ${alignmentClass}`}>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-black-70 mb-p6">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-p6">
             {title}
           </h1>
-          {subtitle && (
-            <p className="text-sm md:text-base text-black-80 mb-p8">
-              {subtitle}
-            </p>
-          )}
+          {subtitle && <p className="text-sm md:text-base mb-p8">{subtitle}</p>}
           {ctaText && ctaHref && (
             <a
               href={ctaHref}
-              className="inline-block px-p8 py-p4 bg-black-80 text-white rounded-full hover:scale-105 transition-transform"
+              className="inline-block px-p8 py-p4 text-white rounded-full hover:scale-105 transition-transform"
             >
               {ctaText}
             </a>
