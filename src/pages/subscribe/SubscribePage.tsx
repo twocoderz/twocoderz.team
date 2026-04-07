@@ -1,5 +1,6 @@
 import Layout from "../../shared/components/layout/Layout";
 import { HeroSection } from "../../shared/components/sections/HeroSection";
+import { Button } from "../../shared/components/ui/Button";
 import Container from "../../shared/components/ui/Container";
 import SubscribeForm from "./components/SubscribeForm";
 
@@ -14,8 +15,13 @@ export default function SubscribePage() {
         alignment="center"
       />
       <Container>
-        <div className="mx-auto max-w-lg">
+        <div className="mx-auto max-w-lg mb-p12">
           <SubscribeForm />
+          <div className="text-center pt-p8">
+            <Button variant="primary" size="sp">
+              <span>Subscribe</span>
+            </Button>
+          </div>
         </div>
       </Container>
     </Layout>

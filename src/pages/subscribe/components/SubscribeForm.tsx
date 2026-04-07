@@ -2,7 +2,7 @@ import Input from "../../../shared/components/ui/MyInput";
 
 export default function SubscribeForm() {
   return (
-    <form action="" className="flex flex-col gap-p8">
+    <form action="" className="flex flex-col gap-p8 mb-p8">
       <Input
         type="email"
         required
