@@ -1,5 +1,6 @@
 import Layout from "../../shared/components/layout/Layout";
 import { HeroSection } from "../../shared/components/sections/HeroSection";
+import Container from "../../shared/components/ui/Container";
 
 export default function ProcessPage() {
   return (
@@ -12,9 +13,15 @@ export default function ProcessPage() {
         and are not constrained by time and budget.`}
         alignment="center"
         className="bg-black text-white"
-        spClassName="py-p10"
+        spClassName="py-p8"
       />
-      <div>{/*Process page content */}</div>
+      <Container>
+        <div className="mt-p23">
+          <h2 className="text-black-80 text-3xl font-bold">
+            Web Development Process
+          </h2>
+        </div>
+      </Container>
     </Layout>
   );
 }
