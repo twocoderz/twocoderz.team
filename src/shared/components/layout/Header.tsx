@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRightIcon } from "../../icons/ArrowRightIcon";
 import { HamburgerMdIcon } from "../../icons/HamburgerMdIcon";
@@ -16,6 +17,14 @@ export default function Header() {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const lastScrollYRef = useRef(0);
   const closeMenu = () => setIsMenuOpen(false);
+
+  const location = useLocation();
+  const headerRef = useRef<HTMLElement | null>(null);
+  const [isProcessHeroFullyVisible, setIsProcessHeroFullyVisible] =
+    useState(false);
+
+  const isProcessPage = location.pathname === ROUTES.PROCESS;
+  const isDarkHeader = isProcessPage && isProcessHeroFullyVisible;
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -63,6 +72,36 @@ export default function Header() {
     }
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    if (location.pathname != ROUTES.PROCESS) {
+      setIsProcessHeroFullyVisible(false);
+      return;
+    }
+
+    const checkHeroVisibility = () => {
+      const hero = document.getElementById("hero");
+      if (!hero) {
+        setIsProcessHeroFullyVisible(false);
+        return;
+      }
+      const rect = hero.getBoundingClientRect();
+      const headerHeight = headerRef.current?.offsetHeight ?? 0;
+      const fullyVisible =
+        rect.top >= headerHeight - 2 && rect.bottom <= window.innerHeight + 2;
+
+      setIsProcessHeroFullyVisible(fullyVisible);
+    };
+
+    checkHeroVisibility();
+    window.addEventListener("scroll", checkHeroVisibility, { passive: true });
+    window.addEventListener("resize", checkHeroVisibility);
+
+    return () => {
+      window.removeEventListener("scroll", checkHeroVisibility);
+      window.removeEventListener("resize", checkHeroVisibility);
+    };
+  }, [location.pathname]);
+
   const navItems = [
     { href: ROUTES.WORK, label: "Work" },
     { href: ROUTES.SERVICES, label: "Services" },
@@ -71,9 +110,10 @@ export default function Header() {
   ];
   return (
     <header
-      className={`sticky top-0 z-50 bg-white backdrop-blur-md py-p4 transition-transform duration-300 ${
-        isHeaderVisible ? "translate-y-0" : "-translate-y-full"
-      }`}
+      ref={headerRef}
+      className={`sticky top-0 z-50 py-p4 transition-[transform, background-color, color] duration-300 
+        ${isDarkHeader ? "bg-black text-white" : "bg-white text-black"} 
+        ${isHeaderVisible ? "translate-y-0" : "-translate-y-full"}`}
     >
       <Container className="flex items-center justify-between">
         {/* Logo */}
