@@ -1,3 +1,4 @@
+import { twMerge } from "tailwind-merge";
 import Container from "../ui/Container";
 import Section from "../ui/Section";
 
@@ -8,6 +9,7 @@ export interface HeroSectionProps {
   ctaHref?: string;
   backgroundImage?: string;
   alignment?: "left" | "center" | "right";
+  className?: string;
 }
 
 export function HeroSection({
@@ -17,6 +19,7 @@ export function HeroSection({
   ctaHref,
   backgroundImage,
   alignment = "center",
+  className,
 }: HeroSectionProps) {
   const alignmentClass = {
     left: "text-left",
@@ -25,7 +28,13 @@ export function HeroSection({
   }[alignment];
 
   return (
-    <Section id="hero" className={backgroundImage ? "bg-cover bg-center" : ""}>
+    <Section
+      id="hero"
+      className={twMerge(
+        backgroundImage ? "bg-cover bg-center" : "",
+        className,
+      )}
+    >
       <Container>
         <div className={`mx-auto max-w-2xl ${alignmentClass}`}>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-black-70 mb-p6">
