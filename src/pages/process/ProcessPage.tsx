@@ -12,6 +12,7 @@ export default function ProcessPage() {
         and are not constrained by time and budget.`}
         alignment="center"
         className="bg-black text-white"
+        spClassName="py-p10"
       />
       <div>{/*Process page content */}</div>
     </Layout>

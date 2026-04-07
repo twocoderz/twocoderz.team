@@ -10,6 +10,7 @@ export interface HeroSectionProps {
   backgroundImage?: string;
   alignment?: "left" | "center" | "right";
   className?: string;
+  spClassName?: string;
 }
 
 export function HeroSection({
@@ -20,6 +21,7 @@ export function HeroSection({
   backgroundImage,
   alignment = "center",
   className,
+  spClassName,
 }: HeroSectionProps) {
   const alignmentClass = {
     left: "text-left",
@@ -37,7 +39,12 @@ export function HeroSection({
       )}
     >
       <Container>
-        <div className={`mx-auto max-w-2xl ${alignmentClass}`}>
+        <div
+          className={twMerge(
+            `mx-auto max-w-2xl ${alignmentClass}`,
+            spClassName,
+          )}
+        >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-p6">
             {title}
           </h1>
