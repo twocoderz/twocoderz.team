@@ -16,11 +16,7 @@ export default function ProcessPage() {
         spClassName="py-p8"
       />
       <Container>
-        <div className="mt-p23">
-          <h2 className="text-black-80 text-3xl font-bold">
-            Web Development Process
-          </h2>
-        </div>
+        <div className="mt-p23"></div>
       </Container>
     </Layout>
   );
