@@ -6,3 +6,5 @@
     = about page (header, capabilities, team members, clients, footers)
     = one project detail page
     = contact page
+
+    ------------PROCHAINEMENT ON VA FAIRE LE ABOUT PAGE OU LE WORK PAGE
