@@ -1,4 +1,5 @@
 import { useMemo, useState, type ReactNode } from "react";
+import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { MinusIcon } from "../../icons/MinusIcon";
 import { AddPlusIcon } from "../../icons/AddPlusIcon";
@@ -79,23 +80,25 @@ export default function AccodionList(props: AccordionListProps) {
               </span>
             </button>
 
-            <div
+            <motion.div
               id={panelId}
               role="region"
               aria-labelledby={buttonId}
+              initial={false}
+              animate={{
+                height: isOpen ? "auto" : 0,
+                opacity: isOpen ? 1 : 0,
+              }}
+              transition={{ duration: 0.32, ease: "easeInOut" }}
               className={twMerge(
-                "grid transition-all duration-300 ease-out",
-                isOpen
-                  ? "grid-rows-[1fr] opacity-100"
-                  : "grid-rows-[0fr] opacity-0",
+                "overflow-hidden will-change-[height,opacity]",
+                !isOpen && "pointer-events-none",
               )}
             >
-              <div className="overflow-hidden">
-                <div className="px-p6 pb-p6 text-r16 leading-relaxed text-black-70">
-                  {item.content}
-                </div>
+              <div className="px-p6 pb-p6 text-r16 leading-relaxed text-black-70">
+                {item.content}
               </div>
-            </div>
+            </motion.div>
           </article>
         );
       })}
