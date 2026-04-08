@@ -7,7 +7,11 @@ export const webDevelopmentItems: AccordionItemData[] = [
     content: (
       <div className="space-y-p6">
         <p className="text-black-80 text-lg font-normal">
-          For those who want faster tangible results...
+          For those who want faster tangible results... We know that startups
+          are always restricted to two things... We know that startups are
+          always restricted to two things... We know that startups are always
+          restricted to two things... You know that startups are always
+          restricted to two things...
         </p>
         <p className="text-black-80 text-lg font-normal">
           We know that startups are always restricted to two things...
