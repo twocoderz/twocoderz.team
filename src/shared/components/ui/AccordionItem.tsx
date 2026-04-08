@@ -48,7 +48,7 @@ export default function AccodionList(props: AccordionListProps) {
   };
 
   return (
-    <div className={twMerge("space-y-p2", className)}>
+    <div className={twMerge("space-y-p2 w-full", className)}>
       {items.map((item) => {
         const isOpen = openIds.has(item.id);
         const panelId = "accordion-panel-" + item.id;
@@ -57,7 +57,7 @@ export default function AccodionList(props: AccordionListProps) {
         return (
           <article
             key={item.id}
-            className={twMerge("rounded-r2 bg-black-5", itemClassName)}
+            className={twMerge("rounded-r2 bg-black-5 p-p1", itemClassName)}
           >
             <button
               id={buttonId}
@@ -68,7 +68,7 @@ export default function AccodionList(props: AccordionListProps) {
               className="w-full cursor-pointer px-p6 py-p5 text-left"
             >
               <span className="flex items-center justify-between gap-p4">
-                <span className="text-b18 md:text-b20 text-black-80">
+                <span className="text-md md:text-lg font-bold text-black-80">
                   {item.title}
                 </span>
                 {isOpen ? (

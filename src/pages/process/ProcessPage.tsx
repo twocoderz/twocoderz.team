@@ -1,5 +1,6 @@
 import Layout from "../../shared/components/layout/Layout";
 import { HeroSection } from "../../shared/components/sections/HeroSection";
+import AccodionList from "../../shared/components/ui/AccordionItem";
 import Container from "../../shared/components/ui/Container";
 
 const processItems = [
@@ -31,21 +32,17 @@ const processItems = [
     title: "Stage 1: Information gathering and requirements",
     content: <p>Before starting the project, we need to understand...</p>,
   },
+  {
+    id: "stage-2",
+    title: "Stage 1: Information gathering and requirements",
+    content: <p>Before starting the project, we need to understand...</p>,
+  },
+  {
+    id: "stage-3",
+    title: "Stage 1: Information gathering and requirements",
+    content: <p>Before starting the project, we need to understand...</p>,
+  },
 ];
-
-// <Container>
-//   <section className="mt-p23 pb-p20">
-//     <h2 className="mb-p10 text-4xl md:text-6xl font-bold text-black-80">
-//       Branding Funnel Process
-//     </h2>
-
-//     <AccordionList
-//       items={processItems}
-//       defaultOpenId="intro"
-//       allowMultiple={false}
-//     />
-//   </section>
-// </Container>
 
 export default function ProcessPage() {
   return (
@@ -58,10 +55,51 @@ export default function ProcessPage() {
         and are not constrained by time and budget.`}
         alignment="center"
         className="bg-black text-white"
-        spClassName="py-p8"
+        spClassName="py-p4"
       />
       <Container>
-        <div className="mt-p23"></div>
+        <div className="flex flex-col items-start gap-p24 mt-p23">
+          <section className="flex flex-col items-start gap-p12 w-full">
+            <h2 className="text-4xl text-black-80 font-bold ">
+              Web Development Process
+            </h2>
+            <AccodionList
+              items={processItems}
+              defaultOpenId="intro"
+              allowMultiple={false}
+            />
+          </section>
+          <section className="flex flex-col items-start gap-p12 w-full">
+            <h2 className="text-4xl text-black-80 font-bold ">
+              Mobile Development Process
+            </h2>
+            <AccodionList
+              items={processItems}
+              defaultOpenId="intro"
+              allowMultiple={false}
+            />
+          </section>
+          <section className="flex flex-col items-start gap-p12 w-full">
+            <h2 className="text-4xl text-black-80 font-bold ">
+              UX/UI Design Process
+            </h2>
+            <AccodionList
+              items={processItems}
+              defaultOpenId="intro"
+              allowMultiple={false}
+            />
+          </section>
+          <section className="flex flex-col items-start gap-p12 w-full">
+            <h2 className="text-4xl text-black-80 font-bold ">
+              Desktop Apps Process
+            </h2>
+            <AccodionList
+              items={processItems}
+              defaultOpenId="intro"
+              allowMultiple={false}
+            />
+          </section>
+        </div>
       </Container>
     </Layout>
   );
