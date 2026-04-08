@@ -1,7 +1,10 @@
+import { ROUTES } from "../../routes";
 import Layout from "../../shared/components/layout/Layout";
 import { HeroSection } from "../../shared/components/sections/HeroSection";
 import AccodionList from "../../shared/components/ui/AccordionItem";
+import { Button } from "../../shared/components/ui/Button";
 import Container from "../../shared/components/ui/Container";
+import { ArrowRightIcon } from "../../shared/icons/ArrowRightIcon";
 import { processSections } from "./components/processSections";
 
 export default function ProcessPage() {
@@ -34,6 +37,14 @@ export default function ProcessPage() {
               />
             </section>
           ))}
+        </div>
+        <div className="text-center mt-p24 mb-p24">
+          <a href={ROUTES.CONTACT}>
+            <Button variant="primary" size="lg">
+              <span> Let&apos;s talk</span>
+              <ArrowRightIcon className="w-4 h-4 ml-p4" />
+            </Button>
+          </a>
         </div>
       </Container>
     </Layout>

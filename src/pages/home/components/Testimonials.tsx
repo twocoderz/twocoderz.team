@@ -8,6 +8,7 @@ import { ArrowRightIcon } from "../../../shared/icons/ArrowRightIcon";
 import { Button } from "../../../shared/components/ui/Button";
 import Section from "../../../shared/components/ui/Section";
 import { testimonialsData } from "../../../shared/data/testimonials";
+import { ROUTES } from "../../../routes";
 
 const transitionEase = [0.22, 1, 0.36, 1] as const;
 
@@ -100,10 +101,12 @@ export default function Testimonials() {
             </div>
           </div>
           <div className="text-center mt-p24">
-            <Button variant="primary" size="lg">
-              <span> Let&apos;s talk</span>
-              <ArrowRightIcon className="w-4 h-4 ml-p4" />
-            </Button>
+            <a href={ROUTES.CONTACT}>
+              <Button variant="primary" size="lg">
+                <span> Let&apos;s talk</span>
+                <ArrowRightIcon className="w-4 h-4 ml-p4" />
+              </Button>
+            </a>
           </div>
         </div>
       </Container>
