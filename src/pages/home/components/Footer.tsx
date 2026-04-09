@@ -161,26 +161,56 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-          <div className="border-t border-black-20">
-            <div className="flex items-center">
-              <span className="text-xs text-black-60">
-                &copy;2026 Twocoderz. All rights reserved
-              </span>
-              <ul className="flex items-center justify-between">
-                <li className="text-xs text-black-60 border-r border-black-10">
-                  rahim100codeur@gmail.com
+          <div className="border-t border-black-10 flex items-center justify-center">
+            <div className="flex items-center justify-center py-p8">
+              <ul className="flex items-center justify-between gap-p8">
+                <li>
+                  <a
+                    href="#"
+                    className="text-xs text-black-60 hover:text-black transition-all duration-500"
+                  >
+                    &copy;2026 Twocoderz. All rights reserved
+                  </a>
                 </li>
-                <li className="text-xs text-black-60 border-r border-black-10">
-                  Sitemap
+                <li>
+                  <a
+                    href="mailto:rahim100codeur@gmail.com"
+                    className="text-xs text-black-60 hover:text-black transition-all duration-500 border-l pl-p6 border-black-10"
+                  >
+                    rahim100codeur@gmail.com
+                  </a>
                 </li>
-                <li className="text-xs text-black-60 border-r border-black-10">
-                  Privacy Policy
+                <li>
+                  <a
+                    href="#"
+                    className="text-xs text-black-60 hover:text-black transition-all duration-500 border-l pl-p6 border-black-10"
+                  >
+                    Sitemap
+                  </a>
                 </li>
-                <li className="text-xs text-black-60 border-r border-black-10">
-                  Terms of use
+                <li>
+                  <a
+                    href="#"
+                    className="text-xs text-black-60 hover:text-black transition-all duration-500 border-l pl-p6 border-black-10"
+                  >
+                    Privacy Policy
+                  </a>
                 </li>
-                <li className="text-xs text-black-60 border-r border-black-10">
-                  Cookie policy
+                <li>
+                  <a
+                    href="#"
+                    className="text-xs text-black-60 hover:text-black transition-all duration-500 border-l pl-p6 border-black-10"
+                  >
+                    Terms of use
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-xs text-black-60 hover:text-black transition-all duration-500 border-l pl-p6 border-black-10"
+                  >
+                    Cookie policy
+                  </a>
                 </li>
               </ul>
             </div>
