@@ -161,6 +161,30 @@ export default function Footer() {
               </ul>
             </div>
           </div>
+          <div className="border-t border-black-20">
+            <div className="flex items-center">
+              <span className="text-xs text-black-60">
+                &copy;2026 Twocoderz. All rights reserved
+              </span>
+              <ul className="flex items-center justify-between">
+                <li className="text-xs text-black-60 border-r border-black-10">
+                  rahim100codeur@gmail.com
+                </li>
+                <li className="text-xs text-black-60 border-r border-black-10">
+                  Sitemap
+                </li>
+                <li className="text-xs text-black-60 border-r border-black-10">
+                  Privacy Policy
+                </li>
+                <li className="text-xs text-black-60 border-r border-black-10">
+                  Terms of use
+                </li>
+                <li className="text-xs text-black-60 border-r border-black-10">
+                  Cookie policy
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </Container>
     </Section>
