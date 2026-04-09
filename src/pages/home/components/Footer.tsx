@@ -127,10 +127,11 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#blog"
+                    href="https://pixelpulse-blog.vercel.app/"
+                    target="_blank"
                     className="text-xs text-black-80 hover:text-black transition-all duration-500"
                   >
-                    Articles
+                    Blog
                   </a>
                 </li>
               </ul>
