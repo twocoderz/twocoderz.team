@@ -1,3 +1,4 @@
+import { ROUTES } from "../../../routes";
 import { Button } from "../../../shared/components/ui/Button";
 import Container from "../../../shared/components/ui/Container";
 import Section from "../../../shared/components/ui/Section";
@@ -70,7 +71,7 @@ export default function Footer() {
               <ul className="flex flex-col gap-p3">
                 <li>
                   <a
-                    href="#about"
+                    href={ROUTES.ABOUT}
                     className="text-xs text-black-80 hover:text-black transition-all duration-500"
                   >
                     About
@@ -78,7 +79,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#services"
+                    href={ROUTES.SERVICES}
                     className="text-xs text-black-80 hover:text-black transition-all duration-500"
                   >
                     Services
@@ -86,7 +87,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#works"
+                    href={ROUTES.WORK}
                     className="text-xs text-black-80 hover:text-black transition-all duration-500"
                   >
                     Works
@@ -94,7 +95,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href={ROUTES.PROCESS}
                     className="text-xs text-black-80 hover:text-black transition-all duration-500"
                   >
                     Process
@@ -110,7 +111,7 @@ export default function Footer() {
               <ul className="flex flex-col gap-p3">
                 <li>
                   <a
-                    href="#testimonials"
+                    href={ROUTES.REVIEWS}
                     className="text-xs text-black-80 hover:text-black transition-all duration-500"
                   >
                     Reviews
@@ -118,7 +119,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href={ROUTES.FAQS}
                     className="text-xs text-black-80 hover:text-black transition-all duration-500"
                   >
                     FAQs
@@ -152,10 +153,10 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#contact"
+                    href={ROUTES.CONTACT}
                     className="text-xs text-black-80 hover:text-black transition-all duration-500"
                   >
-                    Contact up
+                    Contact us
                   </a>
                 </li>
               </ul>
