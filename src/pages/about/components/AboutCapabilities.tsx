@@ -6,20 +6,31 @@ import { useState } from "react";
 
 export default function AboutCapabilities() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const syncedItemCount = Math.min(
+    capabilitiesItems.length,
+    testimonialsDataforAbout.length,
+  );
+  const syncedCapabilitiesItems = capabilitiesItems.slice(0, syncedItemCount);
+
+  const handleAccordionOpenChange = (id: string) => {
+    const nextIndex = syncedCapabilitiesItems.findIndex(
+      (item) => item.id === id,
+    );
+    if (nextIndex !== -1) {
+      setCurrentIndex(nextIndex);
+    }
+  };
 
   const handlePrev = () => {
-    setCurrentIndex((prev) =>
-      prev === 0 ? testimonialsDataforAbout.length - 1 : prev - 1,
-    );
+    setCurrentIndex((prev) => (prev === 0 ? syncedItemCount - 1 : prev - 1));
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) =>
-      prev === testimonialsDataforAbout.length - 1 ? 0 : prev + 1,
-    );
+    setCurrentIndex((prev) => (prev === syncedItemCount - 1 ? 0 : prev + 1));
   };
 
   const current = testimonialsDataforAbout[currentIndex];
+  const currentAccordionId = syncedCapabilitiesItems[currentIndex]?.id;
 
   return (
     <div className="flex flex-col items-start gap-p20">
@@ -29,16 +40,19 @@ export default function AboutCapabilities() {
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="pr-p8">
           <AccodionList
-            items={capabilitiesItems}
+            items={syncedCapabilitiesItems}
             defaultOpenId="refresh"
             allowMultiple={false}
+            openId={currentAccordionId}
+            onOpenChange={handleAccordionOpenChange}
+            preventCloseOnSameClick={true}
           />
         </div>
         <div className="pl-p8 pt-p20">
           <TestimonialCarouselCard
             testimonial={current}
             currentIndex={currentIndex}
-            total={testimonialsDataforAbout.length}
+            total={syncedItemCount}
             onPrev={handlePrev}
             onNext={handleNext}
           />

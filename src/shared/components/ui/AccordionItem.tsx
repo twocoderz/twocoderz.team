@@ -14,6 +14,9 @@ export interface AccordionListProps {
   items: AccordionItemData[];
   defaultOpenId?: string;
   allowMultiple?: boolean;
+  openId?: string;
+  onOpenChange?: (id: string) => void;
+  preventCloseOnSameClick?: boolean;
   className?: string;
   itemClassName?: string;
 }
@@ -23,6 +26,9 @@ export default function AccodionList(props: AccordionListProps) {
     items,
     defaultOpenId,
     allowMultiple = false,
+    openId,
+    onOpenChange,
+    preventCloseOnSameClick = false,
     className,
     itemClassName,
   } = props;
@@ -33,7 +39,27 @@ export default function AccodionList(props: AccordionListProps) {
   }, [defaultOpenId]);
 
   const [openIds, setOpenIds] = useState<Set<string>>(initialOpenIds);
+
+  const isControlledSingle = !allowMultiple && openId !== undefined;
+  const activeOpenIds = isControlledSingle
+    ? new Set<string>(openId ? [openId] : [])
+    : openIds;
+
   const toggleItem = (id: string) => {
+    if (isControlledSingle) {
+      const isOpen = openId === id;
+
+      if (isOpen) {
+        if (!preventCloseOnSameClick) {
+          onOpenChange?.("");
+        }
+        return;
+      }
+
+      onOpenChange?.(id);
+      return;
+    }
+
     setOpenIds((prev) => {
       const next = new Set(prev);
       const isOpen = next.has(id);
@@ -43,7 +69,14 @@ export default function AccodionList(props: AccordionListProps) {
         else next.add(id);
         return next;
       }
-      if (isOpen) return new Set<string>();
+
+      if (isOpen) {
+        if (preventCloseOnSameClick) {
+          return prev;
+        }
+        return new Set<string>();
+      }
+
       return new Set<string>([id]);
     });
   };
@@ -51,7 +84,7 @@ export default function AccodionList(props: AccordionListProps) {
   return (
     <div className={twMerge("space-y-p2 w-full", className)}>
       {items.map((item) => {
-        const isOpen = openIds.has(item.id);
+        const isOpen = activeOpenIds.has(item.id);
         const panelId = "accordion-panel-" + item.id;
         const buttonId = "accordion-button-" + item.id;
 
