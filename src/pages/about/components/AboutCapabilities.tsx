@@ -22,19 +22,28 @@ export default function AboutCapabilities() {
   const current = testimonialsDataforAbout[currentIndex];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2">
-      <AccodionList
-        items={capabilitiesItems}
-        defaultOpenId="refresh"
-        allowMultiple={false}
-      />
-      <TestimonialCarouselCard
-        testimonial={current}
-        currentIndex={currentIndex}
-        total={testimonialsDataforAbout.length}
-        onPrev={handlePrev}
-        onNext={handleNext}
-      />
+    <div className="flex flex-col items-start gap-p20">
+      <h2 className="text-4xl tracking-wide font-bold text-black-80">
+        Capabilities
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="pr-p8">
+          <AccodionList
+            items={capabilitiesItems}
+            defaultOpenId="refresh"
+            allowMultiple={false}
+          />
+        </div>
+        <div className="pl-p8 pt-p20">
+          <TestimonialCarouselCard
+            testimonial={current}
+            currentIndex={currentIndex}
+            total={testimonialsDataforAbout.length}
+            onPrev={handlePrev}
+            onNext={handleNext}
+          />
+        </div>
+      </div>
     </div>
   );
 }
