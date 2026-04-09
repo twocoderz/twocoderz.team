@@ -108,3 +108,42 @@ export const testimonialsData: Testimonial[] = [
       "Their innovative approach and deep understanding of design principles made our project a huge success.",
   },
 ];
+
+export const testimonialsDataforAbout: Testimonial[] = [
+  {
+    id: "testimonial-1",
+    name: "Brian Beaver",
+    profession: "VP of Design at Turo",
+    company: "apple",
+    src: "https://api.dicebear.com/7.x/avataaars/svg?seed=BrianBeaver",
+    quote:
+      "The team's exceptional design thinking and execution transformed our vision into reality. Couldn't be happier with the results.",
+  },
+  {
+    id: "testimonial-2",
+    name: "Malini Leveque",
+    profession: "Vice President, Product Design and Research at Citrix",
+    company: "adobe",
+    src: "https://api.dicebear.com/7.x/avataaars/svg?seed=MaliniLeveque",
+    quote:
+      "Outstanding collaboration and attention to detail. They truly understand what makes great design work across all platforms.",
+  },
+  {
+    id: "testimonial-3",
+    name: "Dan Brown",
+    profession: "Senior Marketing Manager at Mozilla",
+    company: "mozilla",
+    src: "https://api.dicebear.com/7.x/avataaars/svg?seed=DanBrown",
+    quote:
+      "Their approach to problem-solving is refreshing. We've seen tangible improvements in user engagement and satisfaction.",
+  },
+  {
+    id: "testimonial-4",
+    name: "Chris Chen",
+    profession: "Head of ColorOS Design Department at Oppo",
+    company: "oppo",
+    src: "https://api.dicebear.com/7.x/avataaars/svg?seed=ChrisChen",
+    quote:
+      "Impressed with their technical expertise and creative solutions. A pleasure to work with from start to finish.",
+  },
+];
