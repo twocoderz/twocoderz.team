@@ -52,6 +52,8 @@ export default function AccodionList(props: AccordionListProps) {
       if (isOpen) {
         if (!preventCloseOnSameClick) {
           onOpenChange?.("");
+        } else {
+          onOpenChange?.(id);
         }
         return;
       }

@@ -15,12 +15,20 @@ type TestimonialCarouselCardProps = {
   total: number;
   onPrev: () => void;
   onNext: () => void;
+  animationSeed?: number;
 };
 
 export default function TestimonialCarouselCard(
   props: TestimonialCarouselCardProps,
 ) {
-  const { testimonial, currentIndex, total, onPrev, onNext } = props;
+  const {
+    testimonial,
+    currentIndex,
+    total,
+    onPrev,
+    onNext,
+    animationSeed = 0,
+  } = props;
 
   return (
     <div className="flex flex-col items-start max-w-2xl px-p4 py-p4">
@@ -61,7 +69,7 @@ export default function TestimonialCarouselCard(
         </p>
 
         <motion.div
-          key={`profile-${testimonialMotionKey(currentIndex, testimonial.name)}`}
+          key={`profile-${testimonialMotionKey(currentIndex, testimonial.name)}-${animationSeed}`}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
