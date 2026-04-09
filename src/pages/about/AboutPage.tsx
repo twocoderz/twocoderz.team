@@ -3,6 +3,7 @@ import { HeroSection } from "../../shared/components/sections/HeroSection";
 import Container from "../../shared/components/ui/Container";
 import Section from "../../shared/components/ui/Section";
 import AboutStats from "./components/AboutStats";
+import AboutValues from "./components/AboutValues";
 
 export default function AboutPage() {
   return (
@@ -20,15 +21,9 @@ export default function AboutPage() {
         </Container>
       </Section>
       {/* Add Mission/Vision section */}
-
       <Section>
         <Container>
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-black-80 mb-p4">
-              Coming Soon
-            </h2>
-            <p className="text-black-60">Finish building this page!</p>
-          </div>
+          <AboutValues />
         </Container>
       </Section>
     </Layout>
