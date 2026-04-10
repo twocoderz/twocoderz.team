@@ -13,6 +13,7 @@ export default function ContactPage() {
         title="Contact us"
         subtitle="Let's talk about your project and see how we can help."
         alignment="center"
+        spH1ClassName="max-w-2xl"
       />
 
       <Section>

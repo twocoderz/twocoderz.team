@@ -19,6 +19,7 @@ export default function ProcessPage() {
         alignment="center"
         className="bg-black text-white"
         spClassName="py-p8"
+        spH1ClassName="max-w-2xl"
       />
       <Container>
         <div className="flex flex-col items-start gap-p24 mt-p23">

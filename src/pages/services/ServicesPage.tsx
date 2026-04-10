@@ -10,6 +10,7 @@ export default function ServicesPage() {
         title="Our Services"
         subtitle="Comprehensive solutions to transform your digital presence and drive growth."
         alignment="center"
+        spH1ClassName="max-w-2xl"
       />
       <ServiceGridSection services={servicesData} title="What We Offer" />
       {/* TODO: Add detailed service pages/sections */}

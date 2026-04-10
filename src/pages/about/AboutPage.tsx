@@ -13,6 +13,7 @@ export default function AboutPage() {
         title="About"
         subtitle="We're a team of designers and developers passionate about building beautiful, functional digital products."
         alignment="center"
+        spH1ClassName="max-w-2xl"
       />
 
       {/* About stats section */}

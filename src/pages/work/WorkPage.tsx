@@ -10,6 +10,7 @@ export default function WorkPage() {
         title="Our Work"
         subtitle="Explore our portfolio of successful projects that delivered real business impact."
         alignment="center"
+        spH1ClassName="max-w-2xl"
       />
       <PortfolioGridSection
         projects={portfolioData}

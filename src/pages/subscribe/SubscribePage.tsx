@@ -13,6 +13,7 @@ export default function SubscribePage() {
         Sign up for our newsletter and be the first to receive exclusive insights, 
         fresh case studies, and the latest updates — delivered straight to your inbox by the Twocoderz team."
         alignment="center"
+        spH1ClassName="max-w-5xl"
       />
       <Container>
         <div className="mx-auto max-w-lg mb-p12">

@@ -8,6 +8,7 @@ export default function ReviewsPage() {
         title="Twocoderz reviews and client testimonials"
         subtitle="Explore our reviews."
         alignment="center"
+        spH1ClassName="max-w-2xl"
       />
       {/* TODO: Add filtering/search */}
       {/* TODO: Add pagination or load more */}
