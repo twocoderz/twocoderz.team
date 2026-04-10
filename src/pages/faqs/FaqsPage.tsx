@@ -8,6 +8,8 @@ export default function FaqsPage() {
         title="Frequently asked questions"
         subtitle="At Twocoderz, we believe in empowering you with straightforward, transparent information about our team, our approach, and what it takes to bring your project to life. Here, we answer your most pressing questions directly and with purpose, so you can make an informed, confident choice in partnering with us."
         alignment="center"
+        className="bg-black text-white"
+        spClassName="py-p4"
       />
 
       {/* TODO: Add filtering/search */}

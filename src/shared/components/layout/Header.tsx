@@ -24,7 +24,11 @@ export default function Header() {
     useState(false);
 
   const isProcessPage = location.pathname === ROUTES.PROCESS;
-  const isDarkHeader = isProcessPage && isProcessHeroFullyVisible;
+  const isFaqsPage = location.pathname === ROUTES.FAQS;
+
+  const isDarkHeader =
+    (isProcessPage && isProcessHeroFullyVisible) ||
+    (isFaqsPage && isProcessHeroFullyVisible);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -73,7 +77,7 @@ export default function Header() {
   }, [isMenuOpen]);
 
   useEffect(() => {
-    if (location.pathname != ROUTES.PROCESS) {
+    if (!isProcessPage && !isFaqsPage) {
       setIsProcessHeroFullyVisible(false);
       return;
     }
