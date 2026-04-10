@@ -7,11 +7,4 @@
     = one project detail page
     = contact page
 
-Dans AboutCapabilities, on va lier le fait qu'on ouvre ou ferme l'accordion avec l'affichage des testimonials
-voila : quand on va arriver sur cette section, il y a aura le premier accordion qui sera deja ouvert et on va pas 
-pouvoir le fermer. ca ne vas se fermer que quand on clique pour devoiler un autre accordion. tu vas remarquer qu'il 
-y a 4 testimonials tout comme ces 4 capabilities (les accordion) donc  chaque accordion est lie a un testimonial quand on va 
-cliquer sur un accordion, ca va s'ouvrir et le testimonial correspondant aussi va s'afficher. dis moi si tu comprends 
-ce que je veux faire avant qu'on ne modifie le code.
-
     ------------PROCHAINEMENT CONTINUER AVEC LE ABOUT PAGE, FINIR ET COMMENCER LE WORK PAGE
