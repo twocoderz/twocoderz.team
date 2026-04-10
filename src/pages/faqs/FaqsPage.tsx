@@ -10,6 +10,7 @@ export default function FaqsPage() {
         alignment="center"
         className="bg-black text-white"
         spClassName="py-p4"
+        spH1ClassName="max-w-5xl"
       />
 
       {/* TODO: Add filtering/search */}

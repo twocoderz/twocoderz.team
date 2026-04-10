@@ -18,7 +18,7 @@ export default function ProcessPage() {
         and are not constrained by time and budget.`}
         alignment="center"
         className="bg-black text-white"
-        spClassName="py-p4"
+        spClassName="py-p8"
       />
       <Container>
         <div className="flex flex-col items-start gap-p24 mt-p23">
