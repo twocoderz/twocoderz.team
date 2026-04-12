@@ -4,6 +4,8 @@ import { HeroSection } from "../../shared/components/sections/HeroSection";
 import { WorkGridSection } from "../../shared/components/sections/WorkGridSection";
 import { FilterTabs } from "../../shared/components/ui/FilterTabs";
 import { portfolioData } from "../../shared/data/portfolio";
+import Container from "../../shared/components/ui/Container";
+import Section from "../../shared/components/ui/Section";
 
 export default function WorkPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -43,15 +45,18 @@ export default function WorkPage() {
         title="We elevate products and designs"
         spH1ClassName="max-w-4xl"
       />
-      <FilterTabs
-        categories={categories}
-        selected={selectedCategory}
-        onSelect={setSelectedCategory}
-        className="mb-p10 mt-p8"
-      />
-      <WorkGridSection
-        projects={filteredProjects}
-      />
+
+      <Container>
+        <Section>
+          <FilterTabs
+            categories={categories}
+            selected={selectedCategory}
+            onSelect={setSelectedCategory}
+            className="mt-p8"
+          />
+          <WorkGridSection projects={filteredProjects} />
+        </Section>
+      </Container>
     </Layout>
   );
 }
