@@ -111,14 +111,6 @@ export default function Footer() {
               <ul className="flex flex-col gap-p3">
                 <li>
                   <a
-                    href={ROUTES.REVIEWS}
-                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
-                  >
-                    Reviews
-                  </a>
-                </li>
-                <li>
-                  <a
                     href={ROUTES.FAQS}
                     className="text-xs text-black-80 hover:text-black transition-all duration-500"
                   >
