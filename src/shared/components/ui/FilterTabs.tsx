@@ -23,7 +23,7 @@ export function FilterTabs({
     <div
       className={cn(
         "flex flex-wrap items-center justify-center gap-3",
-        className
+        className,
       )}
     >
       {categories.map((category) => {
@@ -34,11 +34,11 @@ export function FilterTabs({
             onClick={() => onSelect(category)}
             whileTap={{ scale: 0.97 }}
             className={cn(
-              "relative px-5 py-2.5 text-sm font-medium tracking-wider rounded-full",
+              "relative px-5 py-2.5 text-sm font-medium rounded-full",
               "transition-colors duration-200",
               isSelected
                 ? "bg-black-80 text-white"
-                : "bg-transparent text-black-60 border border-black-30 hover:border-black-60 hover:text-black-80"
+                : "bg-transparent text-black-60 border border-black-30 hover:border-black-60 hover:text-black-80",
             )}
           >
             {category}

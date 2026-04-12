@@ -8,28 +8,46 @@ import { portfolioData } from "../../shared/data/portfolio";
 export default function WorkPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const categories = [
-    "All",
-    ...new Set(portfolioData.flatMap((p) => p.services || [])),
-  ];
+  const categories = ["All", "Web", "Design", "Apps"];
 
   const filteredProjects =
     selectedCategory === "All"
       ? portfolioData
-      : portfolioData.filter((p) => p.services?.includes(selectedCategory));
+      : portfolioData.filter((p) => {
+          if (selectedCategory === "Web") {
+            return p.services?.some(
+              (s) =>
+                s.toLowerCase().includes("web") ||
+                s.toLowerCase().includes("development"),
+            );
+          }
+          if (selectedCategory === "Design") {
+            return p.services?.some(
+              (s) =>
+                s.toLowerCase().includes("design") ||
+                s.toLowerCase().includes("ui") ||
+                s.toLowerCase().includes("ux") ||
+                s.toLowerCase().includes("branding") ||
+                s.toLowerCase().includes("identity"),
+            );
+          }
+          if (selectedCategory === "Apps") {
+            return p.services?.some((s) => s.toLowerCase().includes("app"));
+          }
+          return true;
+        });
 
   return (
     <Layout>
       <HeroSection
-        title="Our Work"
-        alignment="center"
-        spH1ClassName="max-w-2xl"
+        title="We elevate products and designs"
+        spH1ClassName="max-w-4xl"
       />
       <FilterTabs
         categories={categories}
         selected={selectedCategory}
         onSelect={setSelectedCategory}
-        className="mb-12"
+        className="mb-p10 mt-p8"
       />
       <PortfolioGridSection
         projects={filteredProjects}
