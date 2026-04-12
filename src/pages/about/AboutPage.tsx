@@ -3,6 +3,7 @@ import { HeroSection } from "../../shared/components/sections/HeroSection";
 import Container from "../../shared/components/ui/Container";
 import Section from "../../shared/components/ui/Section";
 import AboutCapabilities from "./components/AboutCapabilities";
+import AboutLeadership from "./components/AboutLeadership";
 import AboutStats from "./components/AboutStats";
 import AboutValues from "./components/AboutValues";
 
@@ -34,6 +35,13 @@ export default function AboutPage() {
       <Section>
         <Container>
           <AboutCapabilities />
+        </Container>
+      </Section>
+
+      {/* About Leadership section */}
+      <Section>
+        <Container>
+          <AboutLeadership />
         </Container>
       </Section>
     </Layout>
