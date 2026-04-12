@@ -11,6 +11,7 @@ export default function AboutLeadership() {
         {teamData.map((team) => (
           <Leader
             src={team.src}
+            href={team.href}
             name={team.name}
             profession={team.profession}
           />
