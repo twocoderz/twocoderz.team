@@ -34,11 +34,11 @@ export function FilterTabs({
             onClick={() => onSelect(category)}
             whileTap={{ scale: 0.97 }}
             className={cn(
-              "relative px-5 py-2.5 text-sm font-medium rounded-full",
+              "relative px-p8 py-p4 text-sm font-bold cursor-pointer rounded-full",
               "transition-colors duration-200",
               isSelected
                 ? "bg-black-80 text-white"
-                : "bg-transparent text-black-60 border border-black-30 hover:border-black-60 hover:text-black-80",
+                : "bg-black-5 text-black-60 hover:text-black-80",
             )}
           >
             {category}
