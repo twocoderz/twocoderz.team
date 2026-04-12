@@ -7,9 +7,7 @@ export const ROUTES = {
   PROCESS: "/process",
   SUBSCRIBE: "/subscribe",
   CONTACT: "/contact",
-  REVIEWS: "/reviews",
   FAQS: "/faqs",
-  
 } as const;
 
 export type RouteKey = keyof typeof ROUTES;

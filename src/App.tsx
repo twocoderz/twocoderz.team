@@ -8,7 +8,6 @@ import ProcessPage from "./pages/process/ProcessPage";
 import SubscribePage from "./pages/subscribe/SubscribePage";
 import { ROUTES } from "./routes";
 import FaqsPage from "./pages/faqs/FaqsPage";
-import ReviewsPage from "./pages/reviews/ReviewsPage";
 
 function App() {
   return (
@@ -22,7 +21,6 @@ function App() {
         <Route path={ROUTES.SUBSCRIBE} element={<SubscribePage />} />
         <Route path={ROUTES.CONTACT} element={<ContactPage />} />
         <Route path={ROUTES.FAQS} element={<FaqsPage />} />
-        <Route path={ROUTES.REVIEWS} element={<ReviewsPage />} />
       </Routes>
     </Router>
   );
