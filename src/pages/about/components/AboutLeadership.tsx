@@ -4,7 +4,7 @@ import { teamData } from "./team";
 export default function AboutLeadership() {
   return (
     <div>
-      <h2 className="text-4xl tracking-wide font-bold text-black-80 mb-p8">
+      <h2 className="text-4xl tracking-wide font-bold text-black-80 mb-p10">
         Leadership
       </h2>
       <div className="flex items-center gap-p12">

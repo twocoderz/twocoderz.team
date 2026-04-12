@@ -12,7 +12,7 @@ export default function Leader(props: LeaderProps) {
   const { src, href, name, profession } = props;
 
   return (
-    <a href={href} className="cursor-pointer">
+    <a href={href} target="_blank" className="cursor-pointer">
       <div className="flex items-center border border-black-10 hover:border-black-40 transition-all duration-500 p-p6 rounded-full gap-p4">
         <div className="p-2 bg-black-5 rounded-full">
           <img
