@@ -8,7 +8,6 @@ export default function WorkPage() {
     <Layout>
       <HeroSection
         title="Our Work"
-        subtitle="Explore our portfolio of successful projects that delivered real business impact."
         alignment="center"
         spH1ClassName="max-w-2xl"
       />
@@ -16,8 +15,8 @@ export default function WorkPage() {
         projects={portfolioData}
         title="Featured Projects"
       />
-      {/* TODO: Add filtering/search */}
-      {/* TODO: Add pagination or load more */}
+      {/* Add filtering/search */}
+      {/* Add pagination or load more */}
     </Layout>
   );
 }
