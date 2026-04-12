@@ -72,7 +72,7 @@ export default function Projects() {
     <section>
       <Container>
         {/* Grille de projets */}
-        <div className="columns-1 md:columns-2 gap-24">
+        <div className="columns-1 md:columns-2 gap-y-24 gap-x-8">
           {portfolioData.map((project) => (
             <ProjectCard key={project.name} project={project} />
           ))}
