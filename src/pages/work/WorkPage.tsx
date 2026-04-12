@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Layout from "../../shared/components/layout/Layout";
 import { HeroSection } from "../../shared/components/sections/HeroSection";
-import { PortfolioGridSection } from "../../shared/components/sections/PortfolioGridSection";
+import { WorkGridSection } from "../../shared/components/sections/WorkGridSection";
 import { FilterTabs } from "../../shared/components/ui/FilterTabs";
 import { portfolioData } from "../../shared/data/portfolio";
 
@@ -49,9 +49,8 @@ export default function WorkPage() {
         onSelect={setSelectedCategory}
         className="mb-p10 mt-p8"
       />
-      <PortfolioGridSection
+      <WorkGridSection
         projects={filteredProjects}
-        title="Featured Projects"
       />
     </Layout>
   );

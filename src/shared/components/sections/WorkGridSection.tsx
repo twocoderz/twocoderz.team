@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import Container from "../../../shared/components/ui/Container";
-import { portfolioData } from "../../../shared/data/portfolio";
+import Container from "../ui/Container";
+import type { Project } from "../../data/portfolio";
 
-// Composant carte individuelle
-function ProjectCard({ project }: { project: (typeof portfolioData)[0] }) {
+function WorkCard({ project }: { project: Project }) {
   const [current, setCurrent] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -30,7 +29,6 @@ function ProjectCard({ project }: { project: (typeof portfolioData)[0] }) {
       onMouseLeave={() => setIsHovered(false)}
       className="group block py-12"
     >
-      {/* Bloc image - hauteur fixe */}
       <div
         className={`relative w-full rounded-lg overflow-hidden mb-6 transition-all duration-300 ${
           project.tall ? "h-130" : "h-80"
@@ -48,13 +46,10 @@ function ProjectCard({ project }: { project: (typeof portfolioData)[0] }) {
         ))}
       </div>
 
-      {/* Contenu texte */}
       <div className="space-y-2">
         <h3 className="text-3xl font-bold text-black-70 group-hover:text-black-90 transition-colors duration-500">
           {project.name}
         </h3>
-
-        {/* Description avec animation slide-up depuis le bas */}
         <p
           className={`text-black-80 text-md font-normal transition-all duration-500 ease-out ${
             isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
@@ -67,16 +62,18 @@ function ProjectCard({ project }: { project: (typeof portfolioData)[0] }) {
   );
 }
 
-export default function Projects() {
-  const displayedProjects = portfolioData.slice(0, 8);
+export interface WorkGridProps {
+  projects: Project[];
+  title?: string;
+}
 
+export function WorkGridSection({ projects }: WorkGridProps) {
   return (
     <section>
       <Container>
-        {/* Grille de projets */}
         <div className="columns-1 md:columns-2 gap-y-24 gap-x-8">
-          {displayedProjects.map((project) => (
-            <ProjectCard key={project.name} project={project} />
+          {projects.map((project) => (
+            <WorkCard key={project.id} project={project} />
           ))}
         </div>
       </Container>
