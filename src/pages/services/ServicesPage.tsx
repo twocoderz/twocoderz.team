@@ -7,10 +7,15 @@ export default function ServicesPage() {
   return (
     <Layout>
       <HeroSection
-        title="Our Services"
-        subtitle="Comprehensive solutions to transform your digital presence and drive growth."
+        title="Services"
+        subtitle="With over 15 years of experience in the industry, our offerings 
+        have evolved into a set of services that complement each other and allow us 
+        to design, develop, implement, maintain, and extend a consistent experience 
+        across all touchpoints."
         alignment="center"
+        className="bg-black text-white"
         spH1ClassName="max-w-2xl"
+        spClassName="py-p8"
       />
       <ServiceGridSection services={servicesData} title="What We Offer" />
       {/* Add detailed service pages/sections */}
