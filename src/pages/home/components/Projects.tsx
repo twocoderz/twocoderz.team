@@ -28,7 +28,7 @@ function ProjectCard({ project }: { project: (typeof portfolioData)[0] }) {
       href={project.href}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="group block py-12"
+      className="group block"
     >
       {/* Bloc image - hauteur fixe */}
       <div
@@ -69,15 +69,36 @@ function ProjectCard({ project }: { project: (typeof portfolioData)[0] }) {
 
 export default function Projects() {
   const displayedProjects = portfolioData.slice(0, 8);
+  const leftColumnProjects = displayedProjects.filter(
+    (_, index) => index % 2 === 0,
+  );
+  const rightColumnProjects = displayedProjects.filter(
+    (_, index) => index % 2 !== 0,
+  );
 
   return (
     <section>
       <Container>
-        {/* Grille de projets */}
-        <div className="columns-1 md:columns-2 gap-y-24 gap-x-8">
+        {/* Mobile: une seule colonne */}
+        <div className="space-y-24 md:hidden">
           {displayedProjects.map((project) => (
             <ProjectCard key={project.name} project={project} />
           ))}
+        </div>
+
+        {/* Desktop: deux colonnes flex sans CSS columns */}
+        <div className="hidden md:flex md:items-start md:gap-8 mt-p24">
+          <div className="flex-1 space-y-24">
+            {leftColumnProjects.map((project) => (
+              <ProjectCard key={project.name} project={project} />
+            ))}
+          </div>
+
+          <div className="flex-1 space-y-24">
+            {rightColumnProjects.map((project) => (
+              <ProjectCard key={project.name} project={project} />
+            ))}
+          </div>
         </div>
       </Container>
     </section>

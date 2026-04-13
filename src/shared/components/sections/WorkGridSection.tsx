@@ -27,7 +27,7 @@ function WorkCard({ project }: { project: Project }) {
       href={project.href}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="group block py-12"
+      className="group block"
     >
       <div
         className={`relative w-full rounded-lg overflow-hidden mb-6 transition-all duration-300 ${
@@ -68,13 +68,30 @@ export interface WorkGridProps {
 }
 
 export function WorkGridSection({ projects }: WorkGridProps) {
+  const leftColumnProjects = projects.filter((_, index) => index % 2 === 0);
+  const rightColumnProjects = projects.filter((_, index) => index % 2 !== 0);
+
   return (
     <section>
       <Container>
-        <div className="columns-1 md:columns-2 gap-y-24 gap-x-8">
+        <div className="space-y-24 md:hidden">
           {projects.map((project) => (
             <WorkCard key={project.id} project={project} />
           ))}
+        </div>
+
+        <div className="hidden md:flex md:items-start md:gap-8">
+          <div className="flex-1 space-y-24">
+            {leftColumnProjects.map((project) => (
+              <WorkCard key={project.id} project={project} />
+            ))}
+          </div>
+
+          <div className="flex-1 space-y-24">
+            {rightColumnProjects.map((project) => (
+              <WorkCard key={project.id} project={project} />
+            ))}
+          </div>
         </div>
       </Container>
     </section>

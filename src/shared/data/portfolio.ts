@@ -71,4 +71,55 @@ export const portfolioData: Project[] = [
     ],
     services: ["Brand Identity", "Design System"],
   },
+  {
+    id: "opera",
+    name: "Opera",
+    description:
+      "Identity system that enhanced brand recognition and user engagement",
+    href: "#",
+    slides: [
+      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800",
+      "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800",
+    ],
+    tall: true,
+    metrics: [
+      { label: "Brand Recognition", value: "+35%" },
+      { label: "Engagement", value: "+28%" },
+    ],
+    services: ["Brand Identity", "Design System"],
+  },
+  {
+    id: "chrome",
+    name: "Chrome",
+    description:
+      "Identity system that enhanced brand recognition and user engagement",
+    href: "#",
+    slides: [
+      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800",
+      "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800",
+    ],
+    tall: false,
+    metrics: [
+      { label: "Brand Recognition", value: "+35%" },
+      { label: "Engagement", value: "+28%" },
+    ],
+    services: ["Brand Identity", "Design System"],
+  },
+  {
+    id: "brave",
+    name: "Brave",
+    description:
+      "Identity system that enhanced brand recognition and user engagement",
+    href: "#",
+    slides: [
+      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800",
+      "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800",
+    ],
+    tall: true,
+    metrics: [
+      { label: "Brand Recognition", value: "+35%" },
+      { label: "Engagement", value: "+28%" },
+    ],
+    services: ["web", "Ecommerce app"],
+  },
 ];
