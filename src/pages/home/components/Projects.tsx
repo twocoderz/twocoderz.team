@@ -56,7 +56,7 @@ function ProjectCard({ project }: { project: (typeof portfolioData)[0] }) {
 
         {/* Description avec animation slide-up depuis le bas */}
         <p
-          className={`text-black-80 text-md font-normal transition-all duration-500 ease-out ${
+          className={`text-black-80 text-md font-normal max-w-sm transition-all duration-500 ease-out ${
             isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >

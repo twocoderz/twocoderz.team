@@ -98,7 +98,7 @@ export const portfolioData: Project[] = [
       "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800",
       "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800",
     ],
-    tall: false,
+    tall: true,
     metrics: [
       { label: "Brand Recognition", value: "+35%" },
       { label: "Engagement", value: "+28%" },
@@ -115,7 +115,7 @@ export const portfolioData: Project[] = [
       "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800",
       "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800",
     ],
-    tall: true,
+    tall: false,
     metrics: [
       { label: "Brand Recognition", value: "+35%" },
       { label: "Engagement", value: "+28%" },
