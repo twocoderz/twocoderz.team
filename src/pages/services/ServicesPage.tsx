@@ -1,7 +1,5 @@
 import Layout from "../../shared/components/layout/Layout";
 import { HeroSection } from "../../shared/components/sections/HeroSection";
-import { ServiceGridSection } from "../../shared/components/sections/ServiceGridSection";
-import { servicesData } from "../../shared/data/services";
 
 export default function ServicesPage() {
   return (
@@ -17,10 +15,6 @@ export default function ServicesPage() {
         spH1ClassName="max-w-2xl"
         spClassName="py-p8"
       />
-      <ServiceGridSection services={servicesData} title="What We Offer" />
-      {/* Add detailed service pages/sections */}
-      {/* Add process/workflow section */}
-      {/* Add case studies per service */}
     </Layout>
   );
 }
