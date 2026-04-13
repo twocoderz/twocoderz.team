@@ -1,5 +1,8 @@
 import Layout from "../../shared/components/layout/Layout";
 import { HeroSection } from "../../shared/components/sections/HeroSection";
+import Container from "../../shared/components/ui/Container";
+import Section from "../../shared/components/ui/Section";
+import OneService from "./components/OneService";
 
 export default function ServicesPage() {
   return (
@@ -15,6 +18,12 @@ export default function ServicesPage() {
         spH1ClassName="max-w-2xl"
         spClassName="py-p8"
       />
+
+      <Container>
+        <Section>
+          <OneService />
+        </Section>
+      </Container>
     </Layout>
   );
 }
