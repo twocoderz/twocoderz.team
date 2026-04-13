@@ -13,9 +13,9 @@ export default function ServicesPage() {
         spH1ClassName="max-w-2xl"
       />
       <ServiceGridSection services={servicesData} title="What We Offer" />
-      {/* TODO: Add detailed service pages/sections */}
-      {/* TODO: Add process/workflow section */}
-      {/* TODO: Add case studies per service */}
+      {/* Add detailed service pages/sections */}
+      {/* Add process/workflow section */}
+      {/* Add case studies per service */}
     </Layout>
   );
 }
