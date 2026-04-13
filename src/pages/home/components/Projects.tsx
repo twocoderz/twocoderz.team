@@ -80,7 +80,7 @@ export default function Projects() {
     <section>
       <Container>
         {/* Mobile: une seule colonne */}
-        <div className="space-y-24 md:hidden">
+        <div className="space-y-24 md:hidden mt-p18">
           {displayedProjects.map((project) => (
             <ProjectCard key={project.name} project={project} />
           ))}

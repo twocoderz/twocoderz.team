@@ -43,6 +43,7 @@ export default function WorkPage() {
     <Layout>
       <HeroSection
         title="We elevate products and designs"
+        subtitle="View our work over decades."
         spH1ClassName="max-w-4xl"
       />
 

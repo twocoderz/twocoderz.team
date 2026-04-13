@@ -74,13 +74,13 @@ export function WorkGridSection({ projects }: WorkGridProps) {
   return (
     <section>
       <Container>
-        <div className="space-y-24 md:hidden">
+        <div className="space-y-24 md:hidden mt-p18">
           {projects.map((project) => (
             <WorkCard key={project.id} project={project} />
           ))}
         </div>
 
-        <div className="hidden md:flex md:items-start md:gap-8">
+        <div className="hidden md:flex md:items-start md:gap-8 mt-p18">
           <div className="flex-1 space-y-24">
             {leftColumnProjects.map((project) => (
               <WorkCard key={project.id} project={project} />
