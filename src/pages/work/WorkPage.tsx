@@ -6,6 +6,9 @@ import { FilterTabs } from "../../shared/components/ui/FilterTabs";
 import { portfolioData } from "../../shared/data/portfolio";
 import Container from "../../shared/components/ui/Container";
 import Section from "../../shared/components/ui/Section";
+import { ROUTES } from "../../routes";
+import { Button } from "../../shared/components/ui/Button";
+import { ArrowRightIcon } from "../../shared/icons/ArrowRightIcon";
 
 export default function WorkPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -48,16 +51,23 @@ export default function WorkPage() {
       />
 
       <Container>
-        <Section>
-          <FilterTabs
-            categories={categories}
-            selected={selectedCategory}
-            onSelect={setSelectedCategory}
-            className="mt-p8"
-          />
-          <WorkGridSection projects={filteredProjects} />
-        </Section>
+        <FilterTabs
+          categories={categories}
+          selected={selectedCategory}
+          onSelect={setSelectedCategory}
+          className="mt-p8"
+        />
+        <WorkGridSection projects={filteredProjects} />
       </Container>
+
+      <div className="text-center mt-p24 mb-p24">
+        <a href={ROUTES.CONTACT}>
+          <Button variant="primary" size="lg">
+            <span> Let&apos;s talk</span>
+            <ArrowRightIcon className="w-4 h-4 ml-p4" />
+          </Button>
+        </a>
+      </div>
     </Layout>
   );
 }
