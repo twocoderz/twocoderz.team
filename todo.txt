@@ -10,4 +10,4 @@
     - rendre le fait que je header deviens black reutilisable de tel sorte 
         que ce ne sois pas appliquable qu'a la page de process.
 
-    ------------PROCHAINEMENT CONTINUER AVEC LE ABOUT PAGE, FINIR ET COMMENCER LE WORK PAGE
+    ------------PROCHAINEMENT CONTINUER AVEC LE SERVICES PAGE ET FINIR

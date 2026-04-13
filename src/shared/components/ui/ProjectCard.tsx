@@ -38,7 +38,7 @@ export function ProjectCard({
       className="group block"
     >
       <div
-        className={`relative w-full rounded-lg overflow-hidden mb-6 transition-all duration-300 ${
+        className={`relative w-full rounded-sm overflow-hidden mb-6 transition-all duration-300 ${
           isServicesVariant ? "h-50 md:h-50" : project.tall ? "h-130" : "h-80"
         }`}
       >
@@ -66,8 +66,8 @@ export function ProjectCard({
         </h3>
 
         <p
-          className={`text-black-80 text-md font-normal leading-relaxed transition-all duration-500 ease-out ${
-            isServicesVariant ? "max-w-xs" : "max-w-sm"
+          className={`text-black-80 font-normal leading-relaxed transition-all duration-500 ease-out ${
+            isServicesVariant ? "max-w-xs text-sm" : "max-w-sm text-md"
           } ${isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
         >
           {project.description}

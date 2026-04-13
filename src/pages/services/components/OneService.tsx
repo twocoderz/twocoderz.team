@@ -28,9 +28,9 @@ export default function OneService() {
           </p>
         </div>
       </div>
-      <div className="mt-p10 flex flex-col gap-p8 md:mt-p12 md:flex-row md:flex-nowrap">
+      <div className="mt-p10 flex flex-col gap-p8 md:mt-p12 lg:inline-flex lg:w-fit lg:flex-row lg:flex-nowrap lg:items-start lg:gap-8">
         {webProjects.map((project) => (
-          <div key={project.id} className="flex-1">
+          <div key={project.id} className="w-full lg:w-80 lg:flex-none">
             <ProjectCard project={project} variant="services" />
           </div>
         ))}
