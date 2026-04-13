@@ -1,4 +1,15 @@
+import { ProjectCard } from "../../../shared/components/ui/ProjectCard";
+import { portfolioData } from "../../../shared/data/portfolio";
+
 export default function OneService() {
+  const webProjects = portfolioData
+    .filter((project) =>
+      project.services?.some((service) =>
+        service.toLowerCase().includes("web"),
+      ),
+    )
+    .slice(0, 2);
+
   return (
     <div>
       <div className="flex flex-col gap-p6">
@@ -17,7 +28,13 @@ export default function OneService() {
           </p>
         </div>
       </div>
-      <div></div>
+      <div className="mt-p10 flex flex-col gap-p8 md:mt-p12 md:flex-row">
+        {webProjects.map((project) => (
+          <div key={project.id} className="flex-1">
+            <ProjectCard project={project} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
