@@ -5,7 +5,6 @@ import { WorkGridSection } from "../../shared/components/sections/WorkGridSectio
 import { FilterTabs } from "../../shared/components/ui/FilterTabs";
 import { portfolioData } from "../../shared/data/portfolio";
 import Container from "../../shared/components/ui/Container";
-import Section from "../../shared/components/ui/Section";
 import { ROUTES } from "../../routes";
 import { Button } from "../../shared/components/ui/Button";
 import { ArrowRightIcon } from "../../shared/icons/ArrowRightIcon";
