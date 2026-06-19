@@ -10,7 +10,7 @@ import { Button } from "../../shared/components/ui/Button";
 import { ArrowRightIcon } from "../../shared/icons/ArrowRightIcon";
 
 export default function WorkPage() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("Tous");
 
   const categories = ["Tous", "Web", "Design", "Applications"];
 

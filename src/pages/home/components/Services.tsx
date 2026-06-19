@@ -1,6 +1,7 @@
 import Container from "../../../shared/components/ui/Container";
 import Section from "../../../shared/components/ui/Section";
 import { servicesData } from "../../../shared/data/services";
+import { ROUTES } from "../../../routes";
 
 const SERVICE_COLOR_CLASSES: Record<string, string> = {
   "design-maquette": "bg-[#bd7bdb]",
@@ -37,7 +38,8 @@ export default function Services() {
             aria-label="Services"
           >
             {servicesData.map((service) => (
-              <article
+              <a
+                href={ROUTES.SERVICES}
                 key={service.id}
                 className="flex flex-col cursor-pointer group"
                 role="listitem"
@@ -52,7 +54,7 @@ export default function Services() {
                 <p className="mt-p2 max-w-xs text-r14 leading-snug text-black">
                   {service.description}
                 </p>
-              </article>
+              </a>
             ))}
           </div>
         </div>
