@@ -39,14 +39,14 @@ export default function Services() {
             {servicesData.map((service) => (
               <article
                 key={service.id}
-                className="flex flex-col"
+                className="flex flex-col cursor-pointer group"
                 role="listitem"
               >
                 <div
                   className={`h-64 w-full ${SERVICE_COLOR_CLASSES[service.id] ?? "bg-primary"}`}
                   aria-hidden
                 />
-                <h3 className="mt-p6 text-2xl font-bold leading-tight text-black md:text-3xl">
+                <h3 className="mt-p6 text-2xl group-hover:underline transition-all duration-500 font-bold leading-tight text-black md:text-3xl">
                   {service.title}
                 </h3>
                 <p className="mt-p2 max-w-xs text-r14 leading-snug text-black">
