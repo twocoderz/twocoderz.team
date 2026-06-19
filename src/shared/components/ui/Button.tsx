@@ -1,7 +1,13 @@
-import { useRef, type ButtonHTMLAttributes, type ReactNode } from "react";
+import { useRef, type ReactNode } from "react";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import {
+  motion,
+  useMotionValue,
+  useSpring,
+  useTransform,
+  type HTMLMotionProps,
+} from "framer-motion";
 
 function cn(...inputs: Parameters<typeof clsx>) {
   return twMerge(clsx(...inputs));
@@ -17,7 +23,7 @@ const sizeMap: Record<ButtonSize, string> = {
   sp: "px-16 py-4 text-base",
 };
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends Omit<HTMLMotionProps<"button">, "children"> {
   children: ReactNode;
   variant?: ButtonVariant;
   size?: ButtonSize;
@@ -78,7 +84,7 @@ export function Button(props: ButtonProps) {
           sizeMap[size],
           className,
         )}
-        {...(rest as any)}
+        {...rest}
       >
         {children}
       </motion.button>
@@ -99,7 +105,7 @@ export function Button(props: ButtonProps) {
         sizeMap[size],
         className,
       )}
-      {...(rest as any)}
+      {...rest}
     >
       <motion.span
         aria-hidden

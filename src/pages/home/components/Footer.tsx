@@ -17,13 +17,15 @@ export default function Footer() {
                 Recevez nos conseils digitaux
               </h4>
               <p className="text-sm text-black-60 font-normal">
-                Idées, bonnes pratiques et retours d’expérience de l’équipe
-                Twocoderz.
+                Idées, bonnes pratiques et retours d&apos;expérience de
+                l&apos;équipe Twocoderz.
               </p>
             </div>
-            <Button variant="secondary" size="sm">
-              Newsletter
-            </Button>
+            <a href={ROUTES.SUBSCRIBE}>
+              <Button variant="secondary" size="sm">
+                Newsletter
+              </Button>
+            </a>
           </div>
           <div className="flex items-start justify-between">
             <div className="flex flex-col gap-p6">
@@ -132,9 +134,7 @@ export default function Footer() {
               id="contact"
               className="flex scroll-mt-24 flex-col gap-p6 md:scroll-mt-28"
             >
-              <p className="text-xs text-black-40 font-semibold">
-                Contact
-              </p>
+              <p className="text-xs text-black-40 font-semibold">Contact</p>
               <ul className="flex flex-col gap-p3">
                 <li>
                   <a
