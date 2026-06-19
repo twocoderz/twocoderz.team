@@ -10,7 +10,7 @@ export default function Clients() {
       <Container>
         <div className="flex flex-col gap-p6 mb-p8">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black tracking-tight">
-            Des marques qui inspirent confiance
+            Ils nous font confiance
           </h2>
           <div className="flex flex-col md:flex-row items-start justify-between gap-p8">
             <MyLink label="Tous les projets" href="#works" />

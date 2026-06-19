@@ -49,7 +49,7 @@ export default function Services() {
                 <h3 className="mt-p6 text-2xl font-bold leading-tight text-black md:text-3xl">
                   {service.title}
                 </h3>
-                <p className="mt-p4 max-w-xs text-r14 leading-snug text-black">
+                <p className="mt-p2 max-w-xs text-r14 leading-snug text-black">
                   {service.description}
                 </p>
               </article>
