@@ -17,7 +17,7 @@ export default function Logo(props: LogoProps) {
       )}
     >
       <img src="/images/logo.png" alt="logo image" />
-      <span className="text-md font-normal">twocoderz</span>
+      <span className="text-md font-medium">twocoderz</span>
     </a>
   );
 }
