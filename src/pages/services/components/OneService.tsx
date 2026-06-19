@@ -3,16 +3,41 @@ import { portfolioData } from "../../../shared/data/portfolio";
 import { servicesData } from "../../../shared/data/services";
 
 const SERVICE_PROJECT_TAGS: Record<string, string[]> = {
-  "Design / maquette": ["Design / maquette", "UI/UX Design", "Design System"],
-  "Analyse de site web": ["Analyse de site web", "SEO", "Performance"],
-  "Redesign de site web": ["Redesign de site web", "Web Design", "Brand Identity"],
-  "Création de sites web": ["Création de sites web", "Web Development", "web"],
-  "Applications mobiles": ["Applications mobiles", "Mobile App", "mobile"],
+  "design-maquette": [
+    "Design / maquette",
+    "UI/UX & Maquettes",
+    "UI/UX Design",
+    "Design System",
+  ],
+  "site-analysis": [
+    "Analyse de site web",
+    "Audit & Analyse",
+    "SEO",
+    "Performance",
+  ],
+  "website-redesign": [
+    "Redesign de site web",
+    "Refonte de Site",
+    "Web Design",
+    "Brand Identity",
+  ],
+  "web-development": [
+    "Création de sites web",
+    "Développement Web",
+    "Web Development",
+    "web",
+  ],
+  "mobile-development": [
+    "Applications mobiles",
+    "Applications Mobiles",
+    "Mobile App",
+    "mobile",
+  ],
 };
 
 export default function OneService() {
   const servicesWithProjects = servicesData.map((service) => {
-    const tagCandidates = SERVICE_PROJECT_TAGS[service.title] ?? [
+    const tagCandidates = SERVICE_PROJECT_TAGS[service.id] ?? [
       service.title,
     ];
     const normalizedTags = new Set(

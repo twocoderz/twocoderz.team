@@ -9,7 +9,7 @@ export interface Service {
 export const servicesData: Service[] = [
   {
     id: "design-maquette",
-    title: "Design / maquette",
+    title: "UI/UX & Maquettes",
     description:
       "Des maquettes claires et modernes pour visualiser votre projet avant le développement. Nous pensons les pages pour rassurer, guider et convertir vos visiteurs.",
     image:
@@ -23,7 +23,7 @@ export const servicesData: Service[] = [
   },
   {
     id: "site-analysis",
-    title: "Analyse de site web",
+    title: "Audit & Analyse",
     description:
       "Un regard technique et stratégique sur votre site actuel pour repérer ce qui freine la confiance, la vitesse, le référencement ou les demandes clients.",
     image:
@@ -37,9 +37,9 @@ export const servicesData: Service[] = [
   },
   {
     id: "website-redesign",
-    title: "Redesign de site web",
+    title: "Refonte de Site",
     description:
-      "Nous modernisons votre site existant pour le rendre plus crédible, plus lisible et plus efficace auprès de vos clients locaux.",
+      "Nous modernisons votre site existant pour le rendre plus crédible, plus lisible et plus efficace auprès de vos clients.",
     image:
       "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1200&q=80",
     details: [
@@ -51,7 +51,7 @@ export const servicesData: Service[] = [
   },
   {
     id: "web-development",
-    title: "Création de sites web",
+    title: "Développement Web",
     description:
       "Des sites rapides, propres et adaptés à votre activité : présentation, catalogue, réservation, demande de devis ou plateforme plus avancée.",
     image:
@@ -65,7 +65,7 @@ export const servicesData: Service[] = [
   },
   {
     id: "mobile-development",
-    title: "Applications mobiles",
+    title: "Applications Mobiles",
     description:
       "Des applications mobiles simples, utiles et bien pensées pour rapprocher votre service de vos clients sur Android et iOS.",
     image:
