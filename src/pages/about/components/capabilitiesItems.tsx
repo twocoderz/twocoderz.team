@@ -8,7 +8,7 @@ export const capabilitiesItems: AccordionItemData[] = [
       <div className="space-y-p4">
         <p className="text-black-80 text-lg font-normal ">
           Nous aidons votre marque à mieux expliquer son offre, à rassurer ses
-          visiteurs et à donner envie de passer à l’action.
+          visiteurs et à donner envie de passer à l&apos;action.
         </p>
         <ul className="list-disc pl-p6 text-lg font-normal space-y-p2">
           <li>
@@ -32,7 +32,7 @@ export const capabilitiesItems: AccordionItemData[] = [
       <div className="space-y-p4">
         <p className="text-black-80 text-lg font-normal">
           Nous créons des supports digitaux capables de présenter vos offres,
-          vos services et vos points forts avec plus d’impact.
+          vos services et vos points forts avec plus d&apos;impact.
         </p>
         <ul className="list-disc pl-p6 text-lg space-y-p2">
           <li>
@@ -42,7 +42,7 @@ export const capabilitiesItems: AccordionItemData[] = [
             <strong>Clarté.</strong> Les décisions restent simples à suivre.
           </li>
           <li>
-            <strong>Collaboration.</strong> Vos retours guident l’évolution du
+            <strong>Collaboration.</strong> Vos retours guident l&apos;évolution du
             projet.
           </li>
         </ul>
@@ -60,7 +60,7 @@ export const capabilitiesItems: AccordionItemData[] = [
         </p>
         <ul className="list-disc pl-p6 text-lg space-y-p2">
           <li>
-            <strong>Souplesse.</strong> L’accompagnement peut être ponctuel ou
+            <strong>Souplesse.</strong> L&apos;accompagnement peut être ponctuel ou
             continu.
           </li>
           <li>
@@ -68,7 +68,7 @@ export const capabilitiesItems: AccordionItemData[] = [
           </li>
           <li>
             <strong>Collaboration.</strong> Nous travaillons avec vos méthodes
-            quand c’est nécessaire.
+            quand c&apos;est nécessaire.
           </li>
         </ul>
       </div>
@@ -81,11 +81,11 @@ export const capabilitiesItems: AccordionItemData[] = [
       <div className="space-y-p4">
         <p className="text-black-80 text-lg font-normal">
           Nous vous aidons à préparer une présence digitale propre avant le
-          lancement d’un produit, service ou nouveau projet.
+          lancement d&apos;un produit, service ou nouveau projet.
         </p>
         <ul className="list-disc pl-p6 text-lg space-y-p2">
           <li>
-            <strong>Souplesse.</strong> Nous allons à l’essentiel pour lancer
+            <strong>Souplesse.</strong> Nous allons à l&apos;essentiel pour lancer
             plus vite.
           </li>
           <li>

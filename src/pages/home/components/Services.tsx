@@ -133,7 +133,7 @@ export default function Services() {
   const carousel = (
     <div className="flex w-full flex-col md:mx-auto md:h-[min(48rem,76svh)] md:w-full md:shrink-0">
       <div
-        className="flex min-h-[min(72vh,520px)] w-full flex-row gap-2 overflow-x-auto overflow-y-hidden pb-1 [-ms-overflow-style:none] [scrollbar-width:none] snap-x snap-mandatory md:h-full md:min-h-0 md:gap-3 md:snap-none [&::-webkit-scrollbar]:hidden"
+        className="flex min-h-[min(72vh,520px)] w-full flex-row gap-2 overflow-x-auto overflow-y-hidden pb-1 [-ms-overflow-style:none] [scrollbar-none] snap-x snap-mandatory md:h-full md:min-h-0 md:gap-3 md:snap-none [&::-webkit-scrollbar]:hidden"
         role="list"
         aria-label="Services"
       >
