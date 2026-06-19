@@ -34,7 +34,7 @@ export default function Testimonials() {
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black tracking-tight">
                 Ce que disent nos clients
               </h2>
-              <MyLink href="#testimonials" label="Avis" />
+              <MyLink href="#testimonials" label="Tous les avis" />
             </div>
 
             <TestimonialCarouselCard
