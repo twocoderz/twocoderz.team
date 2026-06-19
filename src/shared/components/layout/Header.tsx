@@ -10,13 +10,14 @@ import CloseIcon from "../../icons/CloseIcon";
 import { ROUTES } from "../../../routes";
 import { Button } from "../ui/Button";
 
-export interface HeaderProps {}
-
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const lastScrollYRef = useRef(0);
-  const closeMenu = () => setIsMenuOpen(false);
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setIsHeaderVisible(true);
+  };
 
   const location = useLocation();
   const headerRef = useRef<HTMLElement | null>(null);
@@ -73,14 +74,7 @@ export default function Header() {
   }, [isMenuOpen]);
 
   useEffect(() => {
-    if (isMenuOpen) {
-      setIsHeaderVisible(true);
-    }
-  }, [isMenuOpen]);
-
-  useEffect(() => {
-    if (!isProcessPage && !isFaqsPage && !isServicesPage) {
-      setIsProcessHeroFullyVisible(false);
+    if (!(isProcessPage || isFaqsPage || isServicesPage)) {
       return;
     }
 
@@ -106,7 +100,7 @@ export default function Header() {
       window.removeEventListener("scroll", checkHeroVisibility);
       window.removeEventListener("resize", checkHeroVisibility);
     };
-  }, [location.pathname]);
+  }, [isFaqsPage, isProcessPage, isServicesPage]);
 
   const navItems = [
     { href: ROUTES.WORK, label: "Work" },
@@ -125,7 +119,7 @@ export default function Header() {
         {/* Logo */}
         <Logo
           className={
-            isDarkHeader ? "text-white/90 hover:text-white" : "undefined"
+            isDarkHeader ? "text-white/90 hover:text-white" : undefined
           }
         />
         {/* nav */}
@@ -138,7 +132,7 @@ export default function Header() {
               className={
                 isDarkHeader
                   ? "text-white/90 hover:text-white [&>span]:bg-white/90"
-                  : "undefined"
+                  : undefined
               }
             >
               {item.label}
@@ -179,7 +173,10 @@ export default function Header() {
           </div>
           {/* menu buttons */}
           <button
-            onClick={() => setIsMenuOpen((v) => !v)}
+            onClick={() => {
+              setIsMenuOpen((v) => !v);
+              setIsHeaderVisible(true);
+            }}
             className="md:hidden cursor-pointer relative w-8 h-8"
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
