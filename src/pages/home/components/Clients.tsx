@@ -10,13 +10,13 @@ export default function Clients() {
       <Container>
         <div className="flex flex-col gap-p6 mb-p8">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black tracking-tight">
-            Trusted by businesses
+            Des marques qui inspirent confiance
           </h2>
           <div className="flex flex-col md:flex-row items-start justify-between gap-p8">
-            <MyLink label="All works" href="#works" />
+            <MyLink label="Tous les projets" href="#works" />
             <p className="text-black-80 text-sm lg:text-md max-w-md">
-              We help companies establish a strong digital presence through
-              modern, high-performing websites.
+              Nous aidons les entreprises à construire une présence digitale
+              claire, professionnelle et orientée résultats.
             </p>
           </div>
           <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-p2 md:gap-p4 lg:gap-p8 mt-p16">

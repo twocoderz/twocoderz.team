@@ -3,26 +3,29 @@ import type { AccordionItemData } from "../../../shared/components/ui/AccordionI
 export const mobileDevelopmentItems: AccordionItemData[] = [
   {
     id: "mobile-intro",
-    title: "Intro",
+    title: "Introduction",
     content: (
       <div className="space-y-p6">
         <p className="text-black-80 text-lg font-normal">
-          For those who want faster tangible results...
+          Une application mobile doit rendre votre service plus accessible,
+          plus simple et plus proche de vos clients.
         </p>
         <p className="text-black-80 text-lg font-normal">
-          We know that startups are always restricted to two things...
+          Nous partons du besoin réel avant d’ajouter des fonctionnalités, pour
+          garder une app utile et facile à utiliser.
         </p>
         <ul className="list-disc pl-p6 text-lg space-y-p2">
           <li>
-            <strong>Flexibility.</strong> The project scope and exercises depend
-            on needs.
+            <strong>Souplesse.</strong> Les fonctionnalités sont priorisées par
+            impact.
           </li>
           <li>
-            <strong>Clarity.</strong> Each stage has a clear expected output.
+            <strong>Clarté.</strong> Vous savez ce qui est construit à chaque
+            étape.
           </li>
           <li>
-            <strong>Collaboration.</strong> You can involve your internal team
-            anytime.
+            <strong>Collaboration.</strong> Vos retours guident les décisions
+            clés.
           </li>
         </ul>
       </div>
@@ -30,28 +33,31 @@ export const mobileDevelopmentItems: AccordionItemData[] = [
   },
   {
     id: "mobile-stage-1",
-    title: "Stage 1: Information gathering and requirements",
+    title: "Étape 1 : Fonctionnalités utiles",
     content: (
       <p className="text-black-80 text-lg font-normal">
-        Before starting the project, we need to understand...
+        Nous identifions les actions essentielles que vos utilisateurs doivent
+        pouvoir faire.
       </p>
     ),
   },
   {
     id: "mobile-stage-2",
-    title: "Stage 2: Analysis and planning",
+    title: "Étape 2 : Parcours et écrans",
     content: (
       <p className="text-black-80 text-lg font-normal">
-        Before starting the project, we need to understand...
+        Nous préparons les écrans, les enchaînements et les priorités de
+        développement.
       </p>
     ),
   },
   {
     id: "mobile-stage-3",
-    title: "Stage 3: Execution and delivery",
+    title: "Étape 3 : Build et tests",
     content: (
       <p className="text-black-80 text-lg font-normal">
-        Before starting the project, we need to understand...
+        Nous développons l’application, testons les parcours importants et
+        préparons la livraison.
       </p>
     ),
   },

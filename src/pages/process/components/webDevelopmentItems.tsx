@@ -3,30 +3,28 @@ import type { AccordionItemData } from "../../../shared/components/ui/AccordionI
 export const webDevelopmentItems: AccordionItemData[] = [
   {
     id: "web-intro",
-    title: "Intro",
+    title: "Introduction",
     content: (
       <div className="space-y-p6">
         <p className="text-black-80 text-lg font-normal">
-          For those who want faster tangible results... We know that startups
-          are always restricted to two things... We know that startups are
-          always restricted to two things... We know that startups are always
-          restricted to two things... You know that startups are always
-          restricted to two things...
+          Un bon site doit expliquer clairement ce que vous faites, rassurer vos
+          visiteurs et leur donner envie de vous contacter.
         </p>
         <p className="text-black-80 text-lg font-normal">
-          We know that startups are always restricted to two things...
+          Nous construisons chaque page autour de votre activité, de vos clients
+          et des actions que vous voulez obtenir.
         </p>
         <ul className="list-disc pl-p6 text-lg space-y-p2">
           <li>
-            <strong>Flexibility.</strong> The project scope and exercises depend
-            on needs.
+            <strong>Souplesse.</strong> Le périmètre s’adapte à votre budget et
+            à vos priorités.
           </li>
           <li>
-            <strong>Clarity.</strong> Each stage has a clear expected output.
+            <strong>Clarté.</strong> Chaque étape produit un résultat visible.
           </li>
           <li>
-            <strong>Collaboration.</strong> You can involve your internal team
-            anytime.
+            <strong>Collaboration.</strong> Vous validez les décisions
+            importantes au bon moment.
           </li>
         </ul>
       </div>
@@ -34,28 +32,31 @@ export const webDevelopmentItems: AccordionItemData[] = [
   },
   {
     id: "web-stage-1",
-    title: "Stage 1: Information gathering and requirements",
+    title: "Étape 1 : Besoin et objectifs",
     content: (
       <p className="text-black-80 text-lg font-normal">
-        Before starting the project, we need to understand...
+        Nous clarifions votre activité, vos clients, vos offres et les actions
+        attendues sur le site.
       </p>
     ),
   },
   {
     id: "web-stage-2",
-    title: "Stage 2: Analysis and planning",
+    title: "Étape 2 : Structure et contenu",
     content: (
       <p className="text-black-80 text-lg font-normal">
-        Before starting the project, we need to understand...
+        Nous organisons les pages, les messages et les priorités pour rendre le
+        parcours simple.
       </p>
     ),
   },
   {
     id: "web-stage-3",
-    title: "Stage 3: Execution and delivery",
+    title: "Étape 3 : Développement et livraison",
     content: (
       <p className="text-black-80 text-lg font-normal">
-        Before starting the project, we need to understand...
+        Nous développons le site, testons les points essentiels et préparons la
+        mise en ligne.
       </p>
     ),
   },

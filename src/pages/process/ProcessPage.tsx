@@ -11,11 +11,8 @@ export default function ProcessPage() {
   return (
     <Layout>
       <HeroSection
-        title="Process"
-        subtitle={`For those who want to be involved in every step of the creative process's nitty-gritty details.
-        With this Funnel, we research dozens of options on each step until we find
-        the perfect one. This approach fits teams who want to make things right
-        and are not constrained by time and budget.`}
+        title="Processus"
+        subtitle={`Une méthode simple pour avancer avec clarté : comprendre votre besoin, proposer une direction, construire proprement et livrer une solution prête à être utilisée.`}
         alignment="center"
         className="bg-black text-white"
         spClassName="py-p8"
@@ -42,7 +39,7 @@ export default function ProcessPage() {
         <div className="text-center mt-p24 mb-p24">
           <a href={ROUTES.CONTACT}>
             <Button variant="primary" size="lg">
-              <span> Let&apos;s talk</span>
+              <span> Parlons de votre projet</span>
               <ArrowRightIcon className="w-4 h-4 ml-p4" />
             </Button>
           </a>

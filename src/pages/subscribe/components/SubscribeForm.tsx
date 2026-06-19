@@ -14,21 +14,21 @@ export default function SubscribeForm() {
         type="text"
         required
         autoComplete="given-name"
-        placeholder="First name"
+        placeholder="Prénom"
         className="placeholder:text-black-40 placeholder:text-sm w-full"
       />
       <Input
         type="text"
         required
         autoComplete="family-name"
-        placeholder="Last name"
+        placeholder="Nom"
         className="placeholder:text-black-40 placeholder:text-sm w-full"
       />
       <Input
         type="text"
         required
         autoComplete="organization"
-        placeholder="Company name"
+        placeholder="Nom de l’entreprise"
         className="placeholder:text-black-40 placeholder:text-sm w-full"
       />
     </form>

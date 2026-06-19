@@ -8,10 +8,9 @@ export default function SubscribePage() {
   return (
     <Layout>
       <HeroSection
-        title="Join the inner circle"
+        title="Rejoignez notre newsletter"
         subtitle="
-        Sign up for our newsletter and be the first to receive exclusive insights, 
-        fresh case studies, and the latest updates — delivered straight to your inbox by the Twocoderz team."
+        Recevez nos conseils, nos retours d’expérience et nos actualités pour améliorer votre présence digitale avec Twocoderz."
         alignment="center"
         spH1ClassName="max-w-5xl"
       />
@@ -20,7 +19,7 @@ export default function SubscribePage() {
           <SubscribeForm />
           <div className="text-center pt-p8">
             <Button variant="primary" size="sp">
-              <span>Subscribe</span>
+              <span>S’inscrire</span>
             </Button>
           </div>
         </div>

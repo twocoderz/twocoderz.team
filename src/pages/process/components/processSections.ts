@@ -1,5 +1,4 @@
 import type { AccordionItemData } from "../../../shared/components/ui/AccordionItem";
-import { desktopAppsItems } from "./desktopAppsItems";
 import { mobileDevelopmentItems } from "./mobileDevelopmentItems";
 import { uxUiDesignItems } from "./uxUiDesignItems";
 import { webDevelopmentItems } from "./webDevelopmentItems";
@@ -14,26 +13,20 @@ export type ProcessSectionData = {
 export const processSections: ProcessSectionData[] = [
   {
     id: "web",
-    title: "Web Development Process",
+    title: "Processus site web",
     defaultOpenId: "web-intro",
     items: webDevelopmentItems,
   },
   {
     id: "mobile",
-    title: "Mobile Development Process",
+    title: "Processus application mobile",
     defaultOpenId: "mobile-intro",
     items: mobileDevelopmentItems,
   },
   {
     id: "uxui",
-    title: "UX/UI Design Process",
+    title: "Processus design et maquette",
     defaultOpenId: "uxui-intro",
     items: uxUiDesignItems,
-  },
-  {
-    id: "desktop",
-    title: "Desktop Apps Process",
-    defaultOpenId: "desktop-intro",
-    items: desktopAppsItems,
   },
 ];

@@ -24,12 +24,12 @@ export default function Hero() {
         {/* hero center texts */}
         <div className="text-center max-w-6xl md:max-w-lg lg:max-w-3xl mx-auto mb-p12">
           <h1 className="text-4xl md:text-6xl lg:text-7xl text-black-70 font-bold leading-none mb-p8 mt-p6">
-            We build websites that grow your business
+            Des sites web qui donnent confiance et attirent vos clients
             <span className="inline-block w-4 h-4 bg-primary ml-1"></span>
           </h1>
           <p className="text-sm md:text-sm font-normal pb-p6 text-black-80">
-            High-performing, modern websites designed to attract, engage, and
-            convert your customers.
+            Nous aidons les entreprises au Togo à créer une présence digitale
+            claire, moderne et prête à générer des demandes.
           </p>
         </div>
         {/* hero images */}

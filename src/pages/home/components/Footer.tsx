@@ -14,20 +14,20 @@ export default function Footer() {
           >
             <div className="flex flex-col">
               <h4 className="text-lg font-semibold text-black-80">
-                Sign up for our newsletter
+                Recevez nos conseils digitaux
               </h4>
               <p className="text-sm text-black-60 font-normal">
-                Insights, case studies, and updates from the expert teams at
-                twocoderz.
+                Idées, bonnes pratiques et retours d’expérience de l’équipe
+                Twocoderz.
               </p>
             </div>
             <Button variant="secondary" size="sm">
-              Subscribe
+              Newsletter
             </Button>
           </div>
           <div className="flex items-start justify-between">
             <div className="flex flex-col gap-p6">
-              <p className="text-xs text-black-40 font-semibold">Social</p>
+              <p className="text-xs text-black-40 font-semibold">Réseaux</p>
               <ul className="flex flex-col gap-p3">
                 <li>
                   <a
@@ -67,14 +67,14 @@ export default function Footer() {
               id="about"
               className="flex scroll-mt-24 flex-col gap-p6 md:scroll-mt-28"
             >
-              <p className="text-xs text-black-40 font-semibold">Company</p>
+              <p className="text-xs text-black-40 font-semibold">Entreprise</p>
               <ul className="flex flex-col gap-p3">
                 <li>
                   <a
                     href={ROUTES.ABOUT}
                     className="text-xs text-black-80 hover:text-black transition-all duration-500"
                   >
-                    About
+                    À propos
                   </a>
                 </li>
                 <li>
@@ -90,7 +90,7 @@ export default function Footer() {
                     href={ROUTES.WORK}
                     className="text-xs text-black-80 hover:text-black transition-all duration-500"
                   >
-                    Works
+                    Projets
                   </a>
                 </li>
                 <li>
@@ -98,7 +98,7 @@ export default function Footer() {
                     href={ROUTES.PROCESS}
                     className="text-xs text-black-80 hover:text-black transition-all duration-500"
                   >
-                    Process
+                    Processus
                   </a>
                 </li>
               </ul>
@@ -107,7 +107,7 @@ export default function Footer() {
               id="blog"
               className="flex scroll-mt-24 flex-col gap-p6 md:scroll-mt-28"
             >
-              <p className="text-xs text-black-40 font-semibold">Learn</p>
+              <p className="text-xs text-black-40 font-semibold">Ressources</p>
               <ul className="flex flex-col gap-p3">
                 <li>
                   <a
@@ -133,7 +133,7 @@ export default function Footer() {
               className="flex scroll-mt-24 flex-col gap-p6 md:scroll-mt-28"
             >
               <p className="text-xs text-black-40 font-semibold">
-                Get in touch
+                Contact
               </p>
               <ul className="flex flex-col gap-p3">
                 <li>
@@ -149,7 +149,7 @@ export default function Footer() {
                     href={ROUTES.CONTACT}
                     className="text-xs text-black-80 hover:text-black transition-all duration-500"
                   >
-                    Contact us
+                    Nous contacter
                   </a>
                 </li>
               </ul>
@@ -163,7 +163,7 @@ export default function Footer() {
                     href="#"
                     className="text-xs text-black-60 hover:text-black transition-all duration-500"
                   >
-                    &copy;2026 Twocoderz. All rights reserved
+                    &copy;2026 Twocoderz. Tous droits réservés
                   </a>
                 </li>
                 <li>
@@ -179,7 +179,7 @@ export default function Footer() {
                     href="#"
                     className="text-xs text-black-60 hover:text-black transition-all duration-500 border-l pl-p6 border-black-10"
                   >
-                    Sitemap
+                    Plan du site
                   </a>
                 </li>
                 <li>
@@ -187,7 +187,7 @@ export default function Footer() {
                     href="#"
                     className="text-xs text-black-60 hover:text-black transition-all duration-500 border-l pl-p6 border-black-10"
                   >
-                    Privacy Policy
+                    Politique de confidentialité
                   </a>
                 </li>
                 <li>
@@ -195,7 +195,7 @@ export default function Footer() {
                     href="#"
                     className="text-xs text-black-60 hover:text-black transition-all duration-500 border-l pl-p6 border-black-10"
                   >
-                    Terms of use
+                    Conditions d’utilisation
                   </a>
                 </li>
                 <li>
@@ -203,7 +203,7 @@ export default function Footer() {
                     href="#"
                     className="text-xs text-black-60 hover:text-black transition-all duration-500 border-l pl-p6 border-black-10"
                   >
-                    Cookie policy
+                    Politique des cookies
                   </a>
                 </li>
               </ul>

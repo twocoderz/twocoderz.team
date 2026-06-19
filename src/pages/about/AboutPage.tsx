@@ -14,8 +14,8 @@ export default function AboutPage() {
   return (
     <Layout>
       <HeroSection
-        title="About"
-        subtitle="We're a team of designers and developers passionate about building beautiful, functional digital products."
+        title="À propos"
+        subtitle="Nous sommes une équipe de designers et développeurs qui aide les entreprises à construire une présence digitale claire, moderne et utile."
         alignment="center"
         spH1ClassName="max-w-2xl"
       />
@@ -52,7 +52,7 @@ export default function AboutPage() {
       <div className="text-center mt-p24 mb-24">
         <a href={ROUTES.CONTACT}>
           <Button variant="primary" size="lg">
-            <span> Let&apos;s talk</span>
+            <span> Parlons de votre projet</span>
             <ArrowRightIcon className="w-4 h-4 ml-p4" />
           </Button>
         </a>

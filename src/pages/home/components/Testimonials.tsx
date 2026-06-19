@@ -32,9 +32,9 @@ export default function Testimonials() {
           <div className="flex items-start justify-between mb-p16">
             <div className="flex flex-col items-start gap-p8 max-w-xs">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black tracking-tight">
-                What our clients say
+                Ce que disent nos clients
               </h2>
-              <MyLink href="#testimonials" label="Reviews" />
+              <MyLink href="#testimonials" label="Avis" />
             </div>
 
             <TestimonialCarouselCard
@@ -48,7 +48,7 @@ export default function Testimonials() {
           <div className="text-center mt-p24">
             <a href={ROUTES.CONTACT}>
               <Button variant="primary" size="lg">
-                <span> Let&apos;s talk</span>
+                <span> Parlons de votre projet</span>
                 <ArrowRightIcon className="w-4 h-4 ml-p4" />
               </Button>
             </a>

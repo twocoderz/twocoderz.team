@@ -12,10 +12,10 @@ import { ArrowRightIcon } from "../../shared/icons/ArrowRightIcon";
 export default function WorkPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const categories = ["All", "Web", "Design", "Apps"];
+  const categories = ["Tous", "Web", "Design", "Applications"];
 
   const filteredProjects =
-    selectedCategory === "All"
+    selectedCategory === "Tous"
       ? portfolioData
       : portfolioData.filter((p) => {
           if (selectedCategory === "Web") {
@@ -35,7 +35,7 @@ export default function WorkPage() {
                 s.toLowerCase().includes("identity"),
             );
           }
-          if (selectedCategory === "Apps") {
+          if (selectedCategory === "Applications") {
             return p.services?.some((s) => s.toLowerCase().includes("app"));
           }
           return true;
@@ -44,8 +44,8 @@ export default function WorkPage() {
   return (
     <Layout>
       <HeroSection
-        title="We elevate products and designs"
-        subtitle="View our work over decades."
+        title="Des projets pensés pour marquer"
+        subtitle="Découvrez une sélection de réalisations et d’expériences digitales."
         spH1ClassName="max-w-4xl"
       />
 
@@ -62,7 +62,7 @@ export default function WorkPage() {
       <div className="text-center mt-p24 mb-p24">
         <a href={ROUTES.CONTACT}>
           <Button variant="primary" size="lg">
-            <span> Let&apos;s talk</span>
+            <span> Parlons de votre projet</span>
             <ArrowRightIcon className="w-4 h-4 ml-p4" />
           </Button>
         </a>

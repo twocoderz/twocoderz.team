@@ -1,33 +1,33 @@
 const values = [
   {
-    title: "Mastery",
+    title: "Maîtrise",
     description:
-      "Constant repetition of processes leads to mastery. We've been honing our craft and improving our processes for years, every day.",
+      "Nous améliorons nos méthodes à chaque projet pour livrer un travail clair, propre et durable.",
   },
   {
-    title: "Dependability",
+    title: "Fiabilité",
     description:
-      "You can't create value without a trusted partner. Staying true to our word is an intrinsic need, not just an external obligation.",
+      "Un projet digital demande de la confiance. Nous avançons avec sérieux, transparence et respect des engagements.",
   },
   {
     title: "Passion",
     description:
-      "A true love for what you do manifests in where you invest your time. The passion for our work is quiet and calm, yet potent.",
+      "Nous aimons transformer les idées en expériences simples, utiles et agréables à utiliser.",
   },
   {
-    title: "Flexibility",
+    title: "Souplesse",
     description:
-      "We rely on our processes but adapt to the specific needs of projects or partners. Flexibility leads to lasting improvements.",
+      "Chaque entreprise a ses réalités. Nous adaptons notre approche au budget, au délai et aux priorités.",
   },
   {
     title: "Discipline",
     description:
-      "Discipline starts within and shapes all our processes. Though meticulous, our standards ensure solid long-term delivery.",
+      "Nous gardons une exigence constante sur la qualité, la lisibilité et la maintenance du projet.",
   },
   {
-    title: "Creativity",
+    title: "Créativité",
     description:
-      "We combine inspiration with workflow to foster systematic creativity and deliver predictable results.",
+      "Nous cherchons des solutions modernes, simples et adaptées à l’image de chaque marque.",
   },
 ];
 
@@ -35,7 +35,7 @@ export default function AboutValues() {
   return (
     <div>
       <h2 className="text-4xl tracking-wide font-bold text-black-80 text-center mb-p8">
-        Our values
+        Nos valeurs
       </h2>
       <div className="pt-p20 grid grid-cols-1 gap-x-p20 gap-y-p8 md:grid-cols-2 lg:grid-cols-3">
         {values.map((value) => (

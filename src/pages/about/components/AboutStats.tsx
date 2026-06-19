@@ -73,7 +73,7 @@ export default function AboutStats() {
           visible: { opacity: 1, y: 0 },
         }}
       >
-        <h4 className="text-md font-bold text-black-80">Team experts</h4>
+        <h4 className="text-md font-bold text-black-80">Experts équipe</h4>
         <AnimatedStatNumber target={11} start={0} />
       </motion.div>
       <motion.div
@@ -84,7 +84,7 @@ export default function AboutStats() {
         }}
       >
         <h4 className="text-md font-bold text-black-80">
-          In the industry since
+          Dans le métier depuis
         </h4>
         <AnimatedStatNumber target={2023} start={2016} delay={0.05} />
       </motion.div>
@@ -95,7 +95,7 @@ export default function AboutStats() {
           visible: { opacity: 1, y: 0 },
         }}
       >
-        <h4 className="text-md font-bold text-black-80">Projects completed</h4>
+        <h4 className="text-md font-bold text-black-80">Projets réalisés</h4>
         <AnimatedStatNumber target={26} start={0} suffix="+" delay={0.1} />
       </motion.div>
     </motion.div>

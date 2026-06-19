@@ -103,10 +103,10 @@ export default function Header() {
   }, [isFaqsPage, isProcessPage, isServicesPage]);
 
   const navItems = [
-    { href: ROUTES.WORK, label: "Work" },
+    { href: ROUTES.WORK, label: "Projets" },
     { href: ROUTES.SERVICES, label: "Services" },
-    { href: ROUTES.ABOUT, label: "About" },
-    { href: ROUTES.PROCESS, label: "Process" },
+    { href: ROUTES.ABOUT, label: "À propos" },
+    { href: ROUTES.PROCESS, label: "Processus" },
   ];
   return (
     <header
@@ -153,7 +153,7 @@ export default function Header() {
                     : undefined
                 }
               >
-                Subscribe
+                Newsletter
               </Button>
             </a>
             <a href={ROUTES.CONTACT}>
@@ -179,7 +179,7 @@ export default function Header() {
             }}
             className="md:hidden cursor-pointer relative w-8 h-8"
             aria-expanded={isMenuOpen}
-            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
             aria-controls="mobile-menu"
           >
             <AnimatePresence initial={false} mode="wait">
@@ -230,19 +230,19 @@ export default function Header() {
               transition={{ duration: 0.2 }}
             >
               <a href={ROUTES.WORK} onClick={closeMenu}>
-                Work
+                Projets
               </a>
               <a href={ROUTES.SERVICES} onClick={closeMenu}>
                 Services
               </a>
               <a href={ROUTES.ABOUT} onClick={closeMenu}>
-                About
+                À propos
               </a>
               <a href={ROUTES.PROCESS} onClick={closeMenu}>
-                Process
+                Processus
               </a>
               <a href={ROUTES.SUBSCRIBE} onClick={closeMenu}>
-                Subscribe
+                Newsletter
               </a>
               <a href={ROUTES.CONTACT} onClick={closeMenu}>
                 Contact

@@ -12,10 +12,7 @@ export default function ServicesPage() {
     <Layout>
       <HeroSection
         title="Services"
-        subtitle="With over 15 years of experience in the industry, our offerings 
-        have evolved into a set of services that complement each other and allow us 
-        to design, develop, implement, maintain, and extend a consistent experience 
-        across all touchpoints."
+        subtitle="Nous aidons les entreprises à concevoir, améliorer et lancer des solutions digitales utiles : maquettes, analyses, redesigns, sites web et applications mobiles."
         alignment="center"
         className="bg-black text-white"
         spH1ClassName="max-w-2xl"
@@ -30,7 +27,7 @@ export default function ServicesPage() {
       <div className="text-center mt-p24 mb-p24">
         <a href={ROUTES.CONTACT}>
           <Button variant="primary" size="lg">
-            <span> Let&apos;s talk</span>
+            <span> Parlons de votre projet</span>
             <ArrowRightIcon className="w-4 h-4 ml-p4" />
           </Button>
         </a>

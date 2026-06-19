@@ -8,59 +8,73 @@ export interface Service {
 
 export const servicesData: Service[] = [
   {
-    id: "mobile-development",
-    title: "Mobile Development",
+    id: "design-maquette",
+    title: "Design / maquette",
     description:
-      "Native and cross-platform apps with polished UX, offline-ready flows, and store-ready builds. We ship performant mobile products that scale with your roadmap.",
+      "Des maquettes claires et modernes pour visualiser votre projet avant le développement. Nous pensons les pages pour rassurer, guider et convertir vos visiteurs.",
     image:
-      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1200&q=80",
     details: [
-      "iOS & Android native",
-      "React Native / Flutter",
-      "Performance optimization",
-      "App store publishing",
+      "Maquettes web et mobile",
+      "Parcours utilisateur",
+      "Hiérarchie visuelle",
+      "Prototype interactif",
+    ],
+  },
+  {
+    id: "site-analysis",
+    title: "Analyse de site web",
+    description:
+      "Un regard technique et stratégique sur votre site actuel pour repérer ce qui freine la confiance, la vitesse, le référencement ou les demandes clients.",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+    details: [
+      "Audit UX et contenu",
+      "Analyse performance",
+      "Pistes SEO",
+      "Recommandations concrètes",
+    ],
+  },
+  {
+    id: "website-redesign",
+    title: "Redesign de site web",
+    description:
+      "Nous modernisons votre site existant pour le rendre plus crédible, plus lisible et plus efficace auprès de vos clients locaux.",
+    image:
+      "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1200&q=80",
+    details: [
+      "Refonte visuelle",
+      "Structure des pages",
+      "Messages plus clairs",
+      "Expérience mobile",
     ],
   },
   {
     id: "web-development",
-    title: "Web Development",
+    title: "Création de sites web",
     description:
-      "Fast, accessible sites and web apps using modern stacks. From marketing pages to complex dashboards, we focus on SEO, Core Web Vitals, and maintainable code.",
+      "Des sites rapides, propres et adaptés à votre activité : présentation, catalogue, réservation, demande de devis ou plateforme plus avancée.",
     image:
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
     details: [
-      "React / Vue / Svelte",
-      "Next.js / Nuxt",
-      "SEO optimization",
-      "Performance focused",
+      "Site vitrine",
+      "Site catalogue",
+      "Application web",
+      "SEO et performance",
     ],
   },
   {
-    id: "ux-ui-design",
-    title: "UX/UI Design",
+    id: "mobile-development",
+    title: "Applications mobiles",
     description:
-      "Research-backed interfaces, design systems, and prototypes that align business goals with user needs. Clear hierarchy, consistent patterns, and delightful details.",
+      "Des applications mobiles simples, utiles et bien pensées pour rapprocher votre service de vos clients sur Android et iOS.",
     image:
-      "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80",
     details: [
-      "User research",
-      "Design systems",
-      "Wireframing & prototyping",
-      "Accessibility (WCAG)",
-    ],
-  },
-  {
-    id: "desktop-apps",
-    title: "Desktop Apps",
-    description:
-      "Cross-platform desktop experiences with native feel—installers, auto-updates, and deep OS integration when you need power users and offline-first workflows.",
-    image:
-      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=1200&q=80",
-    details: [
-      "Electron / Tauri",
-      "Cross-platform development",
-      "Native integrations",
-      "Auto-updates & distribution",
+      "Android et iOS",
+      "Parcours fluides",
+      "Notifications",
+      "Publication store",
     ],
   },
 ];

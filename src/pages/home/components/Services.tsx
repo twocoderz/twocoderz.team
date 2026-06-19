@@ -222,7 +222,7 @@ export default function Services() {
       <Container>
         <div className="flex flex-col gap-p6">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black tracking-tight">
-            Our services
+            Nos services
           </h2>
           <div className="flex flex-col md:flex-row items-start justify-between gap-p8">
             <div
@@ -230,9 +230,8 @@ export default function Services() {
               aria-hidden
             />
             <p className="text-black-80 text-sm lg:text-md max-w-md shrink-0">
-              Our services cover every stage of your digital project, from
-              initial ideas to final delivery. We focus on clarity, performance,
-              and long-term scalability.
+              De l’idée au lancement, nous vous accompagnons avec des solutions
+              claires, utiles et adaptées à votre activité.
             </p>
           </div>
         </div>

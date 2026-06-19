@@ -19,7 +19,7 @@ export const portfolioData: Project[] = [
     id: "upstream",
     name: "Upstream",
     description:
-      "Turning a complex carbon platform into a clear, intuitive product",
+      "Transformer une plateforme complexe en produit clair et intuitif",
     href: "#",
     slides: [
       "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
@@ -27,12 +27,12 @@ export const portfolioData: Project[] = [
     ],
     tall: true,
     metrics: [
-      { label: "Growth", value: "+45%" },
-      { label: "Users", value: "50K+" },
+      { label: "Croissance", value: "+45%" },
+      { label: "Utilisateurs", value: "50K+" },
     ],
-    services: ["UI/UX Design", "Web Development"],
+    services: ["Design / maquette", "Création de sites web"],
     testimonial: {
-      quote: "Exceptional work that transformed our product.",
+      quote: "Un travail remarquable qui a transformé notre produit.",
       author: "John Doe",
       role: "CEO",
     },
@@ -41,7 +41,7 @@ export const portfolioData: Project[] = [
     id: "rizzle",
     name: "Rizzle",
     description:
-      "Comprehensive redesign propelled the platform to 34M monthly active users",
+      "Une refonte complète qui a renforcé l’expérience de la plateforme",
     href: "#",
     slides: [
       "https://images.unsplash.com/photo-1616469829581-73993eb86b02?w=800",
@@ -49,16 +49,16 @@ export const portfolioData: Project[] = [
     ],
     tall: false,
     metrics: [
-      { label: "Monthly Active Users", value: "34M+" },
+      { label: "Utilisateurs mensuels", value: "34M+" },
       { label: "Engagement", value: "+60%" },
     ],
-    services: ["Branding", "Web Design", "Mobile App"],
+    services: ["Branding", "Redesign de site web", "Applications mobiles"],
   },
   {
     id: "firefox",
     name: "Firefox",
     description:
-      "Identity system that enhanced brand recognition and user engagement",
+      "Un système d’identité pensé pour renforcer la reconnaissance de marque",
     href: "#",
     slides: [
       "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800",
@@ -66,16 +66,16 @@ export const portfolioData: Project[] = [
     ],
     tall: false,
     metrics: [
-      { label: "Brand Recognition", value: "+35%" },
+      { label: "Reconnaissance", value: "+35%" },
       { label: "Engagement", value: "+28%" },
     ],
-    services: ["Brand Identity", "Design System"],
+    services: ["Identité de marque", "Design / maquette"],
   },
   {
     id: "opera",
     name: "Opera",
     description:
-      "Identity system that enhanced brand recognition and user engagement",
+      "Un système visuel cohérent pour améliorer l’image et l’engagement",
     href: "#",
     slides: [
       "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800",
@@ -83,16 +83,16 @@ export const portfolioData: Project[] = [
     ],
     tall: true,
     metrics: [
-      { label: "Brand Recognition", value: "+35%" },
+      { label: "Reconnaissance", value: "+35%" },
       { label: "Engagement", value: "+28%" },
     ],
-    services: ["Brand Identity", "Design System"],
+    services: ["Identité de marque", "Design / maquette"],
   },
   {
     id: "chrome",
     name: "Chrome",
     description:
-      "Identity system that enhanced brand recognition and user engagement",
+      "Une identité digitale plus claire pour mieux guider les utilisateurs",
     href: "#",
     slides: [
       "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800",
@@ -100,16 +100,16 @@ export const portfolioData: Project[] = [
     ],
     tall: true,
     metrics: [
-      { label: "Brand Recognition", value: "+35%" },
+      { label: "Reconnaissance", value: "+35%" },
       { label: "Engagement", value: "+28%" },
     ],
-    services: ["Brand Identity", "Design System"],
+    services: ["Identité de marque", "Design / maquette"],
   },
   {
     id: "brave",
     name: "Brave",
     description:
-      "Identity system that enhanced brand recognition and user engagement",
+      "Une expérience web plus simple pour mieux présenter l’offre",
     href: "#",
     slides: [
       "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800",
@@ -117,9 +117,9 @@ export const portfolioData: Project[] = [
     ],
     tall: false,
     metrics: [
-      { label: "Brand Recognition", value: "+35%" },
+      { label: "Reconnaissance", value: "+35%" },
       { label: "Engagement", value: "+28%" },
     ],
-    services: ["web", "Ecommerce app"],
+    services: ["Création de sites web", "Application e-commerce"],
   },
 ];

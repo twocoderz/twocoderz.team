@@ -56,7 +56,7 @@ export default function AboutCapabilities() {
         viewport={{ once: true, amount: 0.6 }}
         transition={{ duration: 0.45, ease: sectionEase }}
       >
-        Capabilities
+        Capacités
       </motion.h2>
       <div className="grid grid-cols-1 md:grid-cols-2">
         <motion.div

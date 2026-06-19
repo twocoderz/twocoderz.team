@@ -3,10 +3,11 @@ import { portfolioData } from "../../../shared/data/portfolio";
 import { servicesData } from "../../../shared/data/services";
 
 const SERVICE_PROJECT_TAGS: Record<string, string[]> = {
-  "Mobile Development": ["Mobile Development", "Mobile App", "mobile"],
-  "Web Development": ["Web Development", "Web Design", "web"],
-  "UX/UI Design": ["UX/UI Design", "UI/UX Design", "Design System"],
-  "Desktop Apps": ["Desktop Apps", "Desktop App", "Electron", "Tauri"],
+  "Design / maquette": ["Design / maquette", "UI/UX Design", "Design System"],
+  "Analyse de site web": ["Analyse de site web", "SEO", "Performance"],
+  "Redesign de site web": ["Redesign de site web", "Web Design", "Brand Identity"],
+  "Création de sites web": ["Création de sites web", "Web Development", "web"],
+  "Applications mobiles": ["Applications mobiles", "Mobile App", "mobile"],
 };
 
 export default function OneService() {

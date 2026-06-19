@@ -3,97 +3,78 @@ import type { AccordionItemData } from "../../../shared/components/ui/AccordionI
 export const questionsResponses: AccordionItemData[] = [
   {
     id: "q1",
-    title: "What types of companies and industries does Twocoderz work with?",
+    title: "Avec quels types d’entreprises travaillez-vous ?",
     content: (
       <p className="text-black-80 text-lg font-normal">
-        Our client base is diverse, ranging from ambitious startups to
-        established global companies. With a portfolio that includes high-growth
-        B2B and B2C brands, we work across various sectors, including
-        technology, finance, healthcare, and consumer goods, providing solutions
-        that shape the future of these industries.
+        Nous travaillons avec des entrepreneurs, commerces, PME, startups et
+        organisations qui veulent mieux présenter leurs offres et attirer plus
+        de clients grâce au digital.
       </p>
     ),
   },
   {
     id: "q2",
-    title: "Who are some of your clients?",
+    title: "Quels types de projets pouvez-vous réaliser ?",
     content: (
       <p className="text-black-80 text-lg font-normal">
-        Our portfolio includes well-known brands like Mozilla, Salesforce, Turo,
-        Citrix, Volusion, Stripe, and Oppo. We take pride in collaborating with
-        innovative companies across industries to craft compelling brands and
-        create engaging digital experiences that drive growth and customer
-        loyalty.
+        Nous pouvons créer un site vitrine, refaire un site existant, concevoir
+        une maquette, analyser un site web ou développer une application mobile
+        adaptée à votre service.
       </p>
     ),
   },
   {
     id: "q3",
-    title: "Does Twocoderz work with startups?",
+    title: "Travaillez-vous avec les petites entreprises ?",
     content: (
       <p className="text-black-80 text-lg font-normal">
-        Yes, we partner with both early-stage and established companies. We
-        understand the unique needs of startups, including the importance of
-        scalability and investor appeal. Our startup clients collectively have
-        raised over $1 billion, benefiting from our solutions that set them up
-        for sustainable growth.
+        Oui. Nous adaptons notre accompagnement aux réalités des petites
+        structures : budget, délai, priorité commerciale et besoin de résultats
+        concrets.
       </p>
     ),
   },
   {
     id: "q4",
-    title:
-      "Can you share strategies or work for clients not featured on your site?",
+    title: "Pouvez-vous analyser mon site actuel avant une refonte ?",
     content: (
       <p className="text-black-80 text-lg font-normal">
-        We respect our clients&apos; confidentiality and do not share detailed
-        strategies or proprietary work that isn&apos;t publicly available.
-        Instead, we provide case studies that showcase our process, methodology,
-        and outcomes in a way that respects client privacy while giving you
-        valuable insights into our approach... You know that startups are always
-        restricted to two things...
+        Oui. Nous pouvons vérifier la clarté des messages, la structure, la
+        vitesse, l’expérience mobile et les points qui peuvent freiner les
+        visiteurs avant de proposer des améliorations.
       </p>
     ),
   },
   {
     id: "q5",
-    title: "How large is the team that will work on my project?",
+    title: "Combien de personnes travaillent sur mon projet ?",
     content: (
       <p className="text-black-80 text-lg font-normal">
-        Typically, 5–12 experienced team members are dedicated to each project,
-        depending on its scope. You&apos;ll work with specialists in roles such
-        as project management, brand strategy, design, and development. Our
-        distributed team is dedicated to ensuring every project receives focused
-        attention and a high level of expertise.
+        Cela dépend du projet. Vous échangez avec une équipe réduite et
+        organisée, capable de gérer la stratégie, le design et le développement
+        sans compliquer la communication.
       </p>
     ),
   },
   {
     id: "q6",
-    title: "Will the founders be involved in my project?",
+    title: "Serai-je accompagné après la livraison ?",
     content: (
       <p className="text-black-80 text-lg font-normal">
-        Our founders contribute to the strategic direction and quality of all
-        our work. They set the tone at project kickoff and collaborate with team
-        leads on vision and high-level guidance throughout the process. While
-        they may not be involved daily, they ensure that every team member
-        embodies Twocoderz&apos;s standards and commitment to quality. Should
-        you prefer more involvement, we can explore additional options based on
-        your needs.
+        Oui. Nous pouvons vous accompagner pour les corrections, petites
+        évolutions, conseils de contenu, maintenance ou nouvelles
+        fonctionnalités selon vos besoins.
       </p>
     ),
   },
   {
     id: "q7",
-    title: "How are billing and payment schedules structured?",
+    title: "Comment se passent les paiements ?",
     content: (
       <p className="text-black-80 text-lg font-normal">
-        For project-based engagements, billing is typically milestone-based,
-        beginning with an initial payment and followed by scheduled
-        installments. For clients seeking ongoing collaboration, we offer a
-        monthly commitment model, allowing us to function as an integrated
-        extension of your team. We&apos;re committed to transparency and can
-        discuss flexible options to meet your project&apos;s needs.
+        Les paiements peuvent être organisés par étapes : lancement du projet,
+        validation d’une phase importante, puis livraison. Les modalités sont
+        discutées clairement avant de commencer.
       </p>
     ),
   },

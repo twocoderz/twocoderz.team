@@ -10,8 +10,8 @@ export default function ContactPage() {
   return (
     <Layout>
       <HeroSection
-        title="Contact us"
-        subtitle="Let's talk about your project and see how we can help."
+        title="Contactez-nous"
+        subtitle="Parlons de votre projet et voyons comment nous pouvons vous aider."
         alignment="center"
         spH1ClassName="max-w-2xl"
       />
@@ -24,27 +24,27 @@ export default function ContactPage() {
             {/* separator */}
             <div className="my-6 flex w-full items-center gap-4">
               <div className="h-px flex-1 bg-black/20" />
-              <span className="text-sm text-black/60">Or</span>
+              <span className="text-sm text-black/60">Ou</span>
               <div className="h-px flex-1 bg-black/20" />
             </div>
             {/* the form */}
             <div className="flex flex-col w-full mt-p8">
               <h2 className="text-2xl font-bold tracking-wide text-black-80 text-center mb-p8">
-                Fill out the form
+                Remplissez le formulaire
               </h2>
               <ContactForm />
               <p className="text-black-80 text-xs text-center mt-p8">
-                By filling in the form, you agree to our{" "}
+                En remplissant ce formulaire, vous acceptez notre{" "}
                 <span>
                   <a href="#" className="cursor-pointer">
-                    Privacy Policy
+                    politique de confidentialité
                   </a>
                 </span>
-                , including our cookie use
+                , y compris notre utilisation des cookies
               </p>
               <div className="text-center mt-p8">
                 <Button variant="primary" size="sp">
-                  <span> Let&apos;s talk</span>
+                  <span> Envoyer</span>
                 </Button>
               </div>
             </div>

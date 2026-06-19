@@ -11,8 +11,8 @@ export default function FaqsPage() {
   return (
     <Layout>
       <HeroSection
-        title="Frequently asked questions"
-        subtitle="At Twocoderz, we believe in empowering you with straightforward, transparent information about our team, our approach, and what it takes to bring your project to life. Here, we answer your most pressing questions directly and with purpose, so you can make an informed, confident choice in partnering with us."
+        title="Questions fréquentes"
+        subtitle="Des réponses simples sur notre façon de travailler, les délais, les paiements et ce qu’il faut prévoir pour lancer votre projet digital."
         alignment="center"
         className="bg-black text-white"
         spClassName="py-p4"
@@ -38,7 +38,7 @@ export default function FaqsPage() {
         <div className="text-center mt-p24 mb-p24">
           <a href={ROUTES.CONTACT}>
             <Button variant="primary" size="lg">
-              <span> Let&apos;s talk</span>
+              <span> Parlons de votre projet</span>
               <ArrowRightIcon className="w-4 h-4 ml-p4" />
             </Button>
           </a>

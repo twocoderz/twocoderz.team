@@ -8,7 +8,7 @@ export default function ContactForm() {
         type="text"
         required
         autoComplete="name"
-        placeholder="Full name"
+        placeholder="Nom complet"
         className="placeholder:text-black-40 placeholder:text-sm w-full"
       />
       <Input
@@ -19,14 +19,14 @@ export default function ContactForm() {
         className="placeholder:text-black-40 placeholder:text-sm w-full"
       />
       <Textarea
-        placeholder="Project description"
+        placeholder="Décrivez votre projet"
         required
         className="h-48 placeholder:text-black-40 placeholder:text-sm w-full"
       />
       <Input
         type="text"
         autoComplete="off"
-        placeholder="How did you find Twocoderz?"
+        placeholder="Comment avez-vous connu Twocoderz ?"
         className="placeholder:text-black-40 placeholder:text-sm w-full"
       />
     </form>
