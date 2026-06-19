@@ -14,25 +14,47 @@ export default function Services() {
   return (
     <Section id="services" className="bg-white">
       <Container>
-        <div
-          className="grid grid-cols-1 gap-y-p16 md:grid-cols-2 md:gap-x-p12 lg:grid-cols-3 lg:gap-x-p13 lg:gap-y-p22"
-          role="list"
-          aria-label="Services"
-        >
-          {servicesData.map((service) => (
-            <article key={service.id} className="flex flex-col" role="listitem">
+        <div className="flex flex-col gap-p16 md:gap-p20">
+          <div className="flex flex-col gap-p6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black tracking-tight">
+              Nos services
+            </h2>
+            <div className="flex flex-col md:flex-row items-start justify-between gap-p8">
               <div
-                className={`aspect-square w-full ${SERVICE_COLOR_CLASSES[service.id] ?? "bg-primary"}`}
+                className="hidden min-h-0 min-w-0 md:block md:flex-1"
                 aria-hidden
               />
-              <h2 className="mt-p6 text-2xl font-bold leading-tight text-black md:text-3xl">
-                {service.title}
-              </h2>
-              <p className="mt-p5 max-w-sm text-r14 leading-snug text-black">
-                {service.description}
+              <p className="text-black-80 text-sm lg:text-md max-w-md shrink-0">
+                De l&apos;idée au lancement, nous vous accompagnons avec des
+                solutions claires, utiles et adaptées à votre activité.
               </p>
-            </article>
-          ))}
+            </div>
+          </div>
+
+          <div
+            className="grid grid-cols-1 gap-y-p16 md:grid-cols-2 md:gap-x-p12 lg:grid-cols-3 lg:gap-x-p13 lg:gap-y-p22"
+            role="list"
+            aria-label="Services"
+          >
+            {servicesData.map((service) => (
+              <article
+                key={service.id}
+                className="flex flex-col"
+                role="listitem"
+              >
+                <div
+                  className={`aspect-square w-full ${SERVICE_COLOR_CLASSES[service.id] ?? "bg-primary"}`}
+                  aria-hidden
+                />
+                <h3 className="mt-p6 text-2xl font-bold leading-tight text-black md:text-3xl">
+                  {service.title}
+                </h3>
+                <p className="mt-p5 max-w-sm text-r14 leading-snug text-black">
+                  {service.description}
+                </p>
+              </article>
+            ))}
+          </div>
         </div>
       </Container>
     </Section>
