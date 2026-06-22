@@ -1,13 +1,1 @@
-- pages:
-    = Home page (header, hero section, services section, projects section, 
-        why us section, testimonies section, footer)
-    = services page (header, detail services, process of work)
-    = projects page (header, all projects, call to contact, footer)
-    = about page (header, capabilities, team members, clients, footers)
-    = one project detail page
-    = contact page
-
-    - rendre le fait que je header deviens black reutilisable de tel sorte 
-        que ce ne sois pas appliquable qu'a la page de process.
-
-    ------------PROCHAINEMENT CONTINUER AVEC LE SERVICES PAGE ET FINIR
+------------PROCHAINEMENT CONTINUER AVEC LE SERVICES PAGE ET FINIR
