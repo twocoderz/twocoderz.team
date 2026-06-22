@@ -29,12 +29,12 @@ export default function Footer() {
           </div>
           <div className="flex items-start justify-between">
             <div className="flex flex-col gap-p6">
-              <p className="text-xs text-black-40 font-semibold">Réseaux</p>
+              <p className="text-sm text-black-40 font-semibold">Réseaux</p>
               <ul className="flex flex-col gap-p3">
                 <li>
                   <a
                     href="#"
-                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                    className="text-sm text-black-80 hover:text-black transition-all duration-500"
                   >
                     Linked in
                   </a>
@@ -42,7 +42,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#"
-                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                    className="text-sm text-black-80 hover:text-black transition-all duration-500"
                   >
                     Instagram
                   </a>
@@ -50,7 +50,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#"
-                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                    className="text-sm text-black-80 hover:text-black transition-all duration-500"
                   >
                     Twitter
                   </a>
@@ -58,7 +58,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#"
-                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                    className="text-sm text-black-80 hover:text-black transition-all duration-500"
                   >
                     Facebook
                   </a>
@@ -69,12 +69,12 @@ export default function Footer() {
               id="about"
               className="flex scroll-mt-24 flex-col gap-p6 md:scroll-mt-28"
             >
-              <p className="text-xs text-black-40 font-semibold">Entreprise</p>
+              <p className="text-sm text-black-40 font-semibold">Entreprise</p>
               <ul className="flex flex-col gap-p3">
                 <li>
                   <a
                     href={ROUTES.ABOUT}
-                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                    className="text-sm text-black-80 hover:text-black transition-all duration-500"
                   >
                     À propos
                   </a>
@@ -82,7 +82,7 @@ export default function Footer() {
                 <li>
                   <a
                     href={ROUTES.SERVICES}
-                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                    className="text-sm text-black-80 hover:text-black transition-all duration-500"
                   >
                     Services
                   </a>
@@ -90,7 +90,7 @@ export default function Footer() {
                 <li>
                   <a
                     href={ROUTES.WORK}
-                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                    className="text-sm text-black-80 hover:text-black transition-all duration-500"
                   >
                     Projets
                   </a>
@@ -98,7 +98,7 @@ export default function Footer() {
                 <li>
                   <a
                     href={ROUTES.PROCESS}
-                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                    className="text-sm text-black-80 hover:text-black transition-all duration-500"
                   >
                     Processus
                   </a>
@@ -109,12 +109,12 @@ export default function Footer() {
               id="blog"
               className="flex scroll-mt-24 flex-col gap-p6 md:scroll-mt-28"
             >
-              <p className="text-xs text-black-40 font-semibold">Ressources</p>
+              <p className="text-sm text-black-40 font-semibold">Ressources</p>
               <ul className="flex flex-col gap-p3">
                 <li>
                   <a
                     href={ROUTES.FAQS}
-                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                    className="text-sm text-black-80 hover:text-black transition-all duration-500"
                   >
                     FAQs
                   </a>
@@ -123,7 +123,7 @@ export default function Footer() {
                   <a
                     href="https://pixelpulse-blog.vercel.app/"
                     target="_blank"
-                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                    className="text-sm text-black-80 hover:text-black transition-all duration-500"
                   >
                     Blog
                   </a>
@@ -134,12 +134,12 @@ export default function Footer() {
               id="contact"
               className="flex scroll-mt-24 flex-col gap-p6 md:scroll-mt-28"
             >
-              <p className="text-xs text-black-40 font-semibold">Contact</p>
+              <p className="text-sm text-black-40 font-semibold">Contact</p>
               <ul className="flex flex-col gap-p3">
                 <li>
                   <a
                     href="tel:+22891796115"
-                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                    className="text-sm text-black-80 hover:text-black transition-all duration-500"
                   >
                     +228 91 79 61 15
                   </a>
@@ -147,7 +147,7 @@ export default function Footer() {
                 <li>
                   <a
                     href={ROUTES.CONTACT}
-                    className="text-xs text-black-80 hover:text-black transition-all duration-500"
+                    className="text-sm text-black-80 hover:text-black transition-all duration-500"
                   >
                     Nous contacter
                   </a>
