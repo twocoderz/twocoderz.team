@@ -1,1 +1,2 @@
-------------PROCHAINEMENT CONTINUER AVEC LE SERVICES PAGE ET FINIR
+-- Prochainement coder la page de detail de projet
+-- Verifier la consistence des taille de polices
