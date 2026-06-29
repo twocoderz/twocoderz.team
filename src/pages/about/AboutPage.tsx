@@ -15,9 +15,12 @@ export default function AboutPage() {
     <Layout>
       <HeroSection
         title="À propos"
-        subtitle="Nous sommes une équipe de designers et développeurs qui aide les entreprises à construire une présence digitale claire, moderne et utile."
+        subtitle="Nous sommes une équipe de designers et de développeurs passionnés qui conçoit des sites web et 
+        des expériences digitales modernes. Notre mission est d'aider les entreprises à bâtir une présence 
+        en ligne claire, performante et pensée pour inspirer confiance, attirer de nouveaux clients et accompagner leur croissance."
         alignment="center"
         spH1ClassName="max-w-2xl"
+        spPClassName="max-w-4xl"
       />
 
       {/* About stats section */}

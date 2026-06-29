@@ -50,7 +50,7 @@ export default function AboutCapabilities() {
       transition={{ duration: 0.5, ease: sectionEase }}
     >
       <motion.h2
-        className="text-4xl tracking-wide font-bold text-black-80"
+        className="text-5xl tracking-wide font-bold text-black-80"
         initial={{ opacity: 0, y: 8 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.6 }}

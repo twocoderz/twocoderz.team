@@ -10,6 +10,7 @@ export interface HeroSectionProps {
   className?: string;
   spClassName?: string;
   spH1ClassName?: string;
+  spPClassName?: string;
 }
 
 export function HeroSection({
@@ -20,6 +21,7 @@ export function HeroSection({
   className,
   spClassName,
   spH1ClassName,
+  spPClassName,
 }: HeroSectionProps) {
   const alignmentClass = {
     left: "text-left",
@@ -47,7 +49,12 @@ export function HeroSection({
             {title}
           </h1>
           {subtitle && (
-            <p className="text-md md:text-lg mb-p8 mx-auto max-w-xl">
+            <p
+              className={twMerge(
+                "text-md md:text-lg mb-p8 mx-auto",
+                spPClassName,
+              )}
+            >
               {subtitle}
             </p>
           )}

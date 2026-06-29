@@ -34,7 +34,7 @@ function AnimatedStatNumber(props: AnimatedStatNumberProps) {
   return (
     <motion.h1
       ref={ref}
-      className="text-6xl text-black-80 font-bold"
+      className="text-7xl text-black-80 font-bold"
       initial={{ opacity: 0, y: 8 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.65 }}
@@ -49,7 +49,7 @@ function AnimatedStatNumber(props: AnimatedStatNumberProps) {
 export default function AboutStats() {
   return (
     <motion.div
-      className="flex items-center justify-between"
+      className="flex items-center justify-between max-w-4xl mx-auto"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.35 }}
@@ -73,7 +73,7 @@ export default function AboutStats() {
           visible: { opacity: 1, y: 0 },
         }}
       >
-        <h4 className="text-md font-bold text-black-80">Experts équipe</h4>
+        <h4 className="text-xl font-bold text-black-80">Experts équipe</h4>
         <AnimatedStatNumber target={11} start={0} />
       </motion.div>
       <motion.div

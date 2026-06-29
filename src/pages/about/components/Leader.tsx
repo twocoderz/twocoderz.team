@@ -22,8 +22,8 @@ export default function Leader(props: LeaderProps) {
           />
         </div>
         <div className="flex flex-col items-start">
-          <h4 className="text-lg font-bold text-black-80">{name}</h4>
-          <p className="text-sm font-normal text-black-80">{profession}</p>
+          <h4 className="text-xl font-bold text-black-80">{name}</h4>
+          <p className="text-lg font-normal text-black-80">{profession}</p>
         </div>
         <div className="flex items-center gap-p1 ml-p20">
           <LinkedinIcon className="w-6 h-6 text-black-80" />

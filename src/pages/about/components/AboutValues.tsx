@@ -34,7 +34,7 @@ const values = [
 export default function AboutValues() {
   return (
     <div>
-      <h2 className="text-4xl tracking-wide font-bold text-black-80 text-center mb-p8">
+      <h2 className="text-5xl tracking-wide font-bold text-black-80 text-start mb-p6">
         Nos valeurs
       </h2>
       <div className="pt-p20 grid grid-cols-1 gap-x-p20 gap-y-p8 md:grid-cols-2 lg:grid-cols-3">
@@ -43,8 +43,8 @@ export default function AboutValues() {
             key={value.title}
             className="flex flex-col items-start gap-p4 border-b border-black-10 pb-p6"
           >
-            <h3 className="text-2xl font-bold text-black-80">{value.title}</h3>
-            <p className="max-w-xs text-sm font-normal text-black-90">
+            <h3 className="text-3xl font-bold text-black-80">{value.title}</h3>
+            <p className="max-w-xs text-lg font-normal tracking-wide text-black-90">
               {value.description}
             </p>
           </div>
