@@ -6,13 +6,13 @@ export const mobileDevelopmentItems: AccordionItemData[] = [
     title: "Introduction",
     content: (
       <div className="space-y-p6">
-        <p className="text-black-80 text-lg font-normal">
-          Une application mobile doit rendre votre service plus accessible,
-          plus simple et plus proche de vos clients.
+        <p className="text-black-80 tracking-wide text-xl font-normal">
+          Une application mobile doit rendre votre service plus accessible, plus
+          simple et plus proche de vos clients.
         </p>
-        <p className="text-black-80 text-lg font-normal">
-          Nous partons du besoin réel avant d’ajouter des fonctionnalités, pour
-          garder une app utile et facile à utiliser.
+        <p className="text-black-80 tracking-wide text-xl font-normal">
+          Nous partons du besoin réel avant d&apos;ajouter des fonctionnalités,
+          pour garder une app utile et facile à utiliser.
         </p>
         <ul className="list-disc pl-p6 text-lg space-y-p2">
           <li>
@@ -35,7 +35,7 @@ export const mobileDevelopmentItems: AccordionItemData[] = [
     id: "mobile-stage-1",
     title: "Étape 1 : Fonctionnalités utiles",
     content: (
-      <p className="text-black-80 text-lg font-normal">
+      <p className="text-black-80 tracking-wide text-xl font-normal">
         Nous identifions les actions essentielles que vos utilisateurs doivent
         pouvoir faire.
       </p>
@@ -45,7 +45,7 @@ export const mobileDevelopmentItems: AccordionItemData[] = [
     id: "mobile-stage-2",
     title: "Étape 2 : Parcours et écrans",
     content: (
-      <p className="text-black-80 text-lg font-normal">
+      <p className="text-black-80 tracking-wide text-xl font-normal">
         Nous préparons les écrans, les enchaînements et les priorités de
         développement.
       </p>
@@ -55,8 +55,8 @@ export const mobileDevelopmentItems: AccordionItemData[] = [
     id: "mobile-stage-3",
     title: "Étape 3 : Build et tests",
     content: (
-      <p className="text-black-80 text-lg font-normal">
-        Nous développons l’application, testons les parcours importants et
+      <p className="text-black-80 tracking-wide text-xl font-normal">
+        Nous développons l&apos;application, testons les parcours importants et
         préparons la livraison.
       </p>
     ),

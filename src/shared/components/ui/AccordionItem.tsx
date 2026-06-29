@@ -104,7 +104,7 @@ export default function AccodionList(props: AccordionListProps) {
               className="w-full cursor-pointer px-p6 py-p5 text-left"
             >
               <span className="flex items-center justify-between gap-p4">
-                <span className="text-md md:text-lg font-bold text-black-80">
+                <span className="text-lg md:text-xl font-bold text-black-80">
                   {item.title}
                 </span>
                 {isOpen ? (
@@ -130,7 +130,7 @@ export default function AccodionList(props: AccordionListProps) {
                 !isOpen && "pointer-events-none",
               )}
             >
-              <div className="px-p6 pb-p6 text-r16 leading-relaxed text-black-70">
+              <div className="px-p6 pb-p6 text-lg leading-relaxed text-black-80">
                 {item.content}
               </div>
             </motion.div>
