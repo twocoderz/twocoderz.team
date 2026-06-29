@@ -8,28 +8,28 @@ export default function SubscribeForm() {
         required
         autoComplete="email"
         placeholder="email@company.com"
-        className="placeholder:text-black-40 placeholder:text-sm w-full"
+        className="placeholder:text-black-40 placeholder:text-lg w-full"
       />
       <Input
         type="text"
         required
         autoComplete="given-name"
         placeholder="Prénom"
-        className="placeholder:text-black-40 placeholder:text-sm w-full"
+        className="placeholder:text-black-40 placeholder:text-lg w-full"
       />
       <Input
         type="text"
         required
         autoComplete="family-name"
         placeholder="Nom"
-        className="placeholder:text-black-40 placeholder:text-sm w-full"
+        className="placeholder:text-black-40 placeholder:text-lg w-full"
       />
       <Input
         type="text"
         required
         autoComplete="organization"
-        placeholder="Nom de l’entreprise"
-        className="placeholder:text-black-40 placeholder:text-sm w-full"
+        placeholder="Nom de l&apos;entreprise"
+        className="placeholder:text-black-40 placeholder:text-lg w-full"
       />
     </form>
   );
