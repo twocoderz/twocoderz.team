@@ -62,7 +62,7 @@ export default function WorkPage() {
       <div className="text-center mt-p24 mb-p24">
         <a href={ROUTES.CONTACT}>
           <Button variant="primary" size="lg">
-            <span> Parlons de votre projet</span>
+            <span> Obtenir un devis</span>
             <ArrowRightIcon className="w-4 h-4 ml-p4" />
           </Button>
         </a>

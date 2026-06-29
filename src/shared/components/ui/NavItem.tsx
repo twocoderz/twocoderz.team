@@ -14,7 +14,7 @@ export default function NavItem(props: NavItemProps) {
     <a
       href={href}
       className={twMerge(
-        "group relative inline-block pb-p1 text-black-70 text-sm font-medium transition-colors duration-300 ease-out hover:text-black-90",
+        "group relative inline-block pb-p1 text-black-70 text-lg font-normal transition-colors duration-300 ease-out hover:text-black-90",
         className,
       )}
     >

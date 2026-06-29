@@ -143,19 +143,6 @@ export default function Header() {
         <div className="flex items-center gap-p4">
           {/* CTA buttons */}
           <div className="hidden md:flex md:items-center md:gap-p4">
-            <a href={ROUTES.SUBSCRIBE}>
-              <Button
-                variant="secondary"
-                size="sm"
-                className={
-                  isDarkHeader
-                    ? "border-white/70 text-white hover:bg-white hover:text-black transition-colors duration-300"
-                    : undefined
-                }
-              >
-                Newsletter
-              </Button>
-            </a>
             <a href={ROUTES.CONTACT}>
               <Button
                 variant="primary"

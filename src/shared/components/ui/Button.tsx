@@ -17,10 +17,10 @@ type ButtonVariant = "primary" | "secondary";
 type ButtonSize = "sm" | "md" | "lg" | "sp";
 
 const sizeMap: Record<ButtonSize, string> = {
-  sm: "px-4 py-2.5 text-sm",
-  md: "px-6 py-4 text-md",
-  lg: "px-16 py-6 text-base",
-  sp: "px-16 py-4 text-base",
+  sm: "px-6 py-2.5 text-md",
+  md: "px-8 py-4 text-lg",
+  lg: "px-16 py-6 text-xl",
+  sp: "px-16 py-4 text-xl",
 };
 
 interface ButtonProps extends Omit<HTMLMotionProps<"button">, "children"> {

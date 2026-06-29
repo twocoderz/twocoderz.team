@@ -11,7 +11,7 @@ export default function ContactPage() {
     <Layout>
       <HeroSection
         title="Contactez-nous"
-        subtitle="Parlons de votre projet et voyons comment nous pouvons vous aider."
+        subtitle="Obtenir un devis et voyons comment nous pouvons vous aider."
         alignment="center"
         spH1ClassName="max-w-2xl"
       />
