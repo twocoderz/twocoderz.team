@@ -6,11 +6,11 @@ export const webDevelopmentItems: AccordionItemData[] = [
     title: "Introduction",
     content: (
       <div className="space-y-p6">
-        <p className="text-black-80 text-xl tracking-wide font-normal">
+        <p className="max-w-3xl text-black-80 text-xl tracking-wide font-normal">
           Un bon site doit expliquer clairement ce que vous faites, rassurer vos
           visiteurs et leur donner envie de vous contacter.
         </p>
-        <p className="text-black-80 text-xl tracking-wide font-normal">
+        <p className="max-w-3xl text-black-80 text-xl tracking-wide font-normal">
           Nous construisons chaque page autour de votre activité, de vos clients
           et des actions que vous voulez obtenir.
         </p>
@@ -34,7 +34,7 @@ export const webDevelopmentItems: AccordionItemData[] = [
     id: "web-stage-1",
     title: "Étape 1 : Besoin et objectifs",
     content: (
-      <p className="text-black-80 text-xl tracking-wide font-normal">
+      <p className="max-w-3xl text-black-80 text-xl tracking-wide font-normal">
         Nous clarifions votre activité, vos clients, vos offres et les actions
         attendues sur le site.
       </p>
@@ -44,7 +44,7 @@ export const webDevelopmentItems: AccordionItemData[] = [
     id: "web-stage-2",
     title: "Étape 2 : Structure et contenu",
     content: (
-      <p className="text-black-80 text-xl tracking-wide font-normal">
+      <p className="max-w-3xl text-black-80 text-xl tracking-wide font-normal">
         Nous organisons les pages, les messages et les priorités pour rendre le
         parcours simple.
       </p>
@@ -54,7 +54,7 @@ export const webDevelopmentItems: AccordionItemData[] = [
     id: "web-stage-3",
     title: "Étape 3 : Développement et livraison",
     content: (
-      <p className="text-black-80 text-xl tracking-wide font-normal">
+      <p className="max-w-3xl text-black-80 text-xl tracking-wide font-normal">
         Nous développons le site, testons les points essentiels et préparons la
         mise en ligne.
       </p>
