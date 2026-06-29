@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
           <div className="flex items-start justify-between">
             <div className="flex flex-col gap-p6">
-              <p className="text-sm text-black-40 font-semibold">Réseaux</p>
+              <p className="text-sm text-black-60 font-semibold">Réseaux</p>
               <ul className="flex flex-col gap-p3">
                 <li>
                   <a
@@ -69,7 +69,7 @@ export default function Footer() {
               id="about"
               className="flex scroll-mt-24 flex-col gap-p6 md:scroll-mt-28"
             >
-              <p className="text-sm text-black-40 font-semibold">Entreprise</p>
+              <p className="text-sm text-black-60  font-semibold">Entreprise</p>
               <ul className="flex flex-col gap-p3">
                 <li>
                   <a
@@ -109,7 +109,7 @@ export default function Footer() {
               id="blog"
               className="flex scroll-mt-24 flex-col gap-p6 md:scroll-mt-28"
             >
-              <p className="text-sm text-black-40 font-semibold">Ressources</p>
+              <p className="text-sm text-black-60  font-semibold">Ressources</p>
               <ul className="flex flex-col gap-p3">
                 <li>
                   <a
@@ -134,7 +134,7 @@ export default function Footer() {
               id="contact"
               className="flex scroll-mt-24 flex-col gap-p6 md:scroll-mt-28"
             >
-              <p className="text-sm text-black-40 font-semibold">Contact</p>
+              <p className="text-sm text-black-60  font-semibold">Contact</p>
               <ul className="flex flex-col gap-p3">
                 <li>
                   <a
