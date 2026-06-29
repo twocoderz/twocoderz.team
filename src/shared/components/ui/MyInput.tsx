@@ -19,7 +19,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           <input
             ref={ref}
             aria-label={ariaLabel}
-            className={`px-p6 py-p4 bg-black-5 rounded-r2 focus:rounded-l-r2 focus:rounded-r-none focus:outline-none focus:ring-0 focus:border-r-1 focus:border-black-80 ${
+            className={`px-p6 py-p4 bg-black-5 text-lg font-normal rounded-r2 focus:rounded-r-r2 focus:rounded-bl-r2 focus:rounded-tl-r1 focus:outline-none focus:ring-0 focus:border-1 focus:border-black-80 ${
               error ? "border-red-500 focus:ring-red-500" : ""
             } ${className || ""}`}
             {...props}
