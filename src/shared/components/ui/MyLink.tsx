@@ -18,7 +18,7 @@ export default function MyLink(props: MyLinkProps) {
     >
       <a
         href={href}
-        className="text-md font-normal text-black-60 hover:text-black-90"
+        className="text-lg font-normal text-black-60 hover:text-black-90"
       >
         {label}
       </a>

@@ -15,7 +15,7 @@ export default function Clients() {
           </h2>
           <div className="flex flex-col md:flex-row items-start justify-between gap-p8">
             <MyLink label="Tous les projets" href={ROUTES.WORK} />
-            <p className="text-black-80 text-sm lg:text-md max-w-md">
+            <p className="text-black-80 text-sm lg:text-lg max-w-md">
               Nous aidons les entreprises à construire une présence digitale
               claire, professionnelle et orientée résultats.
             </p>

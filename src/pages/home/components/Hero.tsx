@@ -23,11 +23,11 @@ export default function Hero() {
       <Container>
         {/* hero center texts */}
         <div className="text-center max-w-6xl md:max-w-xl lg:max-w-5xl mx-auto mb-p12">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl text-black-70 font-bold leading-none mb-p8 mt-p6">
-            Transformez votre présence en ligne, augmentez vos ventes
+          <h1 className="text-4xl md:text-6xl lg:text-7xl text-black-70 font-medium leading-none mb-p8 mt-p6">
+            Des solutions web pensées pour votre croissance
             <span className="inline-block w-4 h-4 bg-primary ml-1"></span>
           </h1>
-          <p className="text-md md:text-lg font-normal pb-p6 max-w-xl mx-auto text-black-80">
+          <p className="text-md md:text-lg font-normal pb-p6 max-w-4xl mx-auto text-black-80">
             Nous aidons les entreprises au Togo à créer une présence digitale
             claire, moderne et prête à générer des demandes.
           </p>
