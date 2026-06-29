@@ -64,7 +64,7 @@ export default function TestimonialCarouselCard(
       </div>
       <div className="flex flex-col">
         {/* Quote */}
-        <p className="text-lg font-normal text-black-80 mb-p12 leading-relaxed max-w-lg">
+        <p className="text-xl font-normal text-black-80 mb-p12 leading-relaxed max-w-lg">
           "{testimonial.quote}"
         </p>
 

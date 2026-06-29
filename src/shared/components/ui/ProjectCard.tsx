@@ -16,25 +16,33 @@ export function ProjectCard({
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
-    if (isHovered) {
-      timerRef.current = setInterval(() => {
-        setCurrent((prev) => (prev + 1) % project.slides.length);
-      }, 1000);
-    } else {
-      if (timerRef.current) clearInterval(timerRef.current);
-      setCurrent(0);
+    if (!isHovered) {
+      return;
     }
+
+    timerRef.current = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % project.slides.length);
+    }, 1000);
 
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
   }, [isHovered, project.slides.length]);
 
+  function handleMouseEnter() {
+    setIsHovered(true);
+  }
+
+  function handleMouseLeave() {
+    setIsHovered(false);
+    setCurrent(0);
+  }
+
   return (
     <a
       href={project.href}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       className="group block"
     >
       <div
@@ -54,7 +62,7 @@ export function ProjectCard({
         ))}
       </div>
 
-      <div className="space-y-2">
+      <div className="space-y-4">
         <h3
           className={
             isServicesVariant
@@ -67,7 +75,7 @@ export function ProjectCard({
 
         <p
           className={`text-black-80 font-normal leading-relaxed transition-all duration-500 ease-out ${
-            isServicesVariant ? "max-w-xs text-sm" : "max-w-sm text-md"
+            isServicesVariant ? "max-w-xs text-lg" : "max-w-sm text-lg tracking-wider"
           } ${isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
         >
           {project.description}

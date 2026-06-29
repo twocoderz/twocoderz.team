@@ -25,7 +25,7 @@ export default function Services() {
                 className="hidden min-h-0 min-w-0 md:block md:flex-1"
                 aria-hidden
               />
-              <p className="text-black-80 text-sm lg:text-md max-w-md shrink-0">
+              <p className="text-black-80 text-md lg:text-lg max-w-md shrink-0">
                 De l&apos;idée au lancement, nous vous accompagnons avec des
                 solutions claires, utiles et adaptées à votre activité.
               </p>
@@ -51,7 +51,7 @@ export default function Services() {
                 <h3 className="mt-p6 text-2xl group-hover:underline transition-all duration-500 font-bold leading-tight text-black md:text-3xl">
                   {service.title}
                 </h3>
-                <p className="mt-p2 max-w-xs text-r14 leading-snug text-black">
+                <p className="mt-p2 max-w-xs text-lg leading-snug text-black-80">
                   {service.description}
                 </p>
               </a>
