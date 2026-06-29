@@ -17,6 +17,7 @@ export default function FaqsPage() {
         className="bg-black text-white"
         spClassName="py-p4"
         spH1ClassName="max-w-5xl"
+        spPClassName="max-w-xl"
       />
 
       <Container>

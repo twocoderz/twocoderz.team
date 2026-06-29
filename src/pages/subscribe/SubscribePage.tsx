@@ -10,9 +10,10 @@ export default function SubscribePage() {
       <HeroSection
         title="Rejoignez notre newsletter"
         subtitle="
-        Recevez nos conseils, nos retours d&apos;expérience et nos actualités pour améliorer votre présence digitale avec Twocoderz."
+        Recevez nos conseils, nos retours d'expérience et nos actualités pour améliorer votre présence digitale avec Twocoderz."
         alignment="center"
         spH1ClassName="max-w-5xl"
+        spPClassName="max-w-xl"
       />
       <Container>
         <div className="mx-auto max-w-xl mb-p12">

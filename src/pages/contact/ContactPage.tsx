@@ -14,6 +14,7 @@ export default function ContactPage() {
         subtitle="Parlons de votre projet et voyons comment nous pouvons vous aider."
         alignment="center"
         spH1ClassName="max-w-2xl"
+        spPClassName="max-w-xl"
       />
 
       <Section>
