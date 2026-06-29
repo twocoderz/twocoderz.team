@@ -72,7 +72,7 @@ export default function EmailLink(props: EmailLinkProps) {
       )}
       aria-live="polite"
     >
-      <span className="text-2xl font-bold text-black-80">
+      <span className="text-3xl font-bold text-black-80">
         {copied ? copiedLabel : label}
       </span>
       {copied ? (

@@ -11,7 +11,7 @@ export default function ContactPage() {
     <Layout>
       <HeroSection
         title="Contactez-nous"
-        subtitle="Obtenir un devis et voyons comment nous pouvons vous aider."
+        subtitle="Parlons de votre projet et voyons comment nous pouvons vous aider."
         alignment="center"
         spH1ClassName="max-w-2xl"
       />
@@ -36,7 +36,7 @@ export default function ContactPage() {
               <p className="text-black-80 text-xs text-center mt-p8">
                 En remplissant ce formulaire, vous acceptez notre{" "}
                 <span>
-                  <a href="#" className="cursor-pointer">
+                  <a href="#" className="cursor-pointer hover:underline">
                     politique de confidentialité
                   </a>
                 </span>
