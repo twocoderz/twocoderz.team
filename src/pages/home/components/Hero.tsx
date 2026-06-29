@@ -24,7 +24,7 @@ export default function Hero() {
         {/* hero center texts */}
         <div className="text-center max-w-6xl md:max-w-xl lg:max-w-5xl mx-auto mb-p12">
           <h1 className="text-4xl md:text-6xl lg:text-7xl text-black-70 font-bold leading-none mb-p8 mt-p6">
-            Nous réparons votre présence en ligne pour maximiser vos ventes
+            Transformez votre présence en ligne, augmentez vos ventes
             <span className="inline-block w-4 h-4 bg-primary ml-1"></span>
           </h1>
           <p className="text-md md:text-lg font-normal pb-p6 text-black-80">
