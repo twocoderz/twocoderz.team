@@ -14,7 +14,7 @@ export const mobileDevelopmentItems: AccordionItemData[] = [
           Nous partons du besoin réel avant d&apos;ajouter des fonctionnalités,
           pour garder une app utile et facile à utiliser.
         </p>
-        <ul className="list-disc pl-p6 text-lg space-y-p2">
+        <ul className="list-disc pl-p6 text-xl tracking-wide space-y-p2">
           <li>
             <strong>Souplesse.</strong> Les fonctionnalités sont priorisées par
             impact.
