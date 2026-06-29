@@ -149,7 +149,7 @@ export default function Header() {
                 size="sm"
                 className={
                   isDarkHeader
-                    ? "bg-white/10 border-white/70 text-white"
+                    ? "bg-black border-white/70 text-white"
                     : undefined
                 }
               >

@@ -71,7 +71,7 @@ export default function OneService() {
                 className="hidden min-h-0 min-w-0 md:block md:flex-1"
                 aria-hidden
               />
-              <p className="text-black-80 text-sm lg:text-md max-w-md shrink-0">
+              <p className="text-black-80 text-md lg:text-lg max-w-md shrink-0">
                 {service.description}
               </p>
             </div>
