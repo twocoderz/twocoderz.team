@@ -45,7 +45,7 @@ export default function WorkPage() {
     <Layout>
       <HeroSection
         title="Des projets pensés pour marquer"
-        subtitle="Découvrez une sélection de réalisations et d’expériences digitales."
+        subtitle="Découvrez une sélection de réalisations et d&apos;expériences digitales."
         spH1ClassName="max-w-4xl"
       />
 

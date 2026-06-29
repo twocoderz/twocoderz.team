@@ -8,25 +8,33 @@ function WorkCard({ project }: { project: Project }) {
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
-    if (isHovered) {
-      timerRef.current = setInterval(() => {
-        setCurrent((prev) => (prev + 1) % project.slides.length);
-      }, 1000);
-    } else {
-      if (timerRef.current) clearInterval(timerRef.current);
-      setCurrent(0);
+    if (!isHovered) {
+      return;
     }
+
+    timerRef.current = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % project.slides.length);
+    }, 1000);
 
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
   }, [isHovered, project.slides.length]);
 
+  function handleMouseEnter() {
+    setIsHovered(true);
+  }
+
+  function handleMouseLeave() {
+    setIsHovered(false);
+    setCurrent(0);
+  }
+
   return (
     <a
       href={project.href}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       className="group block"
     >
       <div
@@ -46,12 +54,12 @@ function WorkCard({ project }: { project: Project }) {
         ))}
       </div>
 
-      <div className="space-y-2">
+      <div className="space-y-4">
         <h3 className="text-3xl font-bold text-black-70 group-hover:text-black-90 transition-colors duration-500">
           {project.name}
         </h3>
         <p
-          className={`text-black-80 text-md font-normal transition-all duration-500 ease-out ${
+          className={`text-black-80 text-lg font-normal max-w-lg tracking-wider transition-all duration-500 ease-out ${
             isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
