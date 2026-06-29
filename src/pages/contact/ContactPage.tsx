@@ -33,7 +33,7 @@ export default function ContactPage() {
                 Remplissez le formulaire
               </h2>
               <ContactForm />
-              <p className="text-black-80 text-xs text-center mt-p8">
+              <p className="text-black-80 text-sm font-normal mx-auto max-w-xl text-center mt-p8">
                 En remplissant ce formulaire, vous acceptez notre{" "}
                 <span>
                   <a href="#" className="cursor-pointer hover:underline">

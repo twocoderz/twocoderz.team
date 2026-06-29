@@ -10,13 +10,13 @@ export default function Footer() {
         <div className="flex flex-col gap-p12">
           <div
             id="newsletter"
-            className="flex scroll-mt-24 items-center justify-between rounded-r2 bg-black-5 p-p6 md:scroll-mt-28"
+            className="flex scroll-mt-24 items-center justify-between rounded-r2 bg-black-5 p-p8 md:scroll-mt-28"
           >
             <div className="flex flex-col">
-              <h4 className="text-lg font-semibold text-black-80">
+              <h4 className="text-2xl font-semibold text-black-80">
                 Recevez nos conseils digitaux
               </h4>
-              <p className="text-sm text-black-60 font-normal">
+              <p className="text-lg text-black-60 font-normal">
                 Idées, bonnes pratiques et retours d&apos;expérience de
                 l&apos;équipe Twocoderz.
               </p>
