@@ -17,7 +17,7 @@ export default function Services() {
       <Container>
         <div className="flex flex-col gap-p16 md:gap-p20">
           <div className="flex flex-col gap-p6">
-            <h2 className="text-4xl md:text-3xl lg:text-4xl font-bold text-black tracking-tight">
+            <h2 className="text-4xl lg:text-4xl font-bold text-black tracking-tight">
               Nos services
             </h2>
             <div className="flex flex-col md:flex-row items-start justify-between gap-p8">

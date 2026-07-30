@@ -28,27 +28,33 @@ export default function Testimonials() {
   return (
     <Section id="testimonials">
       <Container>
-        <div className="flex flex-col ">
-          <div className="flex items-start justify-between mb-p16">
-            <div className="flex flex-col items-start gap-p8 max-w-xs">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black tracking-tight">
+        <div className="flex flex-col">
+          <div className="flex flex-col md:flex-row items-start justify-between gap-p16 mb-p16">
+            {/* Titre + lien */}
+            <div className="flex flex-col items-start gap-p8 w-full md:max-w-xs">
+              <h2 className="text-4xl lg:text-4xl font-bold text-black tracking-tight">
                 Ce que disent nos clients
               </h2>
               <MyLink href="#testimonials" label="Tous les avis" />
             </div>
 
-            <TestimonialCarouselCard
-              testimonial={current}
-              currentIndex={currentIndex}
-              total={testimonialsData.length}
-              onPrev={handlePrev}
-              onNext={handleNext}
-            />
+            {/* Carousel */}
+            <div className="w-full md:w-auto">
+              <TestimonialCarouselCard
+                testimonial={current}
+                currentIndex={currentIndex}
+                total={testimonialsData.length}
+                onPrev={handlePrev}
+                onNext={handleNext}
+              />
+            </div>
           </div>
+
+          {/* Bouton */}
           <div className="text-center mt-p24">
             <a href={ROUTES.CONTACT}>
               <Button variant="primary" size="lg">
-                <span> Obtenir un devis</span>
+                <span>Obtenir un devis</span>
                 <ArrowRightIcon className="w-4 h-4 ml-p4" />
               </Button>
             </a>
