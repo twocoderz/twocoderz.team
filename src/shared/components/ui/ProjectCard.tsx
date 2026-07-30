@@ -57,7 +57,7 @@ export function ProjectCard({
   }
 
   const descriptionClassName = `text-black-80 font-normal leading-relaxed transition-all duration-500 ease-out ${
-    isServicesVariant ? "max-w-xs text-lg" : "max-w-sm text-lg tracking-wider"
+    isServicesVariant ? "max-w-xs text-lg" : "max-w-sm text-xl"
   } ${isMobile || isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`;
 
   return (
