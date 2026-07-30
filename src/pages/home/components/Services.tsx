@@ -17,7 +17,7 @@ export default function Services() {
       <Container>
         <div className="flex flex-col gap-p16 md:gap-p20">
           <div className="flex flex-col gap-p6">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black tracking-tight">
+            <h2 className="text-4xl md:text-3xl lg:text-4xl font-bold text-black tracking-tight">
               Nos services
             </h2>
             <div className="flex flex-col md:flex-row items-start justify-between gap-p8">
@@ -25,7 +25,7 @@ export default function Services() {
                 className="hidden min-h-0 min-w-0 md:block md:flex-1"
                 aria-hidden
               />
-              <p className="text-black-80 text-md lg:text-lg max-w-md shrink-0">
+              <p className="text-black-80 text-lg lg:text-xl max-w-md shrink-0">
                 De l&apos;idée au lancement, nous vous accompagnons avec des
                 solutions claires, utiles et adaptées à votre activité.
               </p>
@@ -48,7 +48,7 @@ export default function Services() {
                   className={`h-64 w-full ${SERVICE_COLOR_CLASSES[service.id] ?? "bg-primary"}`}
                   aria-hidden
                 />
-                <h3 className="mt-p6 text-2xl group-hover:underline transition-all duration-500 font-bold leading-tight text-black md:text-3xl">
+                <h3 className="mt-p6 text-2xl underline md:no-underline group-hover:underline transition-all duration-500 font-bold leading-tight text-black md:text-3xl">
                   {service.title}
                 </h3>
                 <p className="mt-p2 max-w-xs text-lg leading-snug text-black-80">
