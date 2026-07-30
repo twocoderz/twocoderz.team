@@ -57,7 +57,7 @@ export function ProjectCard({
   }
 
   const descriptionClassName = `text-black-80 font-normal leading-relaxed transition-all duration-500 ease-out ${
-    isServicesVariant ? "max-w-xs text-lg" : "max-w-sm text-xl"
+    isServicesVariant ? "max-w-xs text-md" : "max-w-sm text-xl"
   } ${isMobile || isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`;
 
   return (
@@ -88,7 +88,7 @@ export function ProjectCard({
         <h3
           className={
             isServicesVariant
-              ? "text-md md:text-lg lg:text-xl font-bold text-black-80 leading-tight"
+              ? "text-xl md:text-lg lg:text-xl font-bold text-black-80 leading-tight"
               : "text-3xl font-bold text-black-70 group-hover:text-black-90 transition-colors duration-500"
           }
         >

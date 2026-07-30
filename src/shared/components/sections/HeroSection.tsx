@@ -51,7 +51,7 @@ export function HeroSection({
           {subtitle && (
             <p
               className={twMerge(
-                "text-md md:text-lg mb-p8 mx-auto",
+                "text-lg md:text-xl mb-p8 mx-auto",
                 spPClassName,
               )}
             >

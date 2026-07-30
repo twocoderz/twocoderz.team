@@ -37,9 +37,7 @@ const SERVICE_PROJECT_TAGS: Record<string, string[]> = {
 
 export default function OneService() {
   const servicesWithProjects = servicesData.map((service) => {
-    const tagCandidates = SERVICE_PROJECT_TAGS[service.id] ?? [
-      service.title,
-    ];
+    const tagCandidates = SERVICE_PROJECT_TAGS[service.id] ?? [service.title];
     const normalizedTags = new Set(
       tagCandidates.map((tagCandidate) => tagCandidate.toLowerCase()),
     );
@@ -63,7 +61,7 @@ export default function OneService() {
       {servicesWithProjects.map(({ service, projects }) => (
         <div key={service.id}>
           <div className="flex flex-col gap-p6">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black tracking-tight">
+            <h2 className="text-3xl md:text-3xl lg:text-4xl font-bold text-black tracking-tight">
               {service.title}
             </h2>
             <div className="flex flex-col md:flex-row items-start justify-between gap-p8">
@@ -71,7 +69,7 @@ export default function OneService() {
                 className="hidden min-h-0 min-w-0 md:block md:flex-1"
                 aria-hidden
               />
-              <p className="text-black-80 text-md lg:text-lg max-w-md shrink-0">
+              <p className="text-black-80 text-md lg:text-xl max-w-md shrink-0">
                 {service.description}
               </p>
             </div>
