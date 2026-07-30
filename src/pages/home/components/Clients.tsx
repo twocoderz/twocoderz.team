@@ -9,7 +9,7 @@ export default function Clients() {
   return (
     <Section id="works">
       <Container>
-        <div className="flex flex-col gap-p6 mb-p8">
+        <div className="flex flex-col gap-p6 mb-p12 lg:mb-p8">
           <h2 className="text-4xl lg:text-4xl font-bold text-black tracking-tight">
             Ils nous font confiance
           </h2>

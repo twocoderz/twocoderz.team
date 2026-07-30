@@ -12,7 +12,7 @@ export default function MyLink(props: MyLinkProps) {
   return (
     <div
       className={twMerge(
-        "group flex items-center gap-1 hover:gap-3 transition-all duration-500 hover:border-b hover:border-text-primary",
+        "group flex items-center gap-1 hover:gap-3 transition-all duration-500 border-b border-text-primary md:border-none md:hover:border-b md:hover:border-text-primary",
         className,
       )}
     >
