@@ -8,26 +8,29 @@ export default function Footer() {
     <Section id="site-footer" noScrollMargin>
       <Container>
         <div className="flex flex-col gap-p12">
+          {/* Newsletter */}
           <div
             id="newsletter"
-            className="flex scroll-mt-24 items-center justify-between rounded-r2 bg-black-5 p-p8 md:scroll-mt-28"
+            className="flex flex-col md:flex-row scroll-mt-24 items-start md:items-center justify-between gap-p8 rounded-r2 bg-black-5 p-p8 md:scroll-mt-28"
           >
             <div className="flex flex-col">
-              <h4 className="text-2xl font-semibold text-black-80">
+              <h4 className="text-2xl font-semibold text-black-80 mb-p4">
                 Recevez nos conseils digitaux
               </h4>
-              <p className="text-lg text-black-60 font-normal">
+              <p className="text-lg lg:text-xl max-w-lg text-black-60 font-normal">
                 Idées, bonnes pratiques et retours d&apos;expérience de
                 l&apos;équipe Twocoderz.
               </p>
             </div>
-            <a href={ROUTES.SUBSCRIBE}>
+            <a href={ROUTES.SUBSCRIBE} className="shrink-0">
               <Button variant="secondary" size="sm">
                 Newsletter
               </Button>
             </a>
           </div>
-          <div className="flex items-start justify-between">
+
+          {/* Colonnes de liens */}
+          <div className="grid grid-cols-2 md:flex md:items-start md:justify-between gap-p8 md:gap-0">
             <div className="flex flex-col gap-p6">
               <p className="text-sm text-black-60 font-semibold">Réseaux</p>
               <ul className="flex flex-col gap-p3">
@@ -65,11 +68,12 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
+
             <div
               id="about"
               className="flex scroll-mt-24 flex-col gap-p6 md:scroll-mt-28"
             >
-              <p className="text-sm text-black-60  font-semibold">Entreprise</p>
+              <p className="text-sm text-black-60 font-semibold">Entreprise</p>
               <ul className="flex flex-col gap-p3">
                 <li>
                   <a
@@ -105,11 +109,12 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
+
             <div
               id="blog"
               className="flex scroll-mt-24 flex-col gap-p6 md:scroll-mt-28"
             >
-              <p className="text-sm text-black-60  font-semibold">Ressources</p>
+              <p className="text-sm text-black-60 font-semibold">Ressources</p>
               <ul className="flex flex-col gap-p3">
                 <li>
                   <a
@@ -130,11 +135,12 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
+
             <div
               id="contact"
               className="flex scroll-mt-24 flex-col gap-p6 md:scroll-mt-28"
             >
-              <p className="text-sm text-black-60  font-semibold">Contact</p>
+              <p className="text-sm text-black-60 font-semibold">Contact</p>
               <ul className="flex flex-col gap-p3">
                 <li>
                   <a
@@ -155,9 +161,11 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-          <div className="border-t border-black-10 flex items-center justify-center">
-            <div className="flex items-center justify-center py-p8">
-              <ul className="flex items-center justify-between gap-p8">
+
+          {/* Bas de page */}
+          <div className="border-t border-black-10">
+            <div className="flex flex-col sm:flex-row items-center justify-center py-p8 gap-p4 sm:gap-0">
+              <ul className="flex flex-wrap items-center justify-center gap-x-p6 gap-y-p2">
                 <li>
                   <a
                     href="#"
@@ -169,7 +177,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="mailto:rahim100codeur@gmail.com"
-                    className="text-xs text-black-60 hover:text-black transition-all duration-500 border-l pl-p6 border-black-10"
+                    className="text-xs text-black-60 hover:text-black transition-all duration-500 sm:border-l sm:pl-p6 border-black-10"
                   >
                     rahim100codeur@gmail.com
                   </a>
@@ -177,7 +185,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#"
-                    className="text-xs text-black-60 hover:text-black transition-all duration-500 border-l pl-p6 border-black-10"
+                    className="text-xs text-black-60 hover:text-black transition-all duration-500 sm:border-l sm:pl-p6 border-black-10"
                   >
                     Plan du site
                   </a>
@@ -185,7 +193,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#"
-                    className="text-xs text-black-60 hover:text-black transition-all duration-500 border-l pl-p6 border-black-10"
+                    className="text-xs text-black-60 hover:text-black transition-all duration-500 sm:border-l sm:pl-p6 border-black-10"
                   >
                     Politique de confidentialité
                   </a>
@@ -193,7 +201,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#"
-                    className="text-xs text-black-60 hover:text-black transition-all duration-500 border-l pl-p6 border-black-10"
+                    className="text-xs text-black-60 hover:text-black transition-all duration-500 sm:border-l sm:pl-p6 border-black-10"
                   >
                     Conditions d’utilisation
                   </a>
@@ -201,7 +209,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#"
-                    className="text-xs text-black-60 hover:text-black transition-all duration-500 border-l pl-p6 border-black-10"
+                    className="text-xs text-black-60 hover:text-black transition-all duration-500 sm:border-l sm:pl-p6 border-black-10"
                   >
                     Politique des cookies
                   </a>
