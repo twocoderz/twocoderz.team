@@ -10,12 +10,12 @@ export default function Clients() {
     <Section id="works">
       <Container>
         <div className="flex flex-col gap-p6 mb-p8">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black tracking-tight">
+          <h2 className="text-4xl lg:text-4xl font-bold text-black tracking-tight">
             Ils nous font confiance
           </h2>
           <div className="flex flex-col md:flex-row items-start justify-between gap-p8">
             <MyLink label="Tous les projets" href={ROUTES.WORK} />
-            <p className="text-black-80 text-sm lg:text-lg max-w-md">
+            <p className="text-black-80 text-xl lg:text-xl max-w-md">
               Nous aidons les entreprises à construire une présence digitale
               claire, professionnelle et orientée résultats.
             </p>
