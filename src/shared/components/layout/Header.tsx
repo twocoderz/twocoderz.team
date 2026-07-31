@@ -179,7 +179,13 @@ export default function Header() {
                   transition={{ duration: 0.18 }}
                   className="absolute inset-0 flex items-center justify-center"
                 >
-                  <CloseIcon className="w-6 h-6 text-black-90" />
+                  <CloseIcon
+                    className={
+                      isDarkHeader
+                        ? "text-white/90 hover:text-white"
+                        : "w-6 h-6 text-black-90"
+                    }
+                  />
                 </motion.span>
               ) : (
                 <motion.span
@@ -190,7 +196,13 @@ export default function Header() {
                   transition={{ duration: 0.18 }}
                   className="absolute inset-0 flex items-center justify-center"
                 >
-                  <HamburgerMdIcon className="w-8 h-8 text-black-90" />
+                  <HamburgerMdIcon
+                    className={
+                      isDarkHeader
+                        ? "text-white/90 hover:text-white"
+                        : "w-8 h-8 text-black-90"
+                    }
+                  />
                 </motion.span>
               )}
             </AnimatePresence>
