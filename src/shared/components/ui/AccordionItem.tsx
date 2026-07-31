@@ -104,13 +104,13 @@ export default function AccodionList(props: AccordionListProps) {
               className="w-full cursor-pointer px-p6 py-p5 text-left"
             >
               <span className="flex items-center justify-between gap-p4">
-                <span className="text-lg md:text-xl font-bold text-black-80">
+                <span className="text-2xl lg:text-3xl font-bold text-black-80">
                   {item.title}
                 </span>
                 {isOpen ? (
-                  <MinusIcon className="h-6 w-6 shrink-0 text-black-80" />
+                  <MinusIcon className="h-8 w-8 lg:h-6 lg:w-6 shrink-0 text-black-80" />
                 ) : (
-                  <AddPlusIcon className="h-6 w-6 shrink-0 text-black-80" />
+                  <AddPlusIcon className="h-8 w-8 lg:h-6 lg:w-6 shrink-0 text-black-80" />
                 )}
               </span>
             </button>
@@ -130,7 +130,7 @@ export default function AccodionList(props: AccordionListProps) {
                 !isOpen && "pointer-events-none",
               )}
             >
-              <div className="px-p6 pb-p6 text-lg leading-relaxed text-black-80">
+              <div className="px-p6 pb-p6 text-xl lg:text-xl leading-relaxed text-black-80">
                 {item.content}
               </div>
             </motion.div>

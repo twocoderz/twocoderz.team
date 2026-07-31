@@ -6,11 +6,11 @@ export const capabilitiesItems: AccordionItemData[] = [
     title: "Clarifier et repositionner",
     content: (
       <div className="space-y-p4">
-        <p className="text-black-80 text-lg font-normal ">
+        <p className="text-black-80">
           Nous aidons votre marque à mieux expliquer son offre, à rassurer ses
           visiteurs et à donner envie de passer à l&apos;action.
         </p>
-        <ul className="list-disc pl-p6 text-lg font-normal space-y-p2">
+        <ul className="list-disc pl-p6 space-y-p2">
           <li>
             <strong>Souplesse.</strong> Le périmètre dépend de vos besoins.
           </li>
@@ -30,7 +30,7 @@ export const capabilitiesItems: AccordionItemData[] = [
     title: "Développer votre présence",
     content: (
       <div className="space-y-p4">
-        <p className="text-black-80 text-lg font-normal">
+        <p className="text-black-80">
           Nous créons des supports digitaux capables de présenter vos offres,
           vos services et vos points forts avec plus d&apos;impact.
         </p>
@@ -42,8 +42,8 @@ export const capabilitiesItems: AccordionItemData[] = [
             <strong>Clarté.</strong> Les décisions restent simples à suivre.
           </li>
           <li>
-            <strong>Collaboration.</strong> Vos retours guident l&apos;évolution du
-            projet.
+            <strong>Collaboration.</strong> Vos retours guident l&apos;évolution
+            du projet.
           </li>
         </ul>
       </div>
@@ -54,14 +54,14 @@ export const capabilitiesItems: AccordionItemData[] = [
     title: "Renfort digital",
     content: (
       <div className="space-y-p4">
-        <p className="text-black-80 text-lg font-normal">
+        <p className="text-black-80">
           Nous pouvons intervenir comme renfort pour concevoir, développer ou
           améliorer vos outils digitaux.
         </p>
         <ul className="list-disc pl-p6 text-lg space-y-p2">
           <li>
-            <strong>Souplesse.</strong> L&apos;accompagnement peut être ponctuel ou
-            continu.
+            <strong>Souplesse.</strong> L&apos;accompagnement peut être ponctuel
+            ou continu.
           </li>
           <li>
             <strong>Clarté.</strong> Les livrables sont définis dès le départ.
@@ -79,14 +79,14 @@ export const capabilitiesItems: AccordionItemData[] = [
     title: "Préparer un lancement",
     content: (
       <div className="space-y-p4">
-        <p className="text-black-80 text-lg font-normal">
+        <p className="text-black-80">
           Nous vous aidons à préparer une présence digitale propre avant le
           lancement d&apos;un produit, service ou nouveau projet.
         </p>
         <ul className="list-disc pl-p6 text-lg space-y-p2">
           <li>
-            <strong>Souplesse.</strong> Nous allons à l&apos;essentiel pour lancer
-            plus vite.
+            <strong>Souplesse.</strong> Nous allons à l&apos;essentiel pour
+            lancer plus vite.
           </li>
           <li>
             <strong>Clarté.</strong> Les priorités sont visibles dès le début.
