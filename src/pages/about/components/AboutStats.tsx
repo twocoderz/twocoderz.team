@@ -49,7 +49,7 @@ function AnimatedStatNumber(props: AnimatedStatNumberProps) {
 export default function AboutStats() {
   return (
     <motion.div
-      className="flex items-center justify-between max-w-4xl mx-auto"
+      className="flex flex-col gap-8 lg:flex-row items-center justify-between max-w-4xl mx-auto"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.35 }}
@@ -67,7 +67,7 @@ export default function AboutStats() {
       }}
     >
       <motion.div
-        className="flex flex-col items-start gap-p4 border-b border-black-10 pb-p8"
+        className="flex flex-col items-center lg:items-start gap-p4 border-b border-black-10 pb-p8"
         variants={{
           hidden: { opacity: 0, y: 10 },
           visible: { opacity: 1, y: 0 },
@@ -77,25 +77,25 @@ export default function AboutStats() {
         <AnimatedStatNumber target={11} start={0} />
       </motion.div>
       <motion.div
-        className="flex flex-col items-start gap-p4 border-b border-black-10 pb-p8"
+        className="flex flex-col items-center lg:items-start gap-p4 border-b border-black-10 pb-p8"
         variants={{
           hidden: { opacity: 0, y: 10 },
           visible: { opacity: 1, y: 0 },
         }}
       >
-        <h4 className="text-md font-bold text-black-80">
+        <h4 className="text-xl font-bold text-black-80">
           Dans le métier depuis
         </h4>
         <AnimatedStatNumber target={2023} start={2016} delay={0.05} />
       </motion.div>
       <motion.div
-        className="flex flex-col items-start gap-p4 border-b border-black-10 pb-p8"
+        className="flex flex-col items-center lg:items-start gap-p4 border-b border-black-10 pb-p8"
         variants={{
           hidden: { opacity: 0, y: 10 },
           visible: { opacity: 1, y: 0 },
         }}
       >
-        <h4 className="text-md font-bold text-black-80">Projets réalisés</h4>
+        <h4 className="text-xl font-bold text-black-80">Projets réalisés</h4>
         <AnimatedStatNumber target={26} start={0} suffix="+" delay={0.1} />
       </motion.div>
     </motion.div>
