@@ -213,58 +213,57 @@ export default function Header() {
         </Container>
       </header>
       {/* Mobile menu */}
-      <AnimatePresence>
-        {isMenuOpen &&
-          typeof document !== "undefined" &&
-          createPortal(
-            <motion.div
-              id="mobile-menu"
-              className={`fixed inset-x-0 top-16 bottom-0 z-40 md:hidden overflow-y-auto ${
-                isDarkHeader ? "bg-black text-white" : "bg-white text-black"
-              }`}
-              initial={{ y: "-100%", opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: "-100%", opacity: 0 }}
-              transition={{
-                duration: 0.3,
-                ease: "easeInOut",
-              }}
-            >
+      {typeof document !== "undefined" &&
+        createPortal(
+          <AnimatePresence>
+            {isMenuOpen && (
               <motion.div
-                className="flex min-h-full flex-col justify-center gap-p6 px-p6"
-                initial={{ y: -15 }}
-                animate={{ y: 0 }}
-                exit={{ y: -15 }}
-                transition={{ duration: 0.2 }}
+                id="mobile-menu"
+                key="mobile-menu"
+                className={`fixed inset-x-0 top-16 bottom-0 z-40 md:hidden overflow-y-auto ${
+                  isDarkHeader ? "bg-black text-white" : "bg-white text-black"
+                }`}
+                initial={{ y: "-100%", opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: "-100%", opacity: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
               >
-                <a href={ROUTES.WORK} onClick={closeMenu}>
-                  Projets
-                </a>
+                <motion.div
+                  className="flex min-h-full flex-col justify-center gap-p6 px-p6"
+                  initial={{ y: -15 }}
+                  animate={{ y: 0 }}
+                  exit={{ y: -15 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <a href={ROUTES.WORK} onClick={closeMenu}>
+                    Projets
+                  </a>
 
-                <a href={ROUTES.SERVICES} onClick={closeMenu}>
-                  Services
-                </a>
+                  <a href={ROUTES.SERVICES} onClick={closeMenu}>
+                    Services
+                  </a>
 
-                <a href={ROUTES.ABOUT} onClick={closeMenu}>
-                  À propos
-                </a>
+                  <a href={ROUTES.ABOUT} onClick={closeMenu}>
+                    À propos
+                  </a>
 
-                <a href={ROUTES.PROCESS} onClick={closeMenu}>
-                  Processus
-                </a>
+                  <a href={ROUTES.PROCESS} onClick={closeMenu}>
+                    Processus
+                  </a>
 
-                <a href={ROUTES.SUBSCRIBE} onClick={closeMenu}>
-                  Newsletter
-                </a>
+                  <a href={ROUTES.SUBSCRIBE} onClick={closeMenu}>
+                    Newsletter
+                  </a>
 
-                <a href={ROUTES.CONTACT} onClick={closeMenu}>
-                  Contact
-                </a>
+                  <a href={ROUTES.CONTACT} onClick={closeMenu}>
+                    Contact
+                  </a>
+                </motion.div>
               </motion.div>
-            </motion.div>,
-            document.body,
-          )}
-      </AnimatePresence>
+            )}
+          </AnimatePresence>,
+          document.body,
+        )}
     </>
   );
 }
