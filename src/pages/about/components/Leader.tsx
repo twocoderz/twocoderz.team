@@ -22,7 +22,9 @@ export default function Leader(props: LeaderProps) {
           />
         </div>
         <div className="flex flex-col items-start">
-          <h4 className="text-xl font-bold text-black-80">{name}</h4>
+          <h4 className="text-xl lg:text-2xl font-bold text-black-80 mb-2 ">
+            {name}
+          </h4>
           <p className="text-lg font-normal text-black-80">{profession}</p>
         </div>
         <div className="flex items-center gap-p1 ml-p20">
