@@ -109,6 +109,17 @@ export default function Header() {
     { href: ROUTES.ABOUT, label: "À propos" },
     { href: ROUTES.PROCESS, label: "Processus" },
   ];
+
+  const mobileNavItems = [
+    { href: ROUTES.WORK, label: "Projets" },
+    { href: ROUTES.SERVICES, label: "Services" },
+    { href: ROUTES.ABOUT, label: "À propos" },
+    { href: ROUTES.PROCESS, label: "Processus" },
+    { href: ROUTES.SUBSCRIBE, label: "Newsletter" },
+    { href: ROUTES.CONTACT, label: "Contact" },
+  ];
+
+  const isActiveLink = (href: string) => location.pathname === href;
   return (
     <>
       <header
@@ -235,53 +246,20 @@ export default function Header() {
                   exit={{ y: -15 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <a
-                    href={ROUTES.WORK}
-                    onClick={closeMenu}
-                    className="text-4xl font-normal "
-                  >
-                    Projets
-                  </a>
-
-                  <a
-                    href={ROUTES.SERVICES}
-                    onClick={closeMenu}
-                    className="text-4xl font-normal "
-                  >
-                    Services
-                  </a>
-
-                  <a
-                    href={ROUTES.ABOUT}
-                    onClick={closeMenu}
-                    className="text-4xl font-normal "
-                  >
-                    À propos
-                  </a>
-
-                  <a
-                    href={ROUTES.PROCESS}
-                    onClick={closeMenu}
-                    className="text-4xl font-normal "
-                  >
-                    Processus
-                  </a>
-
-                  <a
-                    href={ROUTES.SUBSCRIBE}
-                    onClick={closeMenu}
-                    className="text-4xl font-normal "
-                  >
-                    Newsletter
-                  </a>
-
-                  <a
-                    href={ROUTES.CONTACT}
-                    onClick={closeMenu}
-                    className="text-4xl font-normal "
-                  >
-                    Contact
-                  </a>
+                  {mobileNavItems.map((item) => (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      onClick={closeMenu}
+                      className={`text-4xl font-normal transition-colors ${
+                        isActiveLink(item.href)
+                          ? "underline decoration-2 underline-offset-4"
+                          : ""
+                      }`}
+                    >
+                      {item.label}
+                    </a>
+                  ))}
                 </motion.div>
               </motion.div>
             )}
