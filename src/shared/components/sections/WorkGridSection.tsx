@@ -1,14 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 import Container from "../ui/Container";
 import type { Project } from "../../data/portfolio";
+import { useIsMobile } from "../../hooks/useIsMobile";
 
 function WorkCard({ project }: { project: Project }) {
   const [current, setCurrent] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const isMobile = useIsMobile();
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
-    if (!isHovered) {
+    const shouldRotate = isMobile || isHovered;
+    if (!shouldRotate) {
       return;
     }
 
@@ -19,7 +22,7 @@ function WorkCard({ project }: { project: Project }) {
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [isHovered, project.slides.length]);
+  }, [isHovered, isMobile, project.slides.length]);
 
   function handleMouseEnter() {
     setIsHovered(true);
@@ -59,8 +62,10 @@ function WorkCard({ project }: { project: Project }) {
           {project.name}
         </h3>
         <p
-          className={`text-black-80 text-lg font-normal max-w-lg tracking-wider transition-all duration-500 ease-out ${
-            isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+          className={`text-black-80 text-xl lg:text-2xl font-normal max-w-lg transition-all duration-500 ease-out ${
+            isMobile || isHovered
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-6"
           }`}
         >
           {project.description}

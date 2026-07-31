@@ -1,21 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import type { Project } from "../../data/portfolio";
-
-function useIsMobile(breakpoint = 768) {
-  const [isMobile, setIsMobile] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return window.innerWidth < breakpoint;
-  });
-
-  useEffect(() => {
-    const mql = window.matchMedia(`(max-width: ${breakpoint - 1}px)`);
-    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
-    mql.addEventListener("change", handler);
-    return () => mql.removeEventListener("change", handler);
-  }, [breakpoint]);
-
-  return isMobile;
-}
+import { useIsMobile } from "../../hooks/useIsMobile";
 
 interface ProjectCardProps {
   project: Project;
@@ -57,7 +42,7 @@ export function ProjectCard({
   }
 
   const descriptionClassName = `text-black-80 font-normal leading-relaxed transition-all duration-500 ease-out ${
-    isServicesVariant ? "max-w-xs text-md" : "max-w-sm text-xl"
+    isServicesVariant ? "max-w-xs text-md" : "max-clearw-sm text-xl lg:text-2xl"
   } ${isMobile || isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`;
 
   return (
@@ -88,7 +73,7 @@ export function ProjectCard({
         <h3
           className={
             isServicesVariant
-              ? "text-xl md:text-lg lg:text-xl font-bold text-black-80 leading-tight"
+              ? "text-xl lg:text-xl font-bold text-black-80 leading-tight"
               : "text-3xl font-bold text-black-70 group-hover:text-black-90 transition-colors duration-500"
           }
         >
