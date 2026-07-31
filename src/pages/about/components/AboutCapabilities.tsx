@@ -43,14 +43,14 @@ export default function AboutCapabilities() {
 
   return (
     <motion.div
-      className="flex flex-col items-start gap-p20"
+      className="flex flex-col items-center lg:items-start gap-p20"
       initial={{ opacity: 0, y: 14 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.25 }}
       transition={{ duration: 0.5, ease: sectionEase }}
     >
       <motion.h2
-        className="text-5xl tracking-wide font-bold text-black-80"
+        className="text-5xl lg:text-6xl font-medium lg:font-bold text-black-80"
         initial={{ opacity: 0, y: 8 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.6 }}
