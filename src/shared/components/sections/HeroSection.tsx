@@ -42,7 +42,7 @@ export function HeroSection({
         <div className={twMerge(`${alignmentClass}`, spClassName)}>
           <h1
             className={twMerge(
-              "text-4xl md:text-6xl lg:text-7xl font-bold mb-p6 mx-auto",
+              "text-5xl md:text-6xl lg:text-8xl font-normal lg:font-medium mb-p6 mx-auto",
               spH1ClassName,
             )}
           >
@@ -51,7 +51,7 @@ export function HeroSection({
           {subtitle && (
             <p
               className={twMerge(
-                "text-lg md:text-xl mb-p8 mx-auto",
+                "text-lg md:text-2xl mb-p8 mx-auto",
                 spPClassName,
               )}
             >

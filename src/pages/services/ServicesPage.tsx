@@ -17,7 +17,7 @@ export default function ServicesPage() {
         className="bg-black text-white"
         spH1ClassName="max-w-2xl"
         spClassName="py-p8"
-        spPClassName="max-w-xl"
+        spPClassName="max-w-xs lg:max-w-2xl"
       />
 
       <Container>

@@ -13,7 +13,7 @@ export default function SubscribePage() {
         Recevez nos conseils, nos retours d'expérience et nos actualités pour améliorer votre présence digitale avec Twocoderz."
         alignment="center"
         spH1ClassName="max-w-5xl"
-        spPClassName="max-w-xl"
+        spPClassName="max-w-xs lg:max-w-2xl"
       />
       <Container>
         <div className="mx-auto max-w-xl mb-p12">

@@ -47,7 +47,7 @@ export default function WorkPage() {
         title="Des projets pensés pour marquer"
         subtitle="Découvrez une sélection de réalisations et d'expériences digitales."
         spH1ClassName="max-w-4xl"
-        spPClassName="max-w-xl"
+        spPClassName="max-w-xs lg:max-w-2xl"
       />
 
       <Container>
