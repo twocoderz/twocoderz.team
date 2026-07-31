@@ -1,3 +1,1 @@
--- Prochainement coder la page de detail de projet
--- Prochainement continuer avec la correction du header sur mobile
--- Verifier la consistence des taille de polices
+-- Prochainement coder la page de detail de projet tout en checkant le responsive
