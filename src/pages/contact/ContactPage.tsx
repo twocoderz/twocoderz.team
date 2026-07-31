@@ -30,7 +30,7 @@ export default function ContactPage() {
             </div>
             {/* the form */}
             <div className="flex flex-col w-full mt-p8">
-              <h2 className="text-3xl font-bold tracking-wide text-black-80 text-center mb-p10">
+              <h2 className="text-3xl lg:text-4xl font-medium text-black-80 text-center mb-p10">
                 Remplissez le formulaire
               </h2>
               <ContactForm />
