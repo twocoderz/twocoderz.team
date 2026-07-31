@@ -229,33 +229,57 @@ export default function Header() {
                 transition={{ duration: 0.3, ease: "easeInOut" }}
               >
                 <motion.div
-                  className="flex min-h-full flex-col justify-center gap-p6 px-p6"
+                  className="flex min-h-full flex-col items-center justify-center gap-12 px-p6"
                   initial={{ y: -15 }}
                   animate={{ y: 0 }}
                   exit={{ y: -15 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <a href={ROUTES.WORK} onClick={closeMenu}>
+                  <a
+                    href={ROUTES.WORK}
+                    onClick={closeMenu}
+                    className="text-4xl font-normal "
+                  >
                     Projets
                   </a>
 
-                  <a href={ROUTES.SERVICES} onClick={closeMenu}>
+                  <a
+                    href={ROUTES.SERVICES}
+                    onClick={closeMenu}
+                    className="text-4xl font-normal "
+                  >
                     Services
                   </a>
 
-                  <a href={ROUTES.ABOUT} onClick={closeMenu}>
+                  <a
+                    href={ROUTES.ABOUT}
+                    onClick={closeMenu}
+                    className="text-4xl font-normal "
+                  >
                     À propos
                   </a>
 
-                  <a href={ROUTES.PROCESS} onClick={closeMenu}>
+                  <a
+                    href={ROUTES.PROCESS}
+                    onClick={closeMenu}
+                    className="text-4xl font-normal "
+                  >
                     Processus
                   </a>
 
-                  <a href={ROUTES.SUBSCRIBE} onClick={closeMenu}>
+                  <a
+                    href={ROUTES.SUBSCRIBE}
+                    onClick={closeMenu}
+                    className="text-4xl font-normal "
+                  >
                     Newsletter
                   </a>
 
-                  <a href={ROUTES.CONTACT} onClick={closeMenu}>
+                  <a
+                    href={ROUTES.CONTACT}
+                    onClick={closeMenu}
+                    className="text-4xl font-normal "
+                  >
                     Contact
                   </a>
                 </motion.div>
