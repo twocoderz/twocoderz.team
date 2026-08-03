@@ -39,7 +39,7 @@ export default function WorkDetailPage() {
                   a stronger brand image and increased conversion rates.
                 </p>
               </div>
-              <div className="flex flex-col lg:flex-row gap-4">
+              <div className="flex flex-col lg:flex-row gap-8">
                 <div>
                   <div>
                     <div>
@@ -48,10 +48,30 @@ export default function WorkDetailPage() {
                     </div>
                     <p>Acquisition by Hubspot</p>
                   </div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
+                  <div>
+                    <h5>Services</h5>
+                    <p>
+                      <a href="" className="underline">
+                        Web design
+                      </a>
+                    </p>
+                  </div>
+                  <div>
+                    <h5>Tech stack</h5>
+                    <p>Next js, Tailwind css, Chart.js, Contentful</p>
+                  </div>
+                  <div>
+                    <h5>Industry</h5>
+                    <p>B2B industry</p>
+                  </div>
+                  <div>
+                    <h5>Website</h5>
+                    <p>
+                      <a href="" className="underline">
+                        Clearbit.com
+                      </a>
+                    </p>
+                  </div>
                 </div>
                 <div>
                   <div>
