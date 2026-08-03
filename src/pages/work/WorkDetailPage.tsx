@@ -16,7 +16,21 @@ export default function WorkDetailPage() {
   return (
     <Layout>
       <Section>
-        <Container></Container>
+        <Container>
+          <div>
+            {/* Top */}
+            <div className="flex flex-col items-start gap-8">
+              <h1 className="text-4xl lg:text-6xl font-medium">Clearbit</h1>
+              <img
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800"
+                alt="image"
+                className="w-full h-150 rounded-lg objec-cover"
+              />
+            </div>git 
+            {/* details */}
+            <div></div>
+          </div>
+        </Container>
       </Section>
     </Layout>
   );
