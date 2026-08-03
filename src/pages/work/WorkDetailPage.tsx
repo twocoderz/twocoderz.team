@@ -5,9 +5,7 @@ import Section from "../../shared/components/ui/Section";
 import { ROUTES } from "../../routes";
 import { findProjectById } from "../../shared/data/portfolio";
 
-
-
-export default function WorkProjectPage() {
+export default function WorkDetailPage() {
   const { projectId } = useParams();
   const project = projectId ? findProjectById(projectId) : undefined;
 
@@ -17,13 +15,9 @@ export default function WorkProjectPage() {
 
   return (
     <Layout>
-      
       <Section>
-        <Container>
-          
-        </Container>
+        <Container></Container>
       </Section>
-
     </Layout>
   );
 }
