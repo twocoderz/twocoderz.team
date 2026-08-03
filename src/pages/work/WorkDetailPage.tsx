@@ -28,7 +28,7 @@ export default function WorkDetailPage() {
               />
             </div>
             {/* details */}
-            <div className="">
+            <div className="flex flex-col lg:flex-row items-start">
               <div className="flex flex-col gap-8">
                 <h3>About</h3>
                 <p>
