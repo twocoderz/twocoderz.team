@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 import HomePage from "./pages/home/HomePage";
 import WorkPage from "./pages/work/WorkPage";
+import WorkProjectPage from "./pages/work/WorkProjectPage";
 import AboutPage from "./pages/about/AboutPage";
 import ServicesPage from "./pages/services/ServicesPage";
 import ContactPage from "./pages/contact/ContactPage";
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path={ROUTES.HOME} element={<HomePage />} />
         <Route path={ROUTES.WORK} element={<WorkPage />} />
+        <Route path={ROUTES.WORK_PROJECT} element={<WorkProjectPage />} />
         <Route path={ROUTES.SERVICES} element={<ServicesPage />} />
         <Route path={ROUTES.ABOUT} element={<AboutPage />} />
         <Route path={ROUTES.PROCESS} element={<ProcessPage />} />

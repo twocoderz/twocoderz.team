@@ -1,3 +1,5 @@
+import { getWorkProjectHref } from "../../routes";
+
 export interface Project {
   id: string;
   name: string;
@@ -14,13 +16,17 @@ export interface Project {
   };
 }
 
+export function findProjectById(projectId: string) {
+  return portfolioData.find((project) => project.id === projectId);
+}
+
 export const portfolioData: Project[] = [
   {
     id: "upstream",
     name: "Upstream",
     description:
       "Transformer une plateforme complexe en produit clair et intuitif",
-    href: "#",
+    href: getWorkProjectHref("upstream"),
     slides: [
       "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
       "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800",
@@ -42,7 +48,7 @@ export const portfolioData: Project[] = [
     name: "Rizzle",
     description:
       "Une refonte complète qui a renforcé l’expérience de la plateforme",
-    href: "#",
+    href: getWorkProjectHref("rizzle"),
     slides: [
       "https://images.unsplash.com/photo-1616469829581-73993eb86b02?w=800",
       "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800",
@@ -59,7 +65,7 @@ export const portfolioData: Project[] = [
     name: "Firefox",
     description:
       "Un système d’identité pensé pour renforcer la reconnaissance de marque",
-    href: "#",
+    href: getWorkProjectHref("firefox"),
     slides: [
       "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800",
       "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800",
@@ -76,7 +82,7 @@ export const portfolioData: Project[] = [
     name: "Opera",
     description:
       "Un système visuel cohérent pour améliorer l’image et l’engagement",
-    href: "#",
+    href: getWorkProjectHref("opera"),
     slides: [
       "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800",
       "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800",
@@ -93,7 +99,7 @@ export const portfolioData: Project[] = [
     name: "Chrome",
     description:
       "Une identité digitale plus claire pour mieux guider les utilisateurs",
-    href: "#",
+    href: getWorkProjectHref("chrome"),
     slides: [
       "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800",
       "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800",
@@ -110,7 +116,7 @@ export const portfolioData: Project[] = [
     name: "Brave",
     description:
       "Une expérience web plus simple pour mieux présenter l’offre",
-    href: "#",
+    href: getWorkProjectHref("brave"),
     slides: [
       "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800",
       "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800",
