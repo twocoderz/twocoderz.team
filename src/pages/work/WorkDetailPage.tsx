@@ -33,7 +33,7 @@ export default function WorkDetailPage() {
             <div className="flex flex-col lg:flex-row items-start justify-between bg-amber-100 rounded-lg mt-12 p-12">
               <div className="flex flex-col gap-8">
                 <h3 className="text-6xl text-black-80 font-bold">About</h3>
-                <p className="max-w-lg text-lg lg:text-xl font-normal text-black-80">
+                <p className="max-w-xl text-xl font-normal text-black-80">
                   Clearbit, a business intelligence platform, engaged us to
                   enhance its digital presence. We revamped their website to
                   better reflect their brand evolution, improving visuals and
@@ -41,12 +41,12 @@ export default function WorkDetailPage() {
                   a stronger brand image and increased conversion rates.
                 </p>
               </div>
-              <div className="flex flex-col lg:flex-row gap-8">
+              <div className="flex flex-col lg:flex-row gap-6">
                 <div>
                   <div>
                     <div>
-                      <span>Exit</span>
-                      <h4>$150M</h4>
+                      <span className="font-bold text-lg mb-2">Exit</span>
+                      <h4 className="font-bold text-4xl">$150M</h4>
                     </div>
                     <p>Acquisition by Hubspot</p>
                   </div>
@@ -77,17 +77,10 @@ export default function WorkDetailPage() {
                 </div>
                 <div>
                   <div>
-                    <span>B2B data</span>
+                    <span className="font-bold text-lg mb-2">B2B data</span>
                     <h4>50M</h4>
                   </div>
                   <p>Company records</p>
-                </div>
-                <div>
-                  <div>
-                    <span>Usage</span>
-                    <h4>1500</h4>
-                  </div>
-                  <p>Business customers</p>
                 </div>
               </div>
             </div>
