@@ -28,10 +28,10 @@ export default function WorkDetailPage() {
               />
             </div>
             {/* details */}
-            <div className="flex flex-col lg:flex-row items-start bg-amber-100 rounded-lg mt-12 p-12">
+            <div className="flex flex-col lg:flex-row items-start justify-between bg-amber-100 rounded-lg mt-12 p-12">
               <div className="flex flex-col gap-8">
-                <h3>About</h3>
-                <p>
+                <h3 className="">About</h3>
+                <p className="max-w-sm">
                   Clearbit, a business intelligence platform, engaged us to
                   enhance its digital presence. We revamped their website to
                   better reflect their brand evolution, improving visuals and
