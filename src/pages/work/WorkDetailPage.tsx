@@ -44,31 +44,47 @@ export default function WorkDetailPage() {
               <div className="flex flex-col lg:flex-row gap-6">
                 <div>
                   <div>
-                    <div>
-                      <span className="font-bold text-lg mb-2">Exit</span>
-                      <h4 className="font-bold text-4xl">$150M</h4>
+                    <div className="mb-8">
+                      <span className="font-bold text-lg mb-2 text-black-90">
+                        Exit
+                      </span>
+                      <h4 className="font-bold text-4xl text-black-90">
+                        $150M
+                      </h4>
                     </div>
-                    <p>Acquisition by Hubspot</p>
+                    <p className="text-xl font-normal text-black-80">
+                      Acquisition by Hubspot
+                    </p>
                   </div>
                   <div>
-                    <h5>Services</h5>
-                    <p>
+                    <h5 className="font-bold text-lg mb-2 text-black-90">
+                      Services
+                    </h5>
+                    <p className="text-xl font-normal text-black-80">
                       <a href="" className="underline">
                         Web design
                       </a>
                     </p>
                   </div>
                   <div>
-                    <h5>Tech stack</h5>
-                    <p>Next js, Tailwind css, Chart.js, Contentful</p>
+                    <h5 className="font-bold text-lg mb-2 text-black-90">
+                      Tech stack
+                    </h5>
+                    <p className="text-xl font-normal text-black-80">
+                      Next js, Tailwind css, Chart.js, Contentful
+                    </p>
                   </div>
                   <div>
-                    <h5>Industry</h5>
-                    <p>B2B industry</p>
+                    <h5 className="font-bold text-lg mb-2 text-black-90">
+                      Industry
+                    </h5>
+                    <p className="text-xl font-normal text-black-80">
+                      B2B industry
+                    </p>
                   </div>
                   <div>
                     <h5>Website</h5>
-                    <p>
+                    <p className="text-xl font-normal text-black-80">
                       <a href="" className="underline">
                         Clearbit.com
                       </a>
@@ -76,11 +92,15 @@ export default function WorkDetailPage() {
                   </div>
                 </div>
                 <div>
-                  <div>
-                    <span className="font-bold text-lg mb-2">B2B data</span>
-                    <h4>50M</h4>
+                  <div className="mb-8">
+                    <span className="font-bold text-lg mb-2 text-black-90">
+                      B2B data
+                    </span>
+                    <h4 className="font-bold text-4xl text-black-90">50M</h4>
                   </div>
-                  <p>Company records</p>
+                  <p className="text-xl font-normal text-black-80">
+                    Company records
+                  </p>
                 </div>
               </div>
             </div>
