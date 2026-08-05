@@ -1,1 +1,1 @@
--- Prochainement coder la page de detail de projet tout en checkant le responsive
+-- Prochainement continuer avec le codage de la page work detail page
