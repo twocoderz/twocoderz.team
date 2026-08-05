@@ -19,7 +19,7 @@ export default function WorkDetailPage() {
         <Container>
           <div>
             {/* Top */}
-            <div className="flex flex-col items-start gap-8">
+            <div className="flex flex-col items-start gap-12">
               <h1 className="text-4xl lg:text-8xl font-medium">Clearbit</h1>
               <img
                 src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800"
@@ -28,7 +28,7 @@ export default function WorkDetailPage() {
               />
             </div>
             {/* details */}
-            <div className="flex flex-col lg:flex-row items-start">
+            <div className="flex flex-col lg:flex-row items-start bg-amber-100 rounded-lg mt-12 p-12">
               <div className="flex flex-col gap-8">
                 <h3>About</h3>
                 <p>
