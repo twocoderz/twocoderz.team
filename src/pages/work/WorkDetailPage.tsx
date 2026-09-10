@@ -105,7 +105,7 @@ export default function WorkDetailPage() {
               </div>
             </div>
             {/* rest */}
-            <div className="my-12">
+            <div className="my-24">
               <div className="mx-auto max-w-3xl flex flex-col gap-4 ">
                 <p className="text-2xl font-normal leading-relaxed text-black-90">
                   Rizzle began when visionary founders with a small group of
@@ -148,18 +148,18 @@ export default function WorkDetailPage() {
                   to:
                 </p>
                 <ul className="flex flex-col gap-4">
-                  <li>
+                  <li className="text-xl font-normal text-black-90">
                     Deliver instant quotes for multiple global carbon markets.
                   </li>
-                  <li>
+                  <li className="text-xl font-normal text-black-90">
                     Provide a clear, approachable interface for manufacturing
                     clients who may not have deep ESG expertise.
                   </li>
-                  <li>
+                  <li className="text-xl font-normal text-black-90">
                     Launch a fully functional MVP by early Q4 2023 with both
                     branding and platform design ready for market.
                   </li>
-                  <li>
+                  <li className="text-xl font-normal text-black-90">
                     Build API integrations to enable in-platform renewable
                     certification management, particularly through the I-REC
                     international registry via the Evident API.
