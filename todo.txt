@@ -1,1 +1,2 @@
 -- Prochainement continuer avec le codage de la page work detail page
+-- reduire la largeur des formulaires dans Contact et Newsletter
