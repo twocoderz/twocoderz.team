@@ -17,7 +17,9 @@ export default function SubscribePage() {
       />
       <Container>
         <div className="mx-auto max-w-xl mb-p12">
-          <SubscribeForm />
+          <div className="w-full mx-auto max-w-xs md:mx-0 md:max-w-none">
+            <SubscribeForm />
+          </div>
           <div className="text-center pt-p8">
             <Button variant="primary" size="sp">
               <span>S&apos;inscrire</span>
