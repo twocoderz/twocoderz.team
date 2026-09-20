@@ -33,7 +33,9 @@ export default function ContactPage() {
               <h2 className="text-3xl lg:text-4xl font-medium text-black-80 text-center mb-p10">
                 Remplissez le formulaire
               </h2>
-              <ContactForm />
+              <div className="max-w-xs w-full mx-auto md:mx-0 md:max-w-none">
+                <ContactForm />
+              </div>
               <p className="text-black-80 text-sm font-normal mx-auto max-w-xl text-center mt-p8">
                 En remplissant ce formulaire, vous acceptez notre{" "}
                 <span>
