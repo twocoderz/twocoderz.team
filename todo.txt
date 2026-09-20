@@ -1,2 +1,2 @@
--- Prochainement continuer avec le codage de la page work detail page
--- reduire la largeur des formulaires dans Contact et Newsletter
+-- quand je vais finir de polish tous les projets, je vais les integrer dans rahim-design
+ensuite je vais les prendre de la et les integrer ici a l'aide de l'ia et tout sera bien.
