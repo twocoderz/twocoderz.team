@@ -120,6 +120,23 @@ export default function Header() {
   ];
 
   const isActiveLink = (href: string) => location.pathname === href;
+
+  useEffect(() => {
+    const setHeaderHeight = () => {
+      if (headerRef.current) {
+        document.documentElement.style.setProperty(
+          "--header-height",
+          `${headerRef.current.offsetHeight}px`,
+        );
+      }
+    };
+    setHeaderHeight();
+    window.addEventListener("resize", setHeaderHeight);
+    return () => {
+      window.removeEventListener("resize", setHeaderHeight);
+    };
+  }, []);
+
   return (
     <>
       <header
@@ -231,16 +248,17 @@ export default function Header() {
               <motion.div
                 id="mobile-menu"
                 key="mobile-menu"
-                className={`fixed inset-x-0 top-16 bottom-0 z-40 md:hidden overflow-y-auto ${
+                className={`fixed inset-x-0 z-40 md:hidden overflow-y-auto ${
                   isDarkHeader ? "bg-black text-white" : "bg-white text-black"
                 }`}
+                style={{ top: `var(--header-height, 72px)`, bottom: 0 }}
                 initial={{ y: "-100%", opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: "-100%", opacity: 0 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
               >
                 <motion.div
-                  className="flex min-h-full flex-col items-center justify-center gap-12 px-p6"
+                  className="flex h-full flex-col items-center justify-center gap-12 px-p6"
                   initial={{ y: -15 }}
                   animate={{ y: 0 }}
                   exit={{ y: -15 }}
