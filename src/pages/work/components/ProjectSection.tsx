@@ -9,13 +9,15 @@ export default function ProjectSection({ section }: ProjectSectionProps) {
   return (
     <section
       id={section.id}
-      className="mx-auto flex max-w-3xl scroll-mt-28 flex-col gap-4"
+      className="flex scroll-mt-28 flex-col gap-4"
     >
-      <h3 className="text-4xl font-bold text-black-90 lg:text-6xl">
+      <h3 className="mx-auto w-full max-w-3xl text-4xl font-bold text-black-90 lg:text-6xl">
         {section.title}
       </h3>
       {section.lead && (
-        <p className="text-xl font-medium text-black-80">{section.lead}</p>
+        <p className="mx-auto w-full max-w-3xl text-xl font-medium text-black-80">
+          {section.lead}
+        </p>
       )}
       <div className="flex flex-col gap-4">
         <ProjectBlockRenderer blocks={section.blocks} />

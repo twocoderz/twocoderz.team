@@ -79,7 +79,7 @@ export default function ProjectBlockRenderer({
             return (
               <p
                 key={index}
-                className="text-xl font-normal leading-relaxed text-black-80"
+                className="mx-auto w-full max-w-3xl text-xl font-normal leading-relaxed text-black-80"
               >
                 <InlineText text={block.text} />
               </p>
@@ -87,7 +87,10 @@ export default function ProjectBlockRenderer({
 
           case "list":
             return (
-              <ul key={index} className="flex list-disc flex-col gap-4 pl-6">
+              <ul
+                key={index}
+                className="mx-auto flex w-full max-w-3xl list-disc flex-col gap-4 pl-6"
+              >
                 {block.items.map((item, itemIndex) => (
                   <li
                     key={itemIndex}
@@ -106,7 +109,7 @@ export default function ProjectBlockRenderer({
             return (
               <blockquote
                 key={index}
-                className="border-l-4 border-primary pl-5 text-xl italic text-black-80"
+                className="mx-auto w-full max-w-3xl border-l-4 border-primary pl-5 text-xl italic text-black-80"
               >
                 <InlineText text={block.text} />
                 {block.author && (
