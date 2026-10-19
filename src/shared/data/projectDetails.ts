@@ -1,7 +1,7 @@
 export type ProjectBlock =
   | { type: "paragraph"; text: string }
   | { type: "list"; items: string[] }
-  | { type: "media"; columns: 2 | 3; items: { src: string; alt: string }[] }
+  | { type: "media"; items: { src: string; alt: string }[] }
   | { type: "quote"; text: string; author?: string };
 
 export type ProjectSectionId =
@@ -45,9 +45,8 @@ export interface ProjectDetail {
 const p = (text: string): ProjectBlock => ({ type: "paragraph", text });
 const ul = (items: string[]): ProjectBlock => ({ type: "list", items });
 const media = (
-  columns: 2 | 3,
   items: { src: string; alt: string }[],
-): ProjectBlock => ({ type: "media", columns, items });
+): ProjectBlock => ({ type: "media", items });
 const quote = (text: string, author?: string): ProjectBlock => ({
   type: "quote",
   text,
@@ -126,7 +125,7 @@ const upstream: ProjectDetail = {
       title: "UX",
       lead: "Avant de penser pixels, pensons parcours.",
       blocks: [
-        media(2, [
+        media([
           { src: IMG.workshop, alt: "Atelier de cadrage UX" },
           { src: IMG.dashboard, alt: "Maquettes du tableau de bord" },
         ]),
@@ -140,7 +139,7 @@ const upstream: ProjectDetail = {
       title: "Design d'interface",
       lead: "Une fois la route claire, place à l'interface.",
       blocks: [
-        media(3, [
+        media([
           { src: IMG.design, alt: "Écran de synthèse" },
           { src: IMG.dashboard, alt: "Écran principal" },
           { src: IMG.analytics, alt: "Écran de données" },
@@ -168,7 +167,7 @@ const upstream: ProjectDetail = {
       title: "Développement",
       lead: "Le design était prêt, il fallait le faire vivre.",
       blocks: [
-        media(2, [
+        media([
           { src: IMG.code, alt: "Intégration front-end" },
           { src: IMG.dashboard, alt: "Produit en production" },
         ]),
@@ -252,7 +251,7 @@ const rizzle: ProjectDetail = {
       title: "UX",
       lead: "Avant de penser pixels, pensons parcours.",
       blocks: [
-        media(2, [
+        media([
           { src: IMG.mobile, alt: "Parcours de création mobile" },
           { src: IMG.workshop, alt: "Tests utilisateurs" },
         ]),
@@ -266,7 +265,7 @@ const rizzle: ProjectDetail = {
       title: "Design d'interface",
       lead: "Une fois la route claire, place à l'interface.",
       blocks: [
-        media(3, [
+        media([
           { src: IMG.mobile, alt: "Écran de création" },
           { src: IMG.branding, alt: "Identité visuelle" },
           { src: IMG.design, alt: "Écran de découverte" },
@@ -294,7 +293,7 @@ const rizzle: ProjectDetail = {
       title: "Développement",
       lead: "Le design était prêt, il fallait le faire vivre.",
       blocks: [
-        media(2, [
+        media([
           { src: IMG.code, alt: "Développement de l'application" },
           { src: IMG.mobile, alt: "Application en production" },
         ]),
@@ -378,7 +377,7 @@ const firefox: ProjectDetail = {
       title: "UX",
       lead: "Avant de penser pixels, pensons expérience.",
       blocks: [
-        media(2, [
+        media([
           { src: IMG.workshop, alt: "Atelier de marque" },
           { src: IMG.branding, alt: "Déclinaisons" },
         ]),
@@ -392,7 +391,7 @@ const firefox: ProjectDetail = {
       title: "Design d'interface",
       lead: "Le système prend forme.",
       blocks: [
-        media(3, [
+        media([
           { src: IMG.branding, alt: "Logo et variations" },
           { src: IMG.design, alt: "Palette et typographie" },
           { src: IMG.dashboard, alt: "Application sur écran" },
@@ -420,7 +419,7 @@ const firefox: ProjectDetail = {
       title: "Développement",
       lead: "Le design était prêt, il fallait l'outiller.",
       blocks: [
-        media(2, [
+        media([
           { src: IMG.code, alt: "Design tokens" },
           { src: IMG.design, alt: "Bibliothèque de composants" },
         ]),
@@ -504,7 +503,7 @@ const opera: ProjectDetail = {
       title: "UX",
       lead: "Avant de penser pixels, pensons parcours.",
       blocks: [
-        media(2, [
+        media([
           { src: IMG.workshop, alt: "Cartographie des parcours" },
           { src: IMG.design, alt: "Maquettes" },
         ]),
@@ -518,7 +517,7 @@ const opera: ProjectDetail = {
       title: "Design d'interface",
       lead: "Une fois la route claire, place à l'interface.",
       blocks: [
-        media(3, [
+        media([
           { src: IMG.design, alt: "Interface principale" },
           { src: IMG.branding, alt: "Système de couleurs" },
           { src: IMG.dashboard, alt: "Écran de données" },
@@ -546,7 +545,7 @@ const opera: ProjectDetail = {
       title: "Développement",
       lead: "Le design était prêt, il fallait le faire vivre.",
       blocks: [
-        media(2, [
+        media([
           { src: IMG.code, alt: "Intégration des tokens" },
           { src: IMG.design, alt: "Composants partagés" },
         ]),
@@ -630,7 +629,7 @@ const chrome: ProjectDetail = {
       title: "UX",
       lead: "Avant de penser pixels, pensons parcours.",
       blocks: [
-        media(2, [
+        media([
           { src: IMG.workshop, alt: "Arborescence" },
           { src: IMG.analytics, alt: "Parcours utilisateur" },
         ]),
@@ -644,7 +643,7 @@ const chrome: ProjectDetail = {
       title: "Design d'interface",
       lead: "Une fois la route claire, place à l'interface.",
       blocks: [
-        media(3, [
+        media([
           { src: IMG.analytics, alt: "Écran d'accueil" },
           { src: IMG.design, alt: "Composants" },
           { src: IMG.dashboard, alt: "Écran de détail" },
@@ -672,7 +671,7 @@ const chrome: ProjectDetail = {
       title: "Développement",
       lead: "Le design était prêt, il fallait le faire vivre.",
       blocks: [
-        media(2, [
+        media([
           { src: IMG.code, alt: "Développement front-end" },
           { src: IMG.analytics, alt: "Produit en production" },
         ]),
@@ -756,7 +755,7 @@ const brave: ProjectDetail = {
       title: "UX",
       lead: "Avant de penser pixels, pensons parcours.",
       blocks: [
-        media(2, [
+        media([
           { src: IMG.workshop, alt: "Parcours d'achat" },
           { src: IMG.analytics, alt: "Analyse des conversions" },
         ]),
@@ -770,7 +769,7 @@ const brave: ProjectDetail = {
       title: "Design d'interface",
       lead: "Une fois la route claire, place à l'interface.",
       blocks: [
-        media(3, [
+        media([
           { src: IMG.workshop, alt: "Page d'accueil" },
           { src: IMG.design, alt: "Fiche produit" },
           { src: IMG.analytics, alt: "Panier et paiement" },
@@ -798,7 +797,7 @@ const brave: ProjectDetail = {
       title: "Développement",
       lead: "Le design était prêt, il fallait le faire vivre.",
       blocks: [
-        media(2, [
+        media([
           { src: IMG.code, alt: "Intégration" },
           { src: IMG.workshop, alt: "Site en production" },
         ]),

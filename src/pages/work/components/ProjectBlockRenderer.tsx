@@ -39,16 +39,19 @@ function InlineText({ text }: { text: string }) {
   );
 }
 
-function MediaGrid({
-  columns,
-  items,
-}: {
-  columns: 2 | 3;
-  items: { src: string; alt: string }[];
-}) {
-  const colsClass = columns === 2 ? "grid-cols-2" : "grid-cols-3";
+const COLS: Record<number, string> = {
+  1: "grid-cols-1",
+  2: "grid-cols-2",
+  3: "grid-cols-3",
+  4: "grid-cols-4",
+};
+
+function MediaGrid({ items }: { items: { src: string; alt: string }[] }) {
+  const colsClass = COLS[items.length] ?? "grid-cols-3";
   return (
-    <div className={`my-4 grid gap-4 ${colsClass}`}>
+    <div
+      className={`my-4 grid h-80 w-full overflow-hidden rounded-lg bg-black-5 lg:h-150 ${colsClass}`}
+    >
       {items.map((item) => (
         <img
           key={item.src}
@@ -56,7 +59,7 @@ function MediaGrid({
           alt={item.alt}
           loading="lazy"
           decoding="async"
-          className="aspect-video w-full rounded-lg bg-black-5 object-cover"
+          className="h-full w-full object-cover"
         />
       ))}
     </div>
@@ -97,13 +100,7 @@ export default function ProjectBlockRenderer({
             );
 
           case "media":
-            return (
-              <MediaGrid
-                key={index}
-                columns={block.columns}
-                items={block.items}
-              />
-            );
+            return <MediaGrid key={index} items={block.items} />;
 
           case "quote":
             return (
