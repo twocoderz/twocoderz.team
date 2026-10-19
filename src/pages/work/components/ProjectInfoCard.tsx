@@ -38,7 +38,9 @@ export default function ProjectInfoCard({ about, meta }: ProjectInfoCardProps) {
   return (
     <div className="mt-12 flex flex-col items-start justify-between gap-12 rounded-lg bg-black-5 p-8 lg:flex-row lg:p-12">
       <div className="flex flex-col gap-8">
-        <h3 className="text-4xl font-bold text-black-80 lg:text-6xl">About</h3>
+        <h3 className="text-4xl font-bold text-black-80 lg:text-6xl">
+          À propos
+        </h3>
         <p className="max-w-xl text-lg font-normal text-black-80 lg:text-xl">
           {about}
         </p>
@@ -78,11 +80,11 @@ export default function ProjectInfoCard({ about, meta }: ProjectInfoCardProps) {
         )}
 
         <InfoItem label="Services" value={meta.services?.join(", ")} />
-        <InfoItem label="Tech stack" value={meta.techStack} />
-        <InfoItem label="Industry" value={meta.industry} />
+        <InfoItem label="Stack technique" value={meta.techStack} />
+        <InfoItem label="Secteur" value={meta.industry} />
         {meta.website && (
           <InfoItem
-            label="Website"
+            label="Site web"
             value={meta.website}
             href={`https://${meta.website.replace(/^https?:\/\//, "")}`}
           />

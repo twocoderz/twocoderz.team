@@ -88,7 +88,7 @@ const upstream: ProjectDetail = {
   sections: [
     {
       id: "context",
-      title: "The context",
+      title: "Le contexte",
       lead: "Tout part d'un problème.",
       blocks: [
         p(
@@ -98,7 +98,7 @@ const upstream: ProjectDetail = {
     },
     {
       id: "challenge",
-      title: "The challenge",
+      title: "Le défi",
       lead: "Rendre le complexe évident.",
       blocks: [
         p(
@@ -113,7 +113,7 @@ const upstream: ProjectDetail = {
     },
     {
       id: "approach",
-      title: "The approach",
+      title: "L'approche",
       lead: "Alors, comment résoudre ça ?",
       blocks: [
         p(
@@ -137,7 +137,7 @@ const upstream: ProjectDetail = {
     },
     {
       id: "ui",
-      title: "UI Design",
+      title: "Design d'interface",
       lead: "Une fois la route claire, place à l'interface.",
       blocks: [
         media(3, [
@@ -152,7 +152,7 @@ const upstream: ProjectDetail = {
     },
     {
       id: "decisions",
-      title: "Important decisions",
+      title: "Décisions importantes",
       lead: "Quelques décisions qui ont changé l'expérience.",
       blocks: [
         ul([
@@ -165,7 +165,7 @@ const upstream: ProjectDetail = {
     },
     {
       id: "development",
-      title: "Development",
+      title: "Développement",
       lead: "Le design était prêt, il fallait le faire vivre.",
       blocks: [
         media(2, [
@@ -179,7 +179,7 @@ const upstream: ProjectDetail = {
     },
     {
       id: "result",
-      title: "The result",
+      title: "Le résultat",
       lead: "Et au final, voilà le résultat.",
       blocks: [
         quote(
@@ -214,7 +214,7 @@ const rizzle: ProjectDetail = {
   sections: [
     {
       id: "context",
-      title: "The context",
+      title: "Le contexte",
       lead: "Tout part d'une ambition.",
       blocks: [
         p(
@@ -224,7 +224,7 @@ const rizzle: ProjectDetail = {
     },
     {
       id: "challenge",
-      title: "The challenge",
+      title: "Le défi",
       lead: "Réconcilier croissance et clarté.",
       blocks: [
         p(
@@ -239,7 +239,7 @@ const rizzle: ProjectDetail = {
     },
     {
       id: "approach",
-      title: "The approach",
+      title: "L'approche",
       lead: "Alors, comment résoudre ça ?",
       blocks: [
         p(
@@ -263,7 +263,7 @@ const rizzle: ProjectDetail = {
     },
     {
       id: "ui",
-      title: "UI Design",
+      title: "Design d'interface",
       lead: "Une fois la route claire, place à l'interface.",
       blocks: [
         media(3, [
@@ -278,7 +278,7 @@ const rizzle: ProjectDetail = {
     },
     {
       id: "decisions",
-      title: "Important decisions",
+      title: "Décisions importantes",
       lead: "Quelques décisions qui ont changé l'expérience.",
       blocks: [
         ul([
@@ -291,7 +291,7 @@ const rizzle: ProjectDetail = {
     },
     {
       id: "development",
-      title: "Development",
+      title: "Développement",
       lead: "Le design était prêt, il fallait le faire vivre.",
       blocks: [
         media(2, [
@@ -305,7 +305,7 @@ const rizzle: ProjectDetail = {
     },
     {
       id: "result",
-      title: "The result",
+      title: "Le résultat",
       lead: "Et au final, voilà le résultat.",
       blocks: [
         quote(
@@ -340,7 +340,7 @@ const firefox: ProjectDetail = {
   sections: [
     {
       id: "context",
-      title: "The context",
+      title: "Le contexte",
       lead: "Tout part d'un constat.",
       blocks: [
         p(
@@ -350,7 +350,7 @@ const firefox: ProjectDetail = {
     },
     {
       id: "challenge",
-      title: "The challenge",
+      title: "Le défi",
       lead: "Unifier sans appauvrir.",
       blocks: [
         p(
@@ -365,7 +365,7 @@ const firefox: ProjectDetail = {
     },
     {
       id: "approach",
-      title: "The approach",
+      title: "L'approche",
       lead: "Alors, comment résoudre ça ?",
       blocks: [
         p(
@@ -389,7 +389,7 @@ const firefox: ProjectDetail = {
     },
     {
       id: "ui",
-      title: "UI Design",
+      title: "Design d'interface",
       lead: "Le système prend forme.",
       blocks: [
         media(3, [
@@ -404,7 +404,7 @@ const firefox: ProjectDetail = {
     },
     {
       id: "decisions",
-      title: "Important decisions",
+      title: "Décisions importantes",
       lead: "Quelques décisions qui ont changé la marque.",
       blocks: [
         ul([
@@ -417,7 +417,7 @@ const firefox: ProjectDetail = {
     },
     {
       id: "development",
-      title: "Development",
+      title: "Développement",
       lead: "Le design était prêt, il fallait l'outiller.",
       blocks: [
         media(2, [
@@ -431,7 +431,7 @@ const firefox: ProjectDetail = {
     },
     {
       id: "result",
-      title: "The result",
+      title: "Le résultat",
       lead: "Et au final, voilà le résultat.",
       blocks: [
         quote(
@@ -466,7 +466,7 @@ const opera: ProjectDetail = {
   sections: [
     {
       id: "context",
-      title: "The context",
+      title: "Le contexte",
       lead: "Tout part d'un besoin de cohérence.",
       blocks: [
         p(
@@ -476,7 +476,7 @@ const opera: ProjectDetail = {
     },
     {
       id: "challenge",
-      title: "The challenge",
+      title: "Le défi",
       lead: "Une image unifiée, sans perdre les usages.",
       blocks: [
         p(
@@ -491,7 +491,7 @@ const opera: ProjectDetail = {
     },
     {
       id: "approach",
-      title: "The approach",
+      title: "L'approche",
       lead: "Alors, comment résoudre ça ?",
       blocks: [
         p(
@@ -515,7 +515,7 @@ const opera: ProjectDetail = {
     },
     {
       id: "ui",
-      title: "UI Design",
+      title: "Design d'interface",
       lead: "Une fois la route claire, place à l'interface.",
       blocks: [
         media(3, [
@@ -530,7 +530,7 @@ const opera: ProjectDetail = {
     },
     {
       id: "decisions",
-      title: "Important decisions",
+      title: "Décisions importantes",
       lead: "Quelques décisions qui ont changé l'expérience.",
       blocks: [
         ul([
@@ -543,7 +543,7 @@ const opera: ProjectDetail = {
     },
     {
       id: "development",
-      title: "Development",
+      title: "Développement",
       lead: "Le design était prêt, il fallait le faire vivre.",
       blocks: [
         media(2, [
@@ -557,7 +557,7 @@ const opera: ProjectDetail = {
     },
     {
       id: "result",
-      title: "The result",
+      title: "Le résultat",
       lead: "Et au final, voilà le résultat.",
       blocks: [
         quote(
@@ -592,7 +592,7 @@ const chrome: ProjectDetail = {
   sections: [
     {
       id: "context",
-      title: "The context",
+      title: "Le contexte",
       lead: "Tout part d'une navigation à clarifier.",
       blocks: [
         p(
@@ -602,7 +602,7 @@ const chrome: ProjectDetail = {
     },
     {
       id: "challenge",
-      title: "The challenge",
+      title: "Le défi",
       lead: "Guider sans surcharger.",
       blocks: [
         p(
@@ -617,7 +617,7 @@ const chrome: ProjectDetail = {
     },
     {
       id: "approach",
-      title: "The approach",
+      title: "L'approche",
       lead: "Alors, comment résoudre ça ?",
       blocks: [
         p(
@@ -641,7 +641,7 @@ const chrome: ProjectDetail = {
     },
     {
       id: "ui",
-      title: "UI Design",
+      title: "Design d'interface",
       lead: "Une fois la route claire, place à l'interface.",
       blocks: [
         media(3, [
@@ -656,7 +656,7 @@ const chrome: ProjectDetail = {
     },
     {
       id: "decisions",
-      title: "Important decisions",
+      title: "Décisions importantes",
       lead: "Quelques décisions qui ont changé l'expérience.",
       blocks: [
         ul([
@@ -669,7 +669,7 @@ const chrome: ProjectDetail = {
     },
     {
       id: "development",
-      title: "Development",
+      title: "Développement",
       lead: "Le design était prêt, il fallait le faire vivre.",
       blocks: [
         media(2, [
@@ -683,7 +683,7 @@ const chrome: ProjectDetail = {
     },
     {
       id: "result",
-      title: "The result",
+      title: "Le résultat",
       lead: "Et au final, voilà le résultat.",
       blocks: [
         quote(
@@ -718,7 +718,7 @@ const brave: ProjectDetail = {
   sections: [
     {
       id: "context",
-      title: "The context",
+      title: "Le contexte",
       lead: "Tout part d'une offre à mieux présenter.",
       blocks: [
         p(
@@ -728,7 +728,7 @@ const brave: ProjectDetail = {
     },
     {
       id: "challenge",
-      title: "The challenge",
+      title: "Le défi",
       lead: "Présenter vite, convaincre mieux.",
       blocks: [
         p(
@@ -743,7 +743,7 @@ const brave: ProjectDetail = {
     },
     {
       id: "approach",
-      title: "The approach",
+      title: "L'approche",
       lead: "Alors, comment résoudre ça ?",
       blocks: [
         p(
@@ -767,7 +767,7 @@ const brave: ProjectDetail = {
     },
     {
       id: "ui",
-      title: "UI Design",
+      title: "Design d'interface",
       lead: "Une fois la route claire, place à l'interface.",
       blocks: [
         media(3, [
@@ -782,7 +782,7 @@ const brave: ProjectDetail = {
     },
     {
       id: "decisions",
-      title: "Important decisions",
+      title: "Décisions importantes",
       lead: "Quelques décisions qui ont changé l'expérience.",
       blocks: [
         ul([
@@ -795,7 +795,7 @@ const brave: ProjectDetail = {
     },
     {
       id: "development",
-      title: "Development",
+      title: "Développement",
       lead: "Le design était prêt, il fallait le faire vivre.",
       blocks: [
         media(2, [
@@ -809,7 +809,7 @@ const brave: ProjectDetail = {
     },
     {
       id: "result",
-      title: "The result",
+      title: "Le résultat",
       lead: "Et au final, voilà le résultat.",
       blocks: [
         quote(
